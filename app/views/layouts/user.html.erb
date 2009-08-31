@@ -12,9 +12,11 @@
   </head>
   <body>
 
-    <div class="container">
+    <div id="navigation" class="container">
       <ul>
-        <li><%= link_to "Presentación", cuestionario_path(:presentacion) %></li>
+        <% Reu09.cuestionarios.each do |name| %>
+          <li><%= cuestionario_nav(name) %></li>
+        <% end %>
       </ul>
     </div>
     <div class="container">

@@ -1,0 +1,12 @@
+
+es:
+  layouts:
+    user:
+      presentacion: "Presentación"
+      tumisma: "Tú misma"
+      experiencias: "Experiencias"
+      dineros: "Dineros"
+      autoria: "Autoria"
+      habitat: "Hábitat"
+      red: "Redes"
+      comun: "Lo común"

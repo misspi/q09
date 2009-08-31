@@ -2,4 +2,4 @@
 es:
   cuestionario:
     presentacion:
-      nombre: "Nombre"
+      title: "Presentación"
