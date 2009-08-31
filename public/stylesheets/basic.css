@@ -41,12 +41,15 @@ input[type=password] {
   border: 1px solid gray;
   width: 20em;
 }
-form input[type=radio] { float: left; }
+form input[type=radio] {
+  float: left;
+  margin-top: 0.2em;
+}
 form label.radio {
   float: left;
-  margin-left: 1em;
-  margin-right: 2em;
   font-weight: normal;
+  padding: 0;
+  margin: 0 2em 0 0.2em;
 }
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -68,6 +71,14 @@ table td { padding: 0.2em; }
 .column-1 {
   padding: 1em;
   background-color: white;
+}
+.flash {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding: 0.5em 0;
+  -moz-border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
 }
 #app {
   background-color: rgba(0, 0, 0, 0.5);

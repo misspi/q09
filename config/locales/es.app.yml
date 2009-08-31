@@ -22,9 +22,21 @@ es:
     index:
       title: "Página inicial"
   users:
+    username: "Nombre de usuarix"
+    email: "Correo electrónico"
+    password: "Contraseña"
+    password_confirmation: "Repite contraseña"
+    signup: "Añadir"
+    update: "Modificar"
+    updated: "Tu perfil ha sido modificado."
+    created: "Tenemos una nueva persona registrada."
     index:
       title: "Usuarios registrados"
+    new:
+      title: "Registro de usuarixs"
   user_sessions:
+    created: "Bienvenidx al cuestionario de Reu08"
+    destroyed: "Adiós. Vuelve pronto!"
     new:
       username: "Nombre de usuario o email"
       password: "Contraseña"
