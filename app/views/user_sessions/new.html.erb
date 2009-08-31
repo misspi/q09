@@ -1,0 +1,19 @@
+<%= title t(:title)  %>
+
+<div class="dialog">
+  <% form_for @user_session do |f| %>
+    <%= f.error_messages %>
+    <p>
+      <%= f.label :username, t(:username) %>
+      <%= f.text_field :username %>
+    </p>
+    <p>
+      <%= f.label :password, t(:password) %>
+      <%= f.password_field :password %>
+    </p>
+    <p>
+      <%= empty_label %>
+      <%= f.submit t(:login) %>
+    </p>
+  <% end %>
+</div>

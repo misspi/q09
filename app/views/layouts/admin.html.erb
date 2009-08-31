@@ -13,16 +13,21 @@
   <body>
 
     <div id="app">
-      <h1>Reu08 Cuestionario</h1>
-      <div class="account">
-        <%= link_to :login, new_user_session_path %>
+      <div id="account">
+        <% if current_user %>
+          <%= link_to t(:edit_profile), edit_user_path(:current) %> 
+          <%= link_to t(:logout), logout_path %>
+        <% else %>
+          <%= link_to t(:signup), new_user_path %> 
+          <%= link_to t(:login), login_path %>
+        <% end %>
       </div>
+      <h1><a href="/">Reu08 Cuestionario</a></h1>
     </div>
     <div id="navigation" class="container">
       <ul>
-        <% Reu09.cuestionarios.each do |name| %>
-          <li><%= cuestionario_nav(name) %></li>
-        <% end %>
+          <li><%= link_to_unless_current t(:users), users_path %></li>
+          <li><%= link_to_unless_current t(:questions), questions_path %></li>
       </ul>
     </div>
 

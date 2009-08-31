@@ -1,14 +1,16 @@
 ActionController::Routing::Routes.draw do |map|
-
   map.root :controller => 'about', :action => 'index'
 
-  map.resources :questions do |questions|
-    questions.resources :answers
+  map.resources(:questions, :as => 'preguntas') do |questions|
+    questions.resources :answers, :as => 'respuestas'
   end
   map.resources :survey
 
   map.resources :cuestionario
 
-
+  map.login "entrar", :controller => "user_sessions", :action => "new"
+  map.logout "salir", :controller => "user_sessions", :action => "destroy"
+  map.resources :user_sessions, :as => 'sesion'
+  map.resources :users, :as => 'usuarios'
 
 end

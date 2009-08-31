@@ -1,7 +1,11 @@
 
 es:
   layouts:
-    user:
+    login: "Entrar"
+    signup: "Registrarse"
+    edit_profile: "Editar perfil"
+    logout: "Salir"
+    basic:
       presentacion: "Presentación"
       tumisma: "Tú misma"
       experiencias: "Experiencias"
@@ -10,3 +14,20 @@ es:
       habitat: "Hábitat"
       red: "Redes"
       comun: "Lo común"
+    admin:
+      users: "Usuarios registrados"
+      questions: "Preguntas"
+
+  about:
+    index:
+      title: "Página inicial"
+  users:
+    index:
+      title: "Usuarios registrados"
+  user_sessions:
+    new:
+      username: "Nombre de usuario o email"
+      password: "Contraseña"
+      title: "Entrar"
+      login: "Entrar"
+

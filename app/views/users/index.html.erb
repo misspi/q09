@@ -1,0 +1,9 @@
+<%= title t(:title) %>
+
+<table>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= h user.username %></td>
+    </tr>
+    <% end %>
+</table>

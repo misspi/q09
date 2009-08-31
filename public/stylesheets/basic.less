@@ -1,6 +1,9 @@
+@fondo: #44cc44;
+@blanquecino: rgba(255,255,255,0.5);
+@oscuro: rgba(0,0,0,0.5);
 
 html  {
-    background-color: #efefef;
+    background-color: @fondo;
     font-family: "Lucida Grande", Verdana, sans-serif;
 }
 
@@ -9,18 +12,27 @@ h1, h2, h3 {  font-family: "Trebuchet MS", Arial, sans-serif; color: gray;}
 h1 { font-size: 200%; }
 h2 {font-size: 150%;}
 
-form {
-  p {display: block; width: 100%; overflow: hidden;}
-  label {display: block; font-weight: bold; color: gray; margin-top: 1em; margin-bottom: 0.2em;}
-  input[type=text] {border: 1px solid gray; width: 20em;}
-  input[type=radio] {float: left;}
-  label.radio {float: left; margin-left: 1em; margin-right: 2em; font-weight: normal;}
-}
+form {}
+form   p {display: block; width: 100%; overflow: hidden;}
+form   label {display: block; font-weight: bold; color: gray; margin-top: 1em; margin-bottom: 0.2em;}
+form   input[type=text], input[type=password] {border: 1px solid gray; width: 20em;}
+form   input[type=radio] {float: left;}
+form   label.radio {float: left; margin-left: 1em; margin-right: 2em; font-weight: normal;}
 
+a {text-decoration: none;}
+a:hover {text-decoration: underline;}
 
 .tab-borders {
     -moz-border-radius:  0.2em 0.2em 0 0;
     -webkit-border-top-left-radius: 0.2em; -webkit-border-top-right-radius: 0.2em;
+}
+
+table tr.even {background-color: #efefef;}
+table td {padding: 0.2em; }
+
+.round {
+    -moz-border-radius: 0.2em;
+    -webkit-border-radius: 0.2em;
 }
 
 .container {
@@ -29,12 +41,33 @@ form {
 }
 .column-1 { padding: 1em;   background-color: white;}
 
+#app {
+    background-color: @oscuro;
+    color: white;
+    margin-bottom: 3em;
+    a {color: @blanquecino;}
+    a:hover {text-decoration: none;}
+}
+
+#account {
+    float: right;
+    margin: 0.7em 2em 0 0;
+    a {color: white; padding: 0.2em 0.5em; background-color: @blanquecino; .round;}
+}
+
 #navigation {
     margin-top: 1em;
     ul {width: 100%; overflow: hidden;}
     li {display: block; float: left; padding: 0.5em 1em;
-        background-color: white;
+        background-color: @blanquecino;
         margin-right: 0.5em;
         .tab-borders;
+        color: white;
     }
+}
+
+#credits {
+    color: @blanquecino;
+    font-size: 75%;
+    text-align: center;
 }

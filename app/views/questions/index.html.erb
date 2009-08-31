@@ -7,7 +7,7 @@
   </tr>
 
 <% @questions.each do |question| %>
-  <tr>
+  <tr class="<%= cycle('even', 'odd')  %>">
     <td><%=h question.group %></td>
     <td><%=link_to h(question.name), question_path(question) %></td>
     <td><%= link_to 'Show', question %></td>

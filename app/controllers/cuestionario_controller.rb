@@ -1,6 +1,4 @@
 class CuestionarioController < ApplicationController
-  layout 'user'
-
   def show
     name = params[:id]
     @survey = Survey.find(name, :user_id => 1)
