@@ -1,0 +1,6 @@
+tmp
+log
+nbproject
+config/database.yml
+db/development.sqlite3
+

@@ -1,0 +1,8 @@
+<h2>  <%=h @question.group %></h2>
+<h1> <%=h @question.name %></h1>
+
+<%= render @question.answers %>
+
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>
