@@ -1,23 +1,23 @@
 <% form_for @user do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :username %>
+    <%= f.label :username, t(:username) %>
     <%= f.text_field :username %>
   </p>
   <p>
-    <%= f.label :email %>
+    <%= f.label :email, t(:email) %>
     <%= f.text_field :email %>
   </p>
   <p>
-    <%= f.label :password %>
+    <%= f.label :password, t(:password) %>
     <%= f.password_field :password %>
   </p>
   <p>
-    <%= f.label :password_confirmation %>
+    <%= f.label :password_confirmation, t(:password_confirmation) %>
     <%= f.password_field :password_confirmation %>
   </p>
   <p>
     <label>&nbsp;</label>
-    <%= f.submit "Submit" %>
+    <%= f.submit @user.new_record? ? t(:signup) : t(:update) %>
   </p>
 <% end %>

@@ -6,7 +6,7 @@ class UserSessionsController < ApplicationController
   def create
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
-      flash[:notice] = "Successfully created user session."
+      flash[:notice] = t(:created)
       redirect_to root_url
     else
       render :action => 'new'
@@ -16,7 +16,7 @@ class UserSessionsController < ApplicationController
   def destroy
     @user_session = UserSession.find(params[:id])
     @user_session.destroy
-    flash[:notice] = "Successfully destroyed user session."
+    flash[:notice] = t(:destroyed)
     redirect_to root_url
   end
 end

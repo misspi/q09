@@ -15,15 +15,20 @@
     <div id="app">
       <div id="account">
         <% if current_user %>
-          <%= link_to t(:edit_profile), edit_user_path(:current) %> 
+          <%= link_to t(:edit_profile), edit_user_path(:current) %>
           <%= link_to t(:logout), logout_path %>
         <% else %>
-          <%= link_to t(:signup), new_user_path %> 
+          <%= link_to t(:signup), new_user_path %>
           <%= link_to t(:login), login_path %>
         <% end %>
       </div>
       <h1><a href="/">Reu08 Cuestionario</a></h1>
     </div>
+
+    <% unless flash[:notice].blank? %>
+      <div class="container flash"><%= flash[:notice] %></div>
+    <% end %>
+
     <div id="navigation" class="container">
       <ul>
         <% Reu09.cuestionarios.each do |name| %>
