@@ -1,4 +1,12 @@
 <h1><%= t(:title) %></h1>
 
 <% form_for @survey do |form| %>
+  <h3>Nivel de estudios académicos</h3>
+
+  <p>
+    <label>¿Para la actividad que realizas, qué tipo de formación ha sido imprescindible?</label>
+    <% Reu09.c(:experiencias, :formacion).each do |formacion| %>
+      <%= form.radio_button :formacion, formacion %><label class="radio"><%= t(formacion) %></label>
+      <% end %>
+  </p>
 <% end %>

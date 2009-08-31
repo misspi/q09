@@ -15,6 +15,9 @@ class Reu09
   PREGUNTAS = {
     :presentacion => {
       :ambito =>  [:actividad_arquitectura, :actividad_plasticas]
+    },
+    :experiencias => {
+      :formacion => [:secundaria, :bachillerato, :fpmedio, :fpsuperio]
     }
   }
 
