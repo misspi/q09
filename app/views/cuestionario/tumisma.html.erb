@@ -2,6 +2,125 @@
 <h1><%= t(:title) %> </h1>
 
 <% form_for @survey do |form| %>
+
+  <p>
+    <%= form.label :birth, t(:birth) %>
+    <%= form.text_field :birth %>
+  </p>
+
+  <p>
+    <%= form.label :gender, t(:gender) %>
+    <%= form.text_field :gender %>
+  </p>
+
+  <p>
+    <%= form.label :since, t(:since) %>
+    <%= form.text_field :since %>
+  </p>
+
+  <p>
+    <%= form.label :books, t(:books) %>
+    <%= form.text_area :books %>
+  </p>
+
+  <p>
+    <%= form.label :films, t(:films) %>
+    <%= form.text_area :films %>
+  </p>
+
+  <p>
+    <%= form.label :musics, t(:musics) %>
+    <%= form.text_area :musics %>
+  </p>
+
+  <p>
+    <%= form.label :movements, t(:movements) %>
+    <%= form.text_area :movements %>
+  </p>
+
+  <p>
+    <%= form.label :influences, t(:influences) %>
+    <%= form.text_area :influences %>
+  </p>
+
+  <p>
+    <%= form.label :ilike, t(:ilike) %>
+    <%= form.text_area :ilike %>
+  </p>
+
+  <p>
+    <%= form.label :dislike, t(:dislike) %>
+    <%= form.text_area :dislike %>
+  </p>
+
+  <p>
+    <%= form.label :isdifferent, t(:isdifferent) %>
+    <%= form.radio_button :isdifferent, :yes %><label class="radio"><%= t(:isdifferent_yes) %></label>
+    <%= form.radio_button :isdifferent, :no %><label class="radio"><%= t(:isdifferent_no) %></label>
+  </p>
+
+  <p>
+    <%= form.label :isdifferent_desc, t(:isdifferent_desc) %>
+    <%= form.text_area :isdifferent_desc %>
+  </p>
+
+  <p>
+    <%= form.label :proj_good, t(:proj_good) %>
+    <%= form.text_area :proj_good %>
+  </p>
+  <p>
+    <%= form.label :proj_good_att, t(:proj_good_att) %>
+    <%= form.text_field :proj_good_att %>
+  </p>
+
+  <p>
+    <%= form.label :proj_bad, t(:proj_bad) %>
+    <%= form.text_area :proj_bad %>
+  </p>
+  <p>
+    <%= form.label :proj_bad_att, t(:proj_bad_att) %>
+    <%= form.text_field :proj_bad_att %>
+  </p>
+
+  <p>
+    <%= form.label :diffusion, t(:diffusion) %>
+    <%= form.text_area :diffusion %>
+  </p>
+
+  <p>
+    <%= form.label :traject_eval, t(:traject_eval) %>
+    <table>
+      <thead>
+        <tr>
+          <td></td>
+          <% Reu09::RELEVANCE.each do |relevance| %>
+            <td><%= t(relevance) %></td>
+          <% end %>
+        </tr>
+      </thead>
+      <% Reu09.c(:tumisma, :traject_eval).each do |topic| %>
+        <tr>
+          <td><%= t(topic) %></td>
+          <% Reu09::RELEVANCE.each do |relevance| %>
+            <td><%= form.radio_button "traject_eval_#{topic}", relevance %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+  </p>
+
+  <p>
+    <%= form.label :gender_influence, t(:gender_influence) %>
+    <%= form.radio_button :gender_influence, :yes %><label class="radio"><%= t(:gender_influence_yes) %></label>
+    <%= form.radio_button :gender_influence, :no %><label class="radio"><%= t(:gender_influence_no) %></label>
+  </p>
+
+  <p>
+    <%= form.label :gender_influence_desc, t(:gender_influence_desc) %>
+    <%= form.text_area :gender_influence_desc %>
+  </p>
+
+
   <p>
     <label>&nbsp;</label>
     <%= form.submit "Guardar" %>

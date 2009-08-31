@@ -41,6 +41,11 @@ input[type=password] {
   border: 1px solid gray;
   width: 20em;
 }
+form textarea {
+  border: 1px solid gray;
+  width: 20em;
+  height: 8em;
+}
 form input[type=radio] {
   float: left;
   margin-top: 0.2em;

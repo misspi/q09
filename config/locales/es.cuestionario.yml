@@ -29,6 +29,46 @@ es:
 
     tumisma:
       title: "Tú mismx"
+      birth: "Año de nacimiento"
+      gender: "Género"
+      since: "¿Desde cuándo te dedicas al trabajo cultural?"
+      books: "Tres libros de referencia"
+      films: "Tres películas de referencia"
+      musics: "Tres músicxs / grupos de referencia"
+      movements: "Tres movimientos culturales / sociales que te influyeron"
+      influences: "Otras cosas que te marcaron / conmovieron / cambiaron"
+      ilike: "¿Qué te gusta de tu trabajo?"
+      dislike: "¿Qué no?"
+      isdifferent: "¿Consideras que tu trabajo es diferente a otros trabajos?"
+      isdifferent_yes: "Si"
+      isdifferent_no: "No"
+      isdifferent_desc: "¿Por qué?"
+      proj_good: "Proyecto más satisfactiorio y por qué"
+      proj_good_att: "Imágenes / video / audio"
+      proj_bad: "Proyecto más frustrante y por qué"
+      proj_bad_att: "Imágenes / video / audio"
+      diffusion: "¿Cómo das a conocer tu trabajo?"
+      traject_eval: "Valora la relevancia de los siguientes criterios en tu trayectoria profesional"
+      none: "sin relevancia"
+      some: "poca relevancia"
+      quite: "moderadamente relevante"
+      lot: "relevante"
+      full: "muy relevante"
+      talent: "Talento"
+      knowledge: "Conocimiento y habilidades"
+      relations: "Relaciones"
+      fame: "Reconocimiento público"
+      money: "Inversión - dinero"
+      marketing: "Estrategias de difusión"
+      other: "Otros"
+      gender_influence: "¿Crees que influye de manera condicional tu género en tu carrera profesional?"
+      gender_influence_yes: "Sí"
+      gender_influence_no: "No"
+      gender_influence_desc: "¿Puedes describir cómo?"
+
+
+
+
     experiencias:
       title: "Experiencias"
     dineros:

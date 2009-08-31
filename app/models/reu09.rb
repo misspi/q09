@@ -12,6 +12,8 @@ class Reu09
     PREGUNTAS[group][name]
   end
 
+  RELEVANCE = [:none, :some, :quite, :lot, :full]
+
   PREGUNTAS = {
     :presentacion => {
       :ambito =>  [:actividad_arquitectura, :actividad_plasticas, :actividad_cine, :actividad_comic,
@@ -22,6 +24,9 @@ class Reu09
     },
     :experiencias => {
       :formacion => [:secundaria, :bachillerato, :fpmedio, :fpsuperio]
+    },
+    :tumisma => {
+      :traject_eval => [:talent, :knowledge, :relations, :fame, :money, :marketing, :gender, :other],
     }
   }
 
