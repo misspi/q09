@@ -29,7 +29,7 @@ class Survey
   def question(name)
     name = name.to_s
     q = Question.find(:first, :conditions => {:group => @group, :name => name})
-    raise ActiveRecord::RecordNotFound.new("Question '#{name}' in '#{@group}' doesn't exsist!") if q.nil?
+    raise ActiveRecord::RecordNotFound.new("Question '#{name}' in '#{@group}' doesn't exsist!.") if q.nil?
     q
   end
 

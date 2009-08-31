@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Reu08 Cuestionario Online <%= yield(:title) || 'Bienvenida' %></title>
+    <!-- link rel="icon" href="images/e3e.ico" type="image/x-icon" / -->
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.6.0/build/reset/reset-min.css" />
+    <%= stylesheet_link_tag 'basic' %>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <%#= javascript_include_tag 'jquery.validator.js'  %>
+    <%= yield :header %>
+  </head>
+  <body>
+
+    <div class="container">
+      <ul>
+        <li><%= link_to "Presentación", cuestionario_path(:presentacion) %></li>
+      </ul>
+    </div>
+    <div class="container">
+      <%= yield  %>
+    </div>
+  </body>
+</html>
