@@ -3,7 +3,30 @@ es:
   cuestionario:
     presentacion:
       title: "Presentación"
+      name: "Nombre / colectivo"
+      page_url: "Web / blog"
+      icon: "Imagen / logo / gráfica con la que quieres aparecer"
+      location: "Vives / trabajas en"
+      indi_colective: "¿Trabajas solx o en colectivo?"
       actividad_arquitectura: "Arquitectura"
+      actividad_plasticas: "Artes Plásticas"
+      actividad_cine: "Cine / Audiovisuales"
+      actividad_comic: "Cómic / Fanzine"
+      actividad_danza: "Danza"
+      actividad_diseño: "Diseño grafico"
+      actividad_docencia: "Docencia"
+      actividad_fotografia: "Fotografía"
+      actividad_gestion: "Gestión cultural"
+      actividad_literatura: "Literatura / Poesía"
+      actividad_musica: "Música"
+      actividad_programacion: "Programación"
+      actividad_netart: "Netart"
+      actividad_performance: "Performance"
+      actividad_street: "Street Art"
+      actividad_teatro: "Teatro"
+      actividad_otros: "Otros"
+      interest: "¿Qué es lo que más te interesa en estos momentos y por qué?"
+
     tumisma:
       title: "Tú mismx"
     experiencias:
