@@ -12,6 +12,12 @@
   </head>
   <body>
 
+    <div id="app">
+      <h1>Reu08 Cuestionario</h1>
+      <div class="account">
+        <%= link_to :login, new_user_session_path %>
+      </div>
+    </div>
     <div id="navigation" class="container">
       <ul>
         <% Reu09.cuestionarios.each do |name| %>
@@ -19,8 +25,11 @@
         <% end %>
       </ul>
     </div>
+
     <div class="container">
-      <%= yield  %>
+      <div class="column-1">
+        <%= yield  %>
+      </div>
     </div>
   </body>
 </html>

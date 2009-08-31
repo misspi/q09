@@ -3,3 +3,18 @@ es:
   cuestionario:
     presentacion:
       title: "Presentación"
+      actividad_arquitectura: "Arquitectura"
+    tumisma:
+      title: "Tú mismx"
+    experiencias:
+      title: "Experiencias"
+    dineros:
+      title: "Dinero"
+    autoria:
+      title: "Autoría"
+    habitat:
+      title: "Hábitat"
+    red:
+      title: "Redes"
+    comun:
+      title: "Lo común"

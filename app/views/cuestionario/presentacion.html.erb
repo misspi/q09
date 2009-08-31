@@ -1,38 +1,38 @@
 
-<div class="container">
-  <div class="column-1">
+<h1><%= t(:title) %></h1>
 
-    <h1><%= t(:title) %></h1>
+<% form_for @survey do |form| %>
+  <p>
+    <label><%= t(:nombre) %></label>
+    <%= form.text_field :name %>
+  </p>
 
-    <% form_for @survey do |form| %>
-      <p>
-        <label><%= t(:nombre) %></label>
-        <%= form.text_field :name %>
-      </p>
-      <p>
-        <label>Página web/blog</label>
-        <%= form.text_field :page_url %>
-      </p>
-      <p>
-        <label>Actividad que desempeñas</label>
-        <%= form.radio_button :actividad, :individual %><label class="radio">actividad individual</label>
-        <%= form.radio_button :actividad, :proyecto %><label class="radio">proyecto colectivo</label>
-        <%= form.radio_button :actividad, :ambos %><label class="radio">ambos</label>
-      </p>
+  <p>
+    <label>Página web/blog</label>
+    <%= form.text_field :page_url %>
+  </p>
 
-      <table>
-        <% Reu09.c(:presentacion, :ambito).each do |actividad| %>
-          <tr>
-            <td><%= actividad %></td>
-            <td><%= form.text_field actividad %></td>
-          </tr>
-        <% end %>
-      </table>
+  <p>
+    <label>Actividad que desempeñas</label>
+    <%= form.radio_button :actividad, :individual %><label class="radio">actividad individual</label>
+    <%= form.radio_button :actividad, :proyecto %><label class="radio">proyecto colectivo</label>
+    <%= form.radio_button :actividad, :ambos %><label class="radio">ambos</label>
+  </p>
 
-      <p>
-        <label>&nbsp;</label>
-        <%= form.submit "Guardar" %>
-      </p>
-    <% end %>
-  </div>
-</div>
+  <p>
+    <label>Actividad que desempeñas</label>
+    <table>
+      <% Reu09.c(:presentacion, :ambito).each do |actividad| %>
+        <tr>
+          <td><%= t(actividad) %></td>
+          <td><%= form.text_field actividad %></td>
+        </tr>
+      <% end %>
+    </table>
+  </p>
+  
+  <p>
+    <label>&nbsp;</label>
+    <%= form.submit "Guardar" %>
+  </p>
+<% end %>
