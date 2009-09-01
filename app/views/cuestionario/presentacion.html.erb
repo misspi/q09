@@ -1,3 +1,7 @@
+<% content_for(:header) do %>
+  <%=  javascript_include_tag 'ajaxupload.3.5.js' %>
+<% end %>
+
 
 <%= title t(:title) %>
 
@@ -14,8 +18,37 @@
 
   <p>
     <%= form.label :icon, t(:icon) %>
-    <%= form.text_field :icon %>
+    <%= form.text_field :icon, :id => 'upload_field' %>
+    <div id="upload_field_ajax">
+      <div class="thumbnail"></div>
+      <a id="upload_field_link" href="#"><%= t('upload') %></a>
+      <img src="/images/spinner.gif" style="display: none" />
+    </div>
+    <script type="text/javascript">
+      jQuery(function($) {
+        $("#upload_field").hide();
+        new AjaxUpload("#upload_field_link",
+        {action: '<%= buckets_path(:format => 'js') %>',
+          name: 'bucket[media]',
+          data: {authenticity_token : '<%= form_authenticity_token %>', response: 'all'},
+          onSubmit: function(file, extension) {
+            $("#upload_field_ajax a").hide();
+            $("#upload_field_ajax img").show();
+          },
+          onComplete: function(file, response) {
+            $("#upload_field_ajax img").hide();
+            $("#upload_field_ajax .thumbnail").html(response).show();
+            response = response.replace('<pre>', '(');
+            response = response.replace('</pre>', ')');
+            var res = eval(response);
+            $("#upload_field_ajax a").show();
+            $("#upload_field_ajax .thumbnail").html('<img src="' + res['thumbnail'] + '" />');
+          }
+        });
+      });
+    </script>
   </p>
+
 
   <p>
     <%= form.label :location, t(:location) %>

@@ -17,6 +17,7 @@ es:
     admin:
       users: "Usuarios registrados"
       questions: "Preguntas"
+      buckets: "Archivos"
 
   about:
     index:

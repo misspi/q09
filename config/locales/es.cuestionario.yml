@@ -6,7 +6,7 @@ es:
     quite: "moderadamente relevante"
     lot: "relevante"
     full: "muy relevante"
-    
+    upload: "Subir fichero"
     presentacion:
       title: "Presentación"
       name: "Nombre / colectivo"

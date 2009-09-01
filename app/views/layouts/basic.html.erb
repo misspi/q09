@@ -4,7 +4,6 @@
   <head>
     <title>Reu08 Cuestionario Online <%= yield(:title) || 'Bienvenida' %></title>
     <!-- link rel="icon" href="images/e3e.ico" type="image/x-icon" / -->
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.6.0/build/reset/reset-min.css" />
     <%= stylesheet_link_tag 'basic' %>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
     <%#= javascript_include_tag 'jquery.validator.js'  %>
@@ -43,7 +42,7 @@
       </div>
     </div>
     <div id="credits" class="container">
-      hecho a mano por c a l c  <%= link_to '(admin)', users_path %>
+      hecho a mano por c a l c  <%= link_to '(admin)', users_path %> <%= link_to '(performance)', '/newrelic' %>
     </div>
   </body>
 </html>
