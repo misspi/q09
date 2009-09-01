@@ -23,7 +23,9 @@ class Reu09
         ]
     },
     :experiencias => {
-      :formacion => [:secundaria, :bachillerato, :fpmedio, :fpsuperio]
+      :studies_eval => [:academica, :transmision, :talleres, :empleo, :aprendizaje, :internet, :biblioteca, :other],
+      :formation_done => [:name, :duration, :entity, :amount, :evaluation],
+      :form_access => [:money, :offer, :info, :time, :geo, :other]
     },
     :tumisma => {
       :traject_eval => [:talent, :knowledge, :relations, :fame, :money, :marketing, :gender, :other],

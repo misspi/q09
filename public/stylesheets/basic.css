@@ -47,11 +47,15 @@ form textarea {
   height: 8em;
 }
 form input[type=radio] {
-  float: left;
+  float: none;
+  margin-top: 0.2em;
+}
+input[type=checkbox] {
+  float: none;
   margin-top: 0.2em;
 }
 form label.radio {
-  float: left;
+  float: none;
   font-weight: normal;
   padding: 0;
   margin: 0 2em 0 0.2em;

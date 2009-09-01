@@ -1,6 +1,12 @@
 
 es:
   cuestionario:
+    none: "sin relevancia"
+    some: "poca relevancia"
+    quite: "moderadamente relevante"
+    lot: "relevante"
+    full: "muy relevante"
+    
     presentacion:
       title: "Presentación"
       name: "Nombre / colectivo"
@@ -49,11 +55,6 @@ es:
       proj_bad_att: "Imágenes / video / audio"
       diffusion: "¿Cómo das a conocer tu trabajo?"
       traject_eval: "Valora la relevancia de los siguientes criterios en tu trayectoria profesional"
-      none: "sin relevancia"
-      some: "poca relevancia"
-      quite: "moderadamente relevante"
-      lot: "relevante"
-      full: "muy relevante"
       talent: "Talento"
       knowledge: "Conocimiento y habilidades"
       relations: "Relaciones"
@@ -67,10 +68,60 @@ es:
       gender_influence_desc: "¿Puedes describir cómo?"
 
 
-
-
     experiencias:
       title: "Experiencias"
+      studies: "Nivel de estudios académicos"
+      studies_eval: "Para la acividad que realizas, ¿qué tipo de formación ha sido imprescindible?"
+      academica: "Formación académica"
+      transmision: "Transmisión familiar o local"
+      talleres: "En talleres / cursos técnicos"
+      empleo: "Cualificación a través del empleo"
+      aprendizaje: "Aprendizaje en grupos de afinidad / amistades / gente cercana"
+      internet: "Internet"
+      biblioteca: "Bibliotecas públicas / centros de documentación / archivos institucionales"
+      other: "Otros"
+      formation: "¿Para la actividad que realizas es imprescindible la formación continua?"
+      formation_yes: "Sí"
+      formation_no: "No"
+      formation_desc: "¿Por qué?"
+      formation_kind: "¿En qué consiste esa formación continua?"
+      formation_kind_course: "Cursos / talleres"
+      formation_kind_exchange: "Intercambiar saberes"
+      formation_kind_auto: "Estudiar de forma autodidacta"
+      formation_kind_net: "Consultar Internet"
+      formation_kind_other: "Otros"
+      formation_done: "¿Has realizado algún curso de formación en los últimos dos años?"
+      name: "Nombre curso"
+      duration: "Duración"
+      entity: "Entidad que lo impartía"
+      amount: "Importe"
+      evaluation: "Valora de 1(min.) a 5(max.) su calidad"
+      formation_week: "¿Cuánto tiempo dedicas semanalmente a la formación?"
+      formation_week_none: "Ningún tiempo"
+      formation_week_1to3: "1-3 horas"
+      formation_week_3to5: "3-5 horas"
+      formation_week_5to8: "5-8 horas"
+      formation_week_more8: "Más de 8 horas"
+      formation_week_desc: "Me es dificil cuantificarlo, ¿por qué?"
+      formation_paid: "¿Ese tiempo es renumerado, puedes señalarlo porcentualmente?"
+      formation_paid_company: "Es renumerado por la empresa"
+      formation_paid_grant: "Es renumerado por becas"
+      formation_paid_client: "Es renumerado por lo que le cobras a tus clientes"
+      formation_paid_not: "No es renumerado"
+      formation_part: "¿Consideras esa formación parte de tu trabajo?"
+      formation_part_yes: "Sí"
+      formation_part_no: "No"
+      form_access: "¿Cuál crees que son los principales problemas para acceder a la formación? Señala los tres más importantes"
+      money: "Financiación"
+      offer: "Escasez de oferta"
+      info: "Falta de información"
+      time: "Falta de tiempo"
+      geo: "Aislamiento territorial"
+      other: "Otros"
+
+
+
+
     dineros:
       title: "Dinero"
     autoria:

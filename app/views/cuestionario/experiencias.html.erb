@@ -1,12 +1,121 @@
 <h1><%= t(:title) %></h1>
 
 <% form_for @survey do |form| %>
-  <h3>Nivel de estudios académicos</h3>
 
   <p>
-    <label>¿Para la actividad que realizas, qué tipo de formación ha sido imprescindible?</label>
-    <% Reu09.c(:experiencias, :formacion).each do |formacion| %>
-      <%= form.radio_button :formacion, formacion %><label class="radio"><%= t(formacion) %></label>
+    <%= form.label :studies, t(:studies) %>
+    <%= form.radio_button :studies, :primera_etapa_secundaria %><label class="radio">Primera etapa de educación secundaria</label>
+    <%= form.radio_button :studies, :bachillerato %><label class="radio">Bachillerato</label>
+    <%= form.radio_button :studies, :fp_medio %><label class="radio">FP de grado medio</label>
+    <%= form.radio_button :studies, :fp_superior %><label class="radio">FP de grado superior</label>
+    <%= form.radio_button :studies, :uni_completa %><label class="radio">Estudios universitarios completos</label>
+    <%= form.radio_button :studies, :uni_incompleta %><label class="radio">Estudios universitarios incompletos</label>
+    <%= form.radio_button :studies, :postgrado %><label class="radio">Cursos de postgrado</label>
+    <%= form.radio_button :studies, :doctorado %><label class="radio">Doctorado</label>
+  </p>
+
+
+  <p>
+    <%= form.label :studies_eval, t(:studies_eval) %>
+    <table>
+      <thead>
+        <tr>
+          <td></td>
+          <% Reu09::RELEVANCE.each do |relevance| %>
+            <td><%= t(relevance) %></td>
+          <% end %>
+        </tr>
+      </thead>
+      <% Reu09.c(:experiencias, :studies_eval).each do |topic| %>
+        <tr>
+          <td><%= t(topic) %></td>
+          <% Reu09::RELEVANCE.each do |relevance| %>
+            <td><%= form.radio_button "studies_eval_#{topic}", relevance %></td>
+          <% end %>
+        </tr>
       <% end %>
+    </table>
+  </p>
+
+  <p>
+    <%= form.label :formation, t(:formation) %>
+    <%= form.radio_button :formation, :yes %><label class="radio"><%= t(:formation_yes) %></label>
+    <%= form.radio_button :formation, :no %><label class="radio"><%= t(:formation_no) %></label>
+  </p>
+
+  <p>
+    <%= form.label :formation_desc, t(:formation_desc) %>
+    <%= form.text_area :formation_desc %>
+  </p>
+
+  <p>
+    <%= form.label :formation_kind, t(:formation_kind) %>
+    <%= form.check_box :formation_kind_course %><label class="checkbox"><%= t(:formation_kind_course) %></label>
+    <%= form.check_box :formation_kind_exchange %><label class="checkbox"><%= t(:formation_kind_exchange) %></label>
+    <%= form.check_box :formation_kind_auto %><label class="checkbox"><%= t(:formation_kind_auto) %></label>
+    <%= form.check_box :formation_kind_net %><label class="checkbox"><%= t(:formation_kind_net) %></label>
+    <%= form.check_box :formation_kind_other %><label class="checkbox"><%= t(:formation_kind_other) %></label>
+  </p>
+
+  <p>
+    <%= form.label :formation_done, t(:formation_done) %>
+    <table>
+      <thead>
+        <tr>
+          <% Reu09.c(:experiencias, :formation_done).each do |topic| %>
+            <td><%= t(topic) %></td>
+          <% end %>
+        </tr>
+      </thead>
+      <% (1..5).each do |number| %>
+        <tr>
+          <% Reu09.c(:experiencias, :formation_done).each do |topic| %>
+            <td><%= form.text_field "formation_done_#{topic}_#{number}" %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+  </p>
+
+  <p>
+    <%= form.label :formation_week, t(:formation_week) %>
+    <%= form.radio_button :formation_week, 'none' %><label class="radio"><%= t(:formation_week_none) %></label>
+    <%= form.radio_button :formation_week, '1to3' %><label class="radio"><%= t(:formation_week_1to3) %></label>
+    <%= form.radio_button :formation_week, '3to5' %><label class="radio"><%= t(:formation_week_3to5) %></label>
+    <%= form.radio_button :formation_week, '5to8' %><label class="radio"><%= t(:formation_week_5to8) %></label>
+    <%= form.radio_button :formation_week, 'more8' %><label class="radio"><%= t(:formation_week_more8) %></label>
+  </p>
+
+  <p>
+    <%= form.label :formation_week_desc, t(:formation_week_desc) %>
+    <%= form.text_area :formation_week_desc %>
+  </p>
+
+  <p>
+    <%= form.label :formation_paid, t(:formation_paid) %>
+    <label><%= t(:formation_paid_company) %></label><%= form.text_field :formation_paid_company %>
+    <label><%= t(:formation_paid_grant) %></label><%= form.text_field :formation_paid_grant %>
+    <label><%= t(:formation_paid_client) %></label><%= form.text_field :formation_paid_client %>
+    <label><%= t(:formation_paid_not) %></label><%= form.text_field :formation_paid_not %>
+  </p>
+
+  <p>
+    <%= form.label :formation_part, t(:formation_part) %>
+    <%= form.radio_button :formation_part, :yes %><label class="radio"><%= t(:formation_part_yes) %></label>
+    <%= form.radio_button :formation_part, :no %><label class="radio"><%= t(:formation_part_no) %></label>
+  </p>
+
+    <p>
+       <%= form.label :form_access, t(:form_access) %>
+             <% Reu09.c(:experiencias, :form_access).each do |topic| %>
+            <%= form.check_box "form_access_#{topic}_#" %>
+            <%= t(topic) %>
+          <% end %>
+    </p>
+
+
+  <p>
+    <label>&nbsp;</label>
+    <%= form.submit "Guardar" %>
   </p>
 <% end %>
