@@ -3,4 +3,6 @@ log
 nbproject
 config/database.yml
 db/development.sqlite3
+public/assets/**
+
 
