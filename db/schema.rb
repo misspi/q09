@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090831131421) do
+ActiveRecord::Schema.define(:version => 20090901083957) do
 
   create_table "answers", :force => true do |t|
     t.string   "value"
@@ -17,6 +17,19 @@ ActiveRecord::Schema.define(:version => 20090831131421) do
     t.integer  "question_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "buckets", :force => true do |t|
+    t.string   "description"
+    t.text     "extra"
+    t.integer  "owner_id"
+    t.string   "owner_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "media_file_name"
+    t.string   "media_content_type"
+    t.integer  "media_file_size"
+    t.datetime "media_updated_at"
   end
 
   create_table "questions", :force => true do |t|
