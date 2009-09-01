@@ -26,6 +26,7 @@ en:
       new: "Create new bucket"
       ajax_new: "Create new bucket with ajax"
       ajax_upload: "Upload file"
+      destroy_all: "Delete all"
     submit:
       create: "Create"
       update: "Update"

@@ -1,6 +1,8 @@
 
 es:
   cuestionario:
+    upload: "Subir fichero"
+
     presentacion:
       title: "Presentación"
       name: "Nombre / colectivo"
