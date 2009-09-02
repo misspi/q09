@@ -1,4 +1,163 @@
-<h1><%= t(:title) %></h1>
+<%= title t(:title) %>
 
 <% form_for @survey do |form| %>
+
+  <p>
+    <%= form.label :laboral, t(:laboral) %>
+    <%= form.radio_button :laboral, :entrepreneur %><label class="radio"><%= t(:laboral_entrepreneur) %></label>
+    <%= form.radio_button :laboral, :employe %><label class="radio"><%= t(:laboral_employe) %></label>
+    <%= form.radio_button :laboral, :various %><label class="radio"><%= t(:laboral_various) %></label>
+    <%= form.radio_button :laboral, :one %><label class="radio"><%= t(:laboral_one) %></label>
+    <%= form.radio_button :laboral, :black %><label class="radio"><%= t(:laboral_black) %></label>
+  </p>
+
+  <p>
+    <%= form.label :laboral_others, t(:laboral_others) %>
+    <%= form.text_area :laboral_others %>
+  </p>
+
+  <p>
+    <%= form.label :ajob, t(:ajob) %>
+    <%= form.radio_button :ajob, :only %><label class="radio"><%= t(:ajob_only) %></label>
+    <%= form.radio_button :ajob, :onemore %><label class="radio"><%= t(:ajob_onemore) %></label>
+    <%= form.radio_button :ajob, :none %><label class="radio"><%= t(:ajob_none) %></label>
+  </p>
+
+  <p>
+    <%= form.label :ajob_time, t(:ajob_time) %>
+    <%= form.radio_button :ajob_time, 'less15' %><label class="radio"><%= t(:ajob_time_less15) %></label>
+    <%= form.radio_button :ajob_time, '15to36' %><label class="radio"><%= t(:ajob_time_15to35) %></label>
+    <%= form.radio_button :ajob_time, '36to46' %><label class="radio"><%= t(:ajob_time_36to46) %></label>
+    <%= form.radio_button :ajob_time, 'more46' %><label class="radio"><%= t(:ajob_time_more46) %></label>
+  </p>
+
+  <p>
+    <%= form.label :ajob_xtra, t(:ajob_xtra) %>
+    <table>
+      <thead>
+        <tr>
+          <td></td>
+          <% Reu09::FREQUENCY.each do |frequency| %>
+            <td><%= t(frequency) %></td>
+          <% end %>
+        </tr>
+      </thead>
+      <% Reu09.c(:dineros, :ajob_xtra).each do |topic| %>
+        <tr>
+          <td><%= t(topic) %></td>
+          <% Reu09::FREQUENCY.each do |frequency| %>
+            <td><%= form.radio_button "ajob_xtra_#{topic}", frequency %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+  </p>
+
+  <p>
+    <%= form.label :ajob_xtra_paid, t(:ajob_xtra_paid) %>
+    <%= form.radio_button :ajob_xtra_paid, 'yes' %><label class="radio"><%= t(:ajob_xtra_paid_yes) %></label>
+    <%= form.radio_button :ajob_xtra_paid, 'no' %><label class="radio"><%= t(:ajob_xtra_paid_no) %></label>
+    <%= form.radio_button :ajob_xtra_paid, 'less' %><label class="radio"><%= t(:ajob_xtra_paid_less) %></label>
+    <%= form.radio_button :ajob_xtra_paid, 'incl' %><label class="radio"><%= t(:ajob_xtra_paid_incl) %></label>
+  </p>
+
+  <p>
+    <%= form.label :ajob_money, t(:ajob_money) %>
+    <% Reu09.c(:dineros, :job_money).each do |topic| %>
+      <%= form.radio_button "ajob_money", topic %>
+      <%= t(topic) %>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :ajob_decision, t(:ajob_decision) %>
+    <% Reu09.c(:dineros, :ajob_decision).each do |topic| %>
+      <%= form.radio_button "ajob_decision", topic %>
+      <%= t(topic) %>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :gestation, t(:gestation) %>
+    <%= form.text_area :gestation %>
+  </p>
+
+  <p>
+    <%= form.label :ajob_vocation, t(:ajob_vocation) %>
+    <%= form.radio_button :ajob_vocation, :yes %><label class="radio"><%= t(:ajob_vocation_yes) %></label>
+    <%= form.radio_button :ajob_vocation, :no %><label class="radio"><%= t(:ajob_vocation_no) %></label>
+  </p>
+
+  <p>
+    <%= form.label :ajob_vocation_money, t(:ajob_vocation_money) %>
+    <% Reu09.c(:dineros, :ajob_vocation_money).each do |topic| %>
+      <%= form.check_box "ajob_vocation_money_#{topic}_#" %>
+      <%= t(topic) %>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :ajob_vocation_money_desc, t(:ajob_vocation_money_desc) %>
+    <%= form.text_area :ajob_vocation_money_desc %>
+  </p>
+
+  <p>
+    <%= form.label :grants, t(:grants) %>
+    <%= form.radio_button :grants, :yes %><label class="radio"><%= t(:grants_yes) %></label>
+    <%= form.radio_button :grants, :no %><label class="radio"><%= t(:grants_no) %></label>
+  </p>
+
+  <p>
+    <%= form.label :grants_who, t(:grants_who) %>
+    <%= form.text_area :grants_who %>
+  </p>
+
+  <p>
+    <%= form.label :grants_bad, t(:grants_bad) %>
+    <% Reu09.c(:dineros, :grants_bad).each do |topic| %>
+      <%= form.check_box "grants_bad_#{topic}_#" %>
+      <%= t(topic) %>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :grants_bad_desc, t(:grants_bad_desc) %>
+    <%= form.text_area :grants_bad_desc %>
+  </p>
+
+  <p>
+    <%= form.label :bjob, t(:bjob) %>
+    <%= form.radio_button :bjob, :yes %><label class="radio"><%= t(:bjob_yes) %></label>
+    <%= form.radio_button :bjob, :no %><label class="radio"><%= t(:bjob_no) %></label>
+  </p>
+
+  <p>
+    <%= form.label :bjob_which, t(:bjob_which) %>
+    <%= form.text_area :bjob_which %>
+  </p>
+
+
+  <p>
+    <%= form.label :bjob_time, t(:bjob_time) %>
+    <%= form.radio_button :bjob_time, 'less15' %><label class="radio"><%= t(:bjob_time_less15) %></label>
+    <%= form.radio_button :bjob_time, '15to36' %><label class="radio"><%= t(:bjob_time_15to35) %></label>
+    <%= form.radio_button :bjob_time, '36to46' %><label class="radio"><%= t(:bjob_time_36to46) %></label>
+    <%= form.radio_button :bjob_time, 'more46' %><label class="radio"><%= t(:bjob_time_more46) %></label>
+  </p>
+
+  <p>
+    <%= form.label :bjob_money, t(:bjob_money) %>
+    <% Reu09.c(:dineros, :job_money).each do |topic| %>
+      <%= form.radio_button "bjob_money", topic %>
+      <%= t(topic) %>
+    <% end %>
+  </p>
+
+
+  <p>
+    <label>&nbsp;</label>
+    <%= form.submit "Guardar" %>
+  </p>
+
+
 <% end %>

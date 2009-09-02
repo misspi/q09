@@ -1,4 +1,4 @@
-<h1><%= t(:title) %></h1>
+<%= title t(:title) %>
 
 <% form_for @survey do |form| %>
 
@@ -113,6 +113,10 @@
           <% end %>
     </p>
 
+  <p>
+    <%= form.label :formation_love, t(:formation_love) %>
+    <%= form.text_area :formation_love %>
+  </p>
 
   <p>
     <label>&nbsp;</label>

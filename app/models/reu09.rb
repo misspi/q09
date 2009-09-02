@@ -14,6 +14,8 @@ class Reu09
 
   RELEVANCE = [:none, :some, :quite, :lot, :full]
 
+  FREQUENCY = [:never, :sometimes, :usually, :always]
+
   PREGUNTAS = {
     :presentacion => {
       :ambito =>  [:actividad_arquitectura, :actividad_plasticas, :actividad_cine, :actividad_comic,
@@ -29,7 +31,14 @@ class Reu09
     },
     :tumisma => {
       :traject_eval => [:talent, :knowledge, :relations, :fame, :money, :marketing, :gender, :other],
-    }
+    },
+    :dineros => {
+      :ajob_xtra => [:night, :holiday, :overtime],
+      :job_money => [:less600, :from1000to1400, :from1400to1800, :more1800],
+      :ajob_decision => [:total, :client, :limited, :none, :collective],
+      :ajob_vocation_money => [:family, :work, :grant, :sponsor, :sale],
+      :grants_bad => [:grantpoor, :grantoffer, :grantcriteria, :grantinfo, :granttime, :grantgeo, :grantage]
+      }
   }
 
 end
