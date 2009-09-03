@@ -234,12 +234,66 @@ es:
       museum: "Museos"
       internet: "Acceso público a Internet"
       social: "Centros sociales / espacios autogestionados"
-
-
-
-
-
+      culture_infra_work: "¿Cuáles necesitas para tu trabajo?"
+      home: "Vivienda"
+      property: "Propiedad"
+      rent: "Alquiler"
+      cession: "Cesión"
+      living: "¿Vives solx o compartidx?"
+      alone: "Solx"
+      family: "Con mi familia"
+      share: "Compartidx"
+      living_share: "¿Con cuántas personas?"
+      home_cost: "¿Cuánto gastas al mes en vivienda?"
+      less100: "Menos de 100 €"
+      from100to200: "100-200 €"
+      from200to300: "200-300 €"
+      from300to400: "300-400 €"
+      from400to500: "400-500 €"
+      from500to600: "500-600 €"
+      from600to700: "600-700 €"
+      more700: "Más de 700 €"
+      studio: "¿Dónde está tu espacio de trabajo?"
+      home: "En mi vivienda habitual"
+      rent: "Alquilo espacio de trabajo aparte"
+      cession: "Dispongo de espacio de trabajo aparte cedido"
+      company: "En la empresa / institución"
+      studio_other: "Otros"
+      studio_share: "¿Compartes tu espacio de trabajo?"
+      studio_share_yes: "Sí"
+      studio_share_no: "No"
+      studio_share_desc: "¿Con cuánta gente?"
+      studio_cost: "¿Cuánto gastas al mes en tu espacio de trabajo?"
+      expenses: "¿Cuánto gastas mensualmente en?"
+      promotion: "Representación / promoción"
+      telecom: "Telecomunicaciones"
+      formation: "Formación"
+      mobility: "Viajes / movilidad"
+      material: "Materiales"
+      travel: "¿Con qué frecuencia has realizado desplazamientos debido a tu trabajo en el ultimo año?"
+      never: "Nunca"
+      sometimes: "A veces"
+      usually: "Habitualmente"
+      must: "Imprescindible"
+      income: "¿Son suficientes tus ingresos para mantener tus gastos corrientes?"
+      income_yes: "Sí"
+      income_no: "No"
+      
     red:
       title: "Redes"
+      computer: "¿Usas el ordenador en el desarrollo de tus proyectos?"
+      computer_yes: "Sí"
+      computer_no: "No"
+      operating: "Con qué sistema oprerativo trabajas?"
+      mac: "MAC"
+      windows: "Windows"
+      linux: "GNU/Linux"
+      operating_desc: "Otros"
+
+
+
+
+
+
     comun:
       title: "Lo común"

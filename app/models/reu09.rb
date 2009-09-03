@@ -44,9 +44,18 @@ class Reu09
     },
     :habitat => {
       :place => [:suburb, :center, :city, :village],
-      :culture_infra => [:cinema, :concert, :theater, :biblio, :exhibition, :space, :museum, :internet, :social]
+      :culture_infra => [:cinema, :concert, :theater, :biblio, :exhibition, :space, :museum, :internet, :social],
+      :home => [:property, :rent, :cession],
+      :living => [:alone, :family, :share],
+      :home_cost => [:less100, :from100to200, :from200to300, :from300to400, :from400to500, :from500to600,  :from600to700, :more700],
+      :studio => [:home, :rent, :cession, :company],
+      :expenses => [:promotion, :telecom, :formation, :mobility, :material],
+      :travel  => [:never, :sometimes, :usually, :must]
     },
 
+    :redes => {
+      :operating => [:mac, :windows, :linux]
+    },
   }
 
 end
