@@ -6,6 +6,11 @@ es:
     quite: "moderadamente relevante"
     lot: "relevante"
     full: "muy relevante"
+    very: "muy importante"
+    important: "importante"
+    moderate: "moderadamente importante"
+    few: "poco importante"
+    nimp: "sin importancia"
     upload: "Subir fichero"
     presentacion:
       title: "Presentación"
@@ -315,11 +320,41 @@ es:
       web_find_yes: "Sí"
       web_find_no: "No"
 
-
-
-
-
-
-
     comun:
       title: "Lo común"
+      institution: "Señala tres iniciativas culturales institucionales que conozcas"
+      policy: "Valora la relevancia de los objetivos de las politicas culturales"
+      access: "Favorecer el acceso a los bienes culturales para toda la población"
+      extend: "Extender las capacidades creativas de la sociedad"
+      future: "Generar una industria de futuro"
+      work: "Crear nuevos nichos de empleo"
+      patrimony: "Conservar el patrimonio cultural"
+      culture_steps: "Valora las siguientes medidas en materia de cultura"
+      budget: "Aumentar los recursos y canales de subvenciones"
+      sponsors: "Incentivar la inversión privada y el apoyo empresarial"
+      space: "Cesión en uso de edificios y equipamientos públicos para proyectos ciudadanos"
+      participate: "Presupuestos participativos en las áreas de cultura de las instituciones públicas"
+      industry: "Creación de viveros de empresas culturales"
+      free_net: "Gratuidad en el acceso a las telecomunicaciones"
+      pirate: "Penalizar la piratería y regular el uso de internet para proteger los derechos de autor"
+      events: "Organizar grandes eventos para atraer inversores y promover el turismo cultural"
+      law: "Crear un estatuto laboral especifico para lxs trabadorxs del sector cultural"
+      situation: "Dinos 3 medidas para mejorar la situación de vida/trabajo de lxs trabajadrxs del sector cultural"
+      culture_action: "Dentro del ámbito cultural, has participado en el último año en"
+      sindicate: "Un sindicato"
+      asociation: "Asociación profesional"
+      movement: "Movimiento social"
+      group: "Agrupación o colectivo artístico y cultural"
+      culture_action_desc: "Otros"
+      polis_action: "Has partcipado en el último año en"
+      manifestation: "Manifestación"
+      act: "Acto reivindicativo"
+      campaign: "Campaña online"
+      polis_action_desc: "Otros"
+      conditions: "¿Cómo valoras las condiciones de vida de lxs trabajadorxs del sector cultural?"
+      excelent: "Excelente"
+      dignified: "Digna"
+      normal: "Normal"
+      precarious: "Precaria"
+      miserable: "Paupérrima"
+      

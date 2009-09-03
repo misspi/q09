@@ -16,6 +16,8 @@ class Reu09
 
   FREQUENCY = [:never, :sometimes, :usually, :always]
 
+  IMPORTANCE = [:nimp, :few, :moderate, :important, :very]
+
   PREGUNTAS = {
     :presentacion => {
       :ambito =>  [:actividad_arquitectura, :actividad_plasticas, :actividad_cine, :actividad_comic,
@@ -60,6 +62,14 @@ class Reu09
       :p2p => [:usually, :ocasion, :never, :know],
       :access=> [:access_yes, :without, :access_no]
     },
+    :comun => {
+      :policy => [:access, :extend, :future, :work, :patrimony],
+      :culture_steps => [:budget, :sponsors, :space, :participate, :industry, :free_net, :pirate, :events, :law],
+      :culture_action => [:sindicate, :asociation, :movement, :group],
+      :polis_action => [:manifestation, :act, :campaign],
+      :conditions => [:excelent, :dignified, :normal, :precarious, :miserable]
+    },
+
   }
 
 end

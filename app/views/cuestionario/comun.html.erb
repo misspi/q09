@@ -1,4 +1,97 @@
-<h1><%= t(:title) %></h1>
+<%= title t(:title) %>
 
 <% form_for @survey do |form| %>
+
+ <p>
+    <%= form.label :institution, t(:institution) %>
+    <%= form.text_area :institution %>
+  </p>
+
+  <p>
+    <%= form.label :policy, t(:policy) %>
+    <table>
+      <thead>
+        <tr>
+          <td></td>
+          <% Reu09::RELEVANCE.each do |relevance| %>
+            <td><%= t(relevance) %></td>
+          <% end %>
+        </tr>
+      </thead>
+      <% Reu09.c(:comun, :policy).each do |topic| %>
+        <tr>
+          <td><%= t(topic) %></td>
+          <% Reu09::RELEVANCE.each do |relevance| %>
+            <td><%= form.radio_button "policy_#{topic}", relevance %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+  </p>
+
+  <p>
+    <%= form.label :culture_steps, t(:culture_steps) %>
+    <table>
+      <thead>
+        <tr>
+          <td></td>
+          <% Reu09::IMPORTANCE.each do |importance| %>
+            <td><%= t(importance) %></td>
+          <% end %>
+        </tr>
+      </thead>
+      <% Reu09.c(:comun, :culture_steps).each do |topic| %>
+        <tr>
+          <td><%= t(topic) %></td>
+          <% Reu09::IMPORTANCE.each do |importance| %>
+            <td><%= form.radio_button "culture_steps_#{topic}", importance %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+  </p>
+
+ <p>
+    <%= form.label :situation, t(:situation) %>
+    <%= form.text_area :situation %>
+  </p>
+
+    <p>
+       <%= form.label :culture_action, t(:culture_action) %>
+             <% Reu09.c(:comun, :culture_action).each do |topic| %>
+            <%= form.check_box "culture_action_#{topic}_#" %>
+            <%= t(topic) %>
+          <% end %>
+    </p>
+
+ <p>
+    <%= form.label :culture_action_desc, t(:culture_action_desc) %>
+    <%= form.text_area :culture_action_desc %>
+  </p>
+
+    <p>
+       <%= form.label :polis_action, t(:polis_action) %>
+             <% Reu09.c(:comun, :polis_action).each do |topic| %>
+            <%= form.check_box "polis_action_#{topic}_#" %>
+            <%= t(topic) %>
+          <% end %>
+    </p>
+
+ <p>
+    <%= form.label :polis_action_desc, t(:polis_action_desc) %>
+    <%= form.text_area :polis_action_desc %>
+  </p>
+
+  <p>
+    <%= form.label :conditions, t(:conditions) %>
+    <% Reu09.c(:comun, :conditions).each do |topic| %>
+      <%= form.radio_button "conditions", topic %>
+      <%= t(topic) %>
+    <% end %>
+  </p>
+
+  <p>
+    <label>&nbsp;</label>
+    <%= form.submit "Guardar" %>
+  </p>
 <% end %>
