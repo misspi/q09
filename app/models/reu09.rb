@@ -54,7 +54,11 @@ class Reu09
     },
 
     :redes => {
-      :operating => [:mac, :windows, :linux]
+      :operating => [:mac, :windows, :linux],
+      :internet => [:home, :cyber, :work],
+      :internet_time => [:less1, :from1to2, :from2to3, :from3to4, :from4to5, :more5],
+      :p2p => [:usually, :ocasion, :never, :know],
+      :access=> [:access_yes, :without, :access_no]
     },
   }
 

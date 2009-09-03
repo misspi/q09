@@ -16,23 +16,58 @@
     <% end %>
   </p>
 
-    <p>
+  <p>
     <%= form.label :operating_desc, t(:operating_desc) %>
     <%= form.text_area :operating_desc %>
   </p>
 
+  <p>
+    <%= form.label :internet, t(:internet) %>
+    <% Reu09.c(:redes, :internet).each do |topic| %>
+      <%= form.radio_button "internet", topic %>
+      <%= t(topic) %>
+    <% end %>
+  </p>
 
+  <p>
+    <%= form.label :internet_desc, t(:internet_desc) %>
+    <%= form.text_area :internet_desc %>
+  </p>
 
+  <p>
+    <%= form.label :internet_time, t(:internet_time) %>
+    <% Reu09.c(:redes, :internet_time).each do |topic| %>
+      <%= form.radio_button "internet_time", topic %>
+      <%= t(topic) %>
+    <% end %>
+  </p>
 
+  <p>
+    <%= form.label :web_links, t(:web_links) %>
+    <%= form.text_area :web_links %>
+  </p>
 
+  <p>
+    <%= form.label :p2p, t(:p2p) %>
+    <% Reu09.c(:redes, :p2p).each do |topic| %>
+      <%= form.radio_button "p2p", topic %>
+      <%= t(topic) %>
+    <% end %>
+  </p>
 
+  <p>
+    <%= form.label :access, t(:access) %>
+    <% Reu09.c(:redes, :access).each do |topic| %>
+      <%= form.radio_button "access", topic %>
+      <%= t(topic) %>
+    <% end %>
+  </p>
 
-
-
-
-
-
-
+  <p>
+    <%= form.label :web_find, t(:web_find) %>
+    <%= form.radio_button :web_find, :yes %><label class="radio"><%= t(:web_find_yes) %></label>
+    <%= form.radio_button :web_find, :no %><label class="radio"><%= t(:web_find_no) %></label>
+  </p>
 
   <p>
     <label>&nbsp;</label>
