@@ -120,9 +120,6 @@ es:
       other: "Otros"
       formation_love: "¿A qué talleres o ciclos te gustaría asistir o generar? (Especifica tres)"
 
-
-
-
     dineros:
       title: "Dinero"
       laboral: "Estatuto laboral:"
@@ -200,16 +197,48 @@ es:
       bjob_time_more46: "Más de 46 horas"
       bjob_money: "¿Cuánto ganaste al mes por este trabajo?"
 
-
-
-
-
-
-
     autoria:
       title: "Autoría"
+      author: "¿Cómo firmas tur tus trabajos?"
+      none: "No los suelo firmar"
+      various: "Utilizo varios nombres"
+      alias: "Utilizo un aka"
+      collective: "Utilizo el nombre del colectivo"
+      name: "Siempre utilizo mi nombre"
+      company: "No los firmo yo, los firma la empresa"
+      author_desc: "Por qué los firmas así?"
+      copyright_why: "¿Has usado el copyright tradicional para algunos de tus proyecto? Describe por qué"
+      cc: "¿Has utilizado algún tipo de licencia abierta (Creative Commons, Open Content...) para tus proyectos? ¿Cuál?"
+      cc_desc: "Si la has utilizado, ¿por qué?"
+      author_asoc: "¿Estás afiliado a alguna entidad de gestión de derechos de autor?"
+      author_asoc_yes: "Sí"
+      author_asoc_no: "No"
+      author_asoc_desc: "¿Cuál?"
+      author_asoc_why: "¿Por qué?"
+
     habitat:
       title: "Hábitat"
+      place: "Vives en"
+      suburb: "Capital - periferia"
+      center: "Capital - centro"
+      city: "Ciudad"
+      village: "Pueblo"
+      place_desc: "Otros"
+      culture_infra: "Indica las infraestructuras culturales que usas más a menudo"
+      cinema: "Cine"
+      concert: "Salas de concierto"
+      theater: "Teatros"
+      biblio: "Bibliotecas"
+      exhibition: "Salas de exposiciones"
+      space: "Espacios de reunión"
+      museum: "Museos"
+      internet: "Acceso público a Internet"
+      social: "Centros sociales / espacios autogestionados"
+
+
+
+
+
     red:
       title: "Redes"
     comun:

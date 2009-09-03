@@ -22,7 +22,7 @@ class Reu09
         :actividad_danza, :actividad_diseño, :actividad_docencia, :actividad_fotografia, :actividad_gestion,
         :actividad_literatura, :actividad_musica, :actividad_programacion, :actividad_netart,
         :actividad_performance, :actividad_street, :actividad_teatro, :actividad_otros
-        ]
+      ]
     },
     :experiencias => {
       :studies_eval => [:academica, :transmision, :talleres, :empleo, :aprendizaje, :internet, :biblioteca, :other],
@@ -38,7 +38,15 @@ class Reu09
       :ajob_decision => [:total, :client, :limited, :none, :collective],
       :ajob_vocation_money => [:family, :work, :grant, :sponsor, :sale],
       :grants_bad => [:grantpoor, :grantoffer, :grantcriteria, :grantinfo, :granttime, :grantgeo, :grantage]
-      }
+    },
+    :autoria => {
+      :author => [:none, :various, :alias, :collective, :name, :company]
+    },
+    :habitat => {
+      :place => [:suburb, :center, :city, :village],
+      :culture_infra => [:cinema, :concert, :theater, :biblio, :exhibition, :space, :museum, :internet, :social]
+    },
+
   }
 
 end

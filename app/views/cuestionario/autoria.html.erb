@@ -1,4 +1,60 @@
-<h1><%= t(:title) %></h1>
+<%= title t(:title) %>
 
 <% form_for @survey do |form| %>
+  
+  <p>
+    <%= form.label :author, t(:author) %>
+    <% Reu09.c(:autoria, :author).each do |topic| %>
+      <%= form.radio_button "author", topic %>
+      <%= t(topic) %>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :author_desc, t(:author_desc) %>
+    <%= form.text_area :author_desc %>
+  </p>
+
+  <p>
+    <%= form.label :copyright_why, t(:copyright_why) %>
+    <%= form.text_area :copyright_why %>
+  </p>
+
+  <p>
+    <%= form.label :cc, t(:cc) %>
+    <%= form.text_area :cc %>
+  </p>
+
+  <p>
+    <%= form.label :cc_desc, t(:cc_desc) %>
+    <%= form.text_area :cc_desc %>
+  </p>
+
+  <p>
+    <%= form.label :author_asoc, t(:author_asoc) %>
+    <%= form.radio_button :author_asoc, :yes %><label class="radio"><%= t(:author_asoc_yes) %></label>
+    <%= form.radio_button :author_asoc, :no %><label class="radio"><%= t(:author_asoc_no) %></label>
+  </p>
+
+    <p>
+    <%= form.label :author_asoc_desc, t(:author_asoc_desc) %>
+    <%= form.text_area :author_asoc_desc %>
+  </p>
+
+  <p>
+    <%= form.label :author_asoc_why, t(:author_asoc_why) %>
+    <%= form.text_area :author_asoc_why %>
+  </p>
+
+
+
+
+
+
+
+
+  <p>
+    <label>&nbsp;</label>
+    <%= form.submit "Guardar" %>
+  </p>
 <% end %>

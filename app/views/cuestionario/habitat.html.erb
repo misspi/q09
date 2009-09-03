@@ -1,4 +1,42 @@
-<h1><%= t(:title) %></h1>
+<%= title t(:title) %>
 
 <% form_for @survey do |form| %>
+
+  <p>
+    <%= form.label :place, t(:place) %>
+    <% Reu09.c(:habitat, :place).each do |topic| %>
+      <%= form.radio_button "place", topic %>
+      <%= t(topic) %>
+    <% end %>
+  </p>
+
+    <p>
+    <%= form.label :place_desc, t(:place_desc) %>
+    <%= form.text_area :place_desc %>
+  </p>
+
+  <p>
+    <%= form.label :culture_infra, t(:culture_infra) %>
+    <% Reu09.c(:habitat, :culture_infra).each do |topic| %>
+      <%= form.check_box "culture_infra_#{topic}_#" %>
+      <%= t(topic) %>
+    <% end %>
+  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <p>
+    <label>&nbsp;</label>
+    <%= form.submit "Guardar" %>
+  </p>
 <% end %>
