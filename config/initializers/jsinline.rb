@@ -12,11 +12,21 @@ class JSInline
   def self.inline(name, params)
     JSInline.instance.process(name, params)
   end
-  
-  def process(name, params)
-    @partials[name] ||= ERB.new(load_file(name), 0, "%<>")
-    @partials[name].result bind(params)
+
+  if RAILS_ENV == 'development'
+    def get_partial(name)
+      @partials[name] = ERB.new(load_file(name), 0, "%<>")
+    end
+  else
+    def get_partial(name)
+      @partials[name] ||= ERB.new(load_file(name), 0, "%<>")
+    end
   end
+
+  def process(name, params)
+    get_partial(name).result bind(params)
+  end
+
     
   private
   def bind(params)
@@ -27,7 +37,7 @@ class JSInline
   
   def load_file(name)
     path = File.join(RAILS_ROOT, 'public/javascripts/inline', "#{name}.erb.js")
-    if File.exists? path 
+    if File.exists? path
       File.readlines(path).join('')
     else
       "jsinline ''#{path}' not found!"

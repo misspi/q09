@@ -26,7 +26,7 @@
     <%= form.label :icon, t(:icon) %>
     <%= form.text_field :icon, :id => 'upload_field' %>
   </p>
-  <%= js_upload_file(:id => 'upload_field', :label => t('upload')) %>
+  <%= js_upload_file(@survey.icon, :id => 'upload_field', :label => t('upload')) %>
 
   <p>
     <%= form.label :location, t(:location) %>

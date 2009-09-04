@@ -48,6 +48,8 @@ es:
       title: "Registro de usuarixs"
     show:
       title: "Usuario "
+    edit:
+      title: "Editando perfile de '{{name}}'"
   questions:
     edit: "Editar"
     index:
