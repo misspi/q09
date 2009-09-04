@@ -13,4 +13,5 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :user_sessions, :as => 'sesion'
   map.resources :users, :as => 'usuarios'
 
+  map.simple '/simple', :controller => 'about', :action => 'simple'
 end
