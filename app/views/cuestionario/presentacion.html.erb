@@ -19,6 +19,7 @@
   <p>
     <%= form.label :icon, t(:icon) %>
     <%= form.text_field :icon, :id => 'upload_field' %>
+	<%#= bucket('upload_field') %>
     <div id="upload_field_ajax">
       <div class="thumbnail"></div>
       <a id="upload_field_link" href="#"><%= t('upload') %></a>
