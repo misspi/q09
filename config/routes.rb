@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources(:questions, :as => 'preguntas') do |questions|
     questions.resources :answers, :as => 'respuestas'
   end
-  map.resources :survey
+  map.resources :surveys
 
   map.resources :cuestionario
 

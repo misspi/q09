@@ -180,6 +180,7 @@ table td { padding: 0.2em; }
   -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
 }
+a { color: rgba(0, 0, 0, 0.5); }
 #app {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;

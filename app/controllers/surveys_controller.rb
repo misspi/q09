@@ -7,6 +7,6 @@ class SurveysController < ApplicationController
       answer.value = params[:survey][name]
       answer.save
     end
-    render :text => params[:id]
+    redirect_to params[:next_url]
   end
 end

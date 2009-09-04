@@ -10,7 +10,7 @@ class Survey
   end
 
   def id
-    1
+    @group
   end
 
   def new_record?

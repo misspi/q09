@@ -17,6 +17,7 @@
           <%= link_to t(:edit_profile), edit_user_path(:current) %>
           <%= link_to t(:logout), logout_path %>
         <% else %>
+          <%= link_to 'Admin', users_path %>
           <%= link_to t(:signup), new_user_path %>
           <%= link_to t(:login), login_path %>
         <% end %>
@@ -42,7 +43,7 @@
       </div>
     </div>
     <div id="credits" class="container">
-      hecho a mano por c a l c  <%= link_to '(admin)', users_path %> <%= link_to '(performance)', '/newrelic' %>
+      hecho a mano por c a l c <%= link_to '(performance)', '/newrelic' %>
     </div>
   </body>
 </html>
