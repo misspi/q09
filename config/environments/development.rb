@@ -1,12 +1,14 @@
 
 # http://github.com/flyerhzm/bullet/tree/master
-config.after_initialize do
-  Bullet.enable = true
-  Bullet::Association.alert = false # true
-  Bullet::Association.bullet_logger = true
-  Bullet::Association.console = true
-  Bullet::Association.growl = false
-  Bullet::Association.rails_logger = true
+if false
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet::Association.alert = false # true
+    Bullet::Association.bullet_logger = true
+    Bullet::Association.console = true
+    Bullet::Association.growl = false
+    Bullet::Association.rails_logger = true
+  end
 end
 
 # Settings specified here will take precedence over those in
