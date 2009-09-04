@@ -1,9 +1,12 @@
 <%= title t(:title) %>
 
 <table>
+  <thead><tr>
+    <td><%= t(:username) %>
+  </tr></thead>
   <% @users.each do |user| %>
     <tr>
-      <td><%= h user.username %></td>
+      <td><%= link_to h(user.username), user_path(user) %></td>
     </tr>
     <% end %>
 </table>

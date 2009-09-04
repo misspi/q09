@@ -1,8 +1,17 @@
-<h2>  <%=h @question.group %></h2>
-<h1> <%=h @question.name %></h1>
+<h2>Grupo: <%=h @question.group %></h2>
+<h1>Pregunta: <%=h @question.name %></h1>
 
+<div class="actions">
+<%= link_to t('edit'), edit_question_path(@question) %>
+<%= link_to t('index.title'), questions_path %>
+</div>
+
+<table>
+  <thead><tr>
+    <td><%= t(:user) %></td>
+    <td><%= t(:value) %></td>
+  </tr></thead>
 <%= render @question.answers %>
+</table>
 
 
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', questions_path %>

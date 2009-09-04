@@ -1,0 +1,20 @@
+<%= title t(:title) %>
+
+<div class="actions">
+  <%= link_to t('index.title'), users_path %>
+</div>
+
+<table>
+  <thead><tr>
+    <td><%= t(:group) %> </td>
+    <td><%= t(:name) %> </td>
+    <td><%= t(:value) %> </td>
+  </tr></thead>
+  <% @user.answers.each do |a| %>
+    <tr class="<%= cycle('even', 'odd') %>">
+      <td><%= h a.question.group %></td>
+      <td><%= h a.question.name %></td>
+      <td><%= h a.value %></td>
+    </tr>
+  <% end %>
+</table>

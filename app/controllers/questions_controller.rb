@@ -1,9 +1,13 @@
 class QuestionsController < ApplicationController
   layout 'admin'
-  # GET /questions
-  # GET /questions.xml
+
   def index
-    @questions = Question.all
+    if params[:group]
+      @group = params[:group]
+      @questions = Question.all(:conditions => {:group => @group})
+    else
+      @questions = Question.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -11,8 +15,7 @@ class QuestionsController < ApplicationController
     end
   end
 
-  # GET /questions/1
-  # GET /questions/1.xml
+  # GET /questions/1 GET /questions/1.xml
   def show
     @question = Question.find(params[:id])
 
@@ -22,8 +25,7 @@ class QuestionsController < ApplicationController
     end
   end
 
-  # GET /questions/new
-  # GET /questions/new.xml
+  # GET /questions/new GET /questions/new.xml
   def new
     @question = Question.new
 
@@ -38,8 +40,7 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
   end
 
-  # POST /questions
-  # POST /questions.xml
+  # POST /questions POST /questions.xml
   def create
     @question = Question.new(params[:question])
 
@@ -55,8 +56,7 @@ class QuestionsController < ApplicationController
     end
   end
 
-  # PUT /questions/1
-  # PUT /questions/1.xml
+  # PUT /questions/1 PUT /questions/1.xml
   def update
     @question = Question.find(params[:id])
 
@@ -72,8 +72,7 @@ class QuestionsController < ApplicationController
     end
   end
 
-  # DELETE /questions/1
-  # DELETE /questions/1.xml
+  # DELETE /questions/1 DELETE /questions/1.xml
   def destroy
     @question = Question.find(params[:id])
     @question.destroy

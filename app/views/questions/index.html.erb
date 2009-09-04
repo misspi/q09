@@ -1,22 +1,30 @@
-<h1>Listing questions</h1>
+<%= title t(:title) %>
+<% if @group %>
+  <h2>Mostrando grupo '<%= @group %>'</h2>
+  <%= link_to 'Mostrar todos', questions_path %>
+<% end %>
+
+<br/><br/>
 
 <table>
-  <tr>
-    <th>Group</th>
-    <th>Name</th>
-  </tr>
+  <thead> <tr>
+      <td><%= t(:group) %></td>
+      <td><%= t(:name) %></td>
+      <td><%= t(:actions) %></td>
+  </tr></thead>
 
-<% @questions.each do |question| %>
-  <tr class="<%= cycle('even', 'odd')  %>">
-    <td><%=h question.group %></td>
-    <td><%=link_to h(question.name), question_path(question) %></td>
-    <td><%= link_to 'Show', question %></td>
-    <td><%= link_to 'Edit', edit_question_path(question) %></td>
-    <td><%= link_to 'Destroy', question, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+  <% @questions.each do |question| %>
+    <tr class="<%= cycle('even', 'odd')  %>">
+      <td><%=link_to h(question.group), questions_path(:group => question.group) %></td>
+      <td><%=link_to h(question.name), question_path(question) %></td>
+      <td>
+        <%= link_to 'Show', question %>
+        <%= link_to 'Edit', edit_question_path(question) %>
+        <%= link_to 'Destroy', question, :confirm => 'Are you sure?', :method => :delete %>
+      </td>
+    </tr>
+  <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New question', new_question_path %>

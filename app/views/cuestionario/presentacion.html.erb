@@ -6,7 +6,7 @@
 <%= title t(:title) %>
 
 <% form_for @survey do |form| %>
-<%= next_step cuestionario_path(:id => 'tumisma')%>
+<%= next_step cuestionario_path(:id => 'presentacion') %>
   <p>
     <%= form.label :name, t(:name) %>
     <%= form.text_field :name %>

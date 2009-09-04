@@ -1,7 +1,13 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  def test_should_be_valid
-    assert User.new.valid?
+  
+  context "A User instance" do
+    setup do
+    end
+
+    should "have a name" do
+    end
   end
+
 end

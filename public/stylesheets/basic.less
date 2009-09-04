@@ -7,13 +7,23 @@ version: 2.6.0
 html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}
 
 @fondo: #44cc44;
-@blanquecino: rgba(255,255,255,0.5);
+@claro: rgba(255,255,255,0.5);
 @oscuro: rgba(0,0,0,0.5);
 
 html  {
     background-color: @fondo;
     font-family: "Lucida Grande", Verdana, sans-serif;
 }
+
+div.actions {
+    margin: 1em 0;
+    width: 100%; overflow: hidden;
+}
+
+.actions a {
+    float: left; display: block; margin-right: 1em;
+}
+
 
 
 h1, h2, h3 {  font-family: "Trebuchet MS", Arial, sans-serif; color: gray;}
@@ -37,6 +47,8 @@ a:hover {text-decoration: underline;}
     -webkit-border-top-left-radius: 0.2em; -webkit-border-top-right-radius: 0.2em;
 }
 
+table {width: 100%;}
+table thead td {font-weight: bold; color: @oscuro;}
 table tr.even {background-color: #efefef;}
 table td {padding: 0.2em; }
 
@@ -52,7 +64,7 @@ table td {padding: 0.2em; }
 
 .column-1 { padding: 1em;   background-color: white;}
 
-.flash {background-color: @oscuro; color: @blanquecino;
+.flash {background-color: @oscuro; color: @claro;
     text-align: center; padding: 0.5em 0;
     .round;}
 
@@ -62,7 +74,7 @@ a { color: @oscuro;}
     background-color: @oscuro;
     color: white;
     margin-bottom: 3em;
-    a {color: @blanquecino;}
+    a {color: @claro;}
     a:hover {text-decoration: none;}
 }
 
@@ -76,7 +88,7 @@ a { color: @oscuro;}
     margin-top: 1em;
     ul {width: 100%; overflow: hidden;}
     li {display: block; float: left; padding: 0.5em 1em;
-        background-color: @blanquecino;
+        background-color: @claro;
         margin-right: 0.5em;
         .tab-borders;
         color: white;
@@ -84,7 +96,7 @@ a { color: @oscuro;}
 }
 
 #credits {
-    color: @blanquecino;
+    color: @claro;
     font-size: 75%;
     text-align: center;
 }

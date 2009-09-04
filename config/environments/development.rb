@@ -1,8 +1,20 @@
-# Settings specified here will take precedence over those in config/environment.rb
 
-# In the development environment your application's code is reloaded on
-# every request.  This slows down response time but is perfect for development
-# since you don't have to restart the webserver when you make code changes.
+# http://github.com/flyerhzm/bullet/tree/master
+config.after_initialize do
+  Bullet.enable = true
+  Bullet::Association.alert = false # true
+  Bullet::Association.bullet_logger = true
+  Bullet::Association.console = true
+  Bullet::Association.growl = false
+  Bullet::Association.rails_logger = true
+end
+
+# Settings specified here will take precedence over those in
+# config/environment.rb
+
+# In the development environment your application's code is reloaded on every
+# request.  This slows down response time but is perfect for development since
+# you don't have to restart the webserver when you make code changes.
 config.cache_classes = false
 
 # Log error messages when you accidentally call methods on nil.

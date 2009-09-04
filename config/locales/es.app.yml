@@ -19,6 +19,16 @@ es:
       questions: "Preguntas"
       buckets: "Archivos"
 
+  auth:
+    user_required: "Necesitas entrar para poder acceder a esta página"
+    require_no_user: "No puedes acceder a esta página como usuario registrado"
+
+  name: "Nombre"
+  group: "Grupo"
+  user: "Usuario"
+  value: "Valor"
+
+
   about:
     index:
       title: "Página inicial"
@@ -35,6 +45,13 @@ es:
       title: "Usuarios registrados"
     new:
       title: "Registro de usuarixs"
+    show:
+      title: "Usuario "
+  questions:
+    edit: "Editar"
+    index:
+      title: "Listado de preguntas"
+      actions: ""
   user_sessions:
     created: "Bienvenidx al cuestionario de Reu08"
     destroyed: "Adiós. Vuelve pronto!"
