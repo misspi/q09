@@ -146,6 +146,7 @@ form p label {
   font-weight: bold;
 }
 form input[type=text] {
+  font-size: 85%;
   border: 1px solid #9c9e9f;
   color: #414042;
   padding: 1px 2px;
@@ -153,6 +154,7 @@ form input[type=text] {
   width: 80%;
 }
 form p input[type=password] {
+  font-size: 85%;
   border: 1px solid #9c9e9f;
   color: #414042;
   padding: 1px 2px;
@@ -160,16 +162,21 @@ form p input[type=password] {
   width: 80%;
 }
 form textarea {
+  font-size: 85%;
   border: 1px solid #9c9e9f;
   color: #414042;
   padding: 1px 2px;
   margin-left: 1em;
   width: 80%;
 }
-form textarea { height: 4em; }
+form textarea {
+  height: 4em;
+  font-size: 85%;
+}
 form input[type=submit] {
   margin-bottom: 1em;
   margin-top: 1em;
+  margin-left: 0.9em;
 }
 form input[type=radio] {
   display: block;
@@ -188,6 +195,7 @@ form input[type=checkbox] {
   margin-top: 2px;
 }
 form label.radio {
+  font-size: 85%;
   display: block;
   float: left;
   clear: none;
@@ -195,6 +203,7 @@ form label.radio {
   margin: 2px 0 3px 5px;
 }
 form label.checkbox {
+  font-size: 85%;
   display: block;
   float: left;
   clear: none;
@@ -203,7 +212,32 @@ form label.checkbox {
 }
 form table {
   margin-left: 1em;
-  width: 80%;
+  width: 81.5%;
 }
-form td { padding: 2px; }
+form td {
+  padding: 2px;
+  font-size: 85%;
+}
 td input[type=text] { width: 96%; }
+td input[type=radio] {
+  display: inline;
+  float: none;
+  clear: none;
+  margin: 0 3px;
+}
+td.none, td.very_bad, td.some {
+  background-color: white;
+  text-align: center;
+}
+td.quite {
+  background-color: lightgray;
+  text-align: center;
+}
+td.lot {
+  background-color: white;
+  text-align: center;
+}
+td.full {
+  background-color: gray;
+  text-align: center;
+}

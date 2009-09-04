@@ -96,24 +96,35 @@ form p {width: 100%; overflow: hidden;}
 form p label {display: block; margin-top: 1.5em; margin-bottom: 0.3em;
     color: @medio; font-weight: bold;}
 form input[type=text], form p input[type=password], form textarea {
+    font-size: 85%;
     border: 1px solid @medio; color: @oscuro;
     padding: 1px 2px; margin-left: 1em;
     width: 80%;}
-form textarea {height: 4em;}
-form input[type=submit] { margin-bottom: 1em; margin-top: 1em;}
+form textarea {height: 4em; font-size: 85%;}
+form input[type=submit] { margin-bottom: 1em; margin-top: 1em; margin-left: 0.9em;}
 
 
 form input[type=radio], form input[type=checkbox]  {
     display: block; float: left; clear: left; margin-bottom: 3px; margin-left: 1em; margin-top: 2px;
 }
 form label.radio, form label.checkbox  {
+    font-size: 85%;
     display: block; float: left; clear: none; color: @oscuro;
     margin: 2px 0 3px 5px;}
 
-form table {margin-left: 1em; width: 80%; }
-form td {padding: 2px;}
+/* TABLAS DENTRO DE FORMULARIOS */
+
+form table {margin-left: 1em; width: 81.5%; }
+form td {padding: 2px; font-size: 85%;}
 td input[type=text] {width: 96%;}
 
-/* TABLAS */
+td input[type=radio] {display: inline; float: none; clear: none; margin: 0 3px;}
+td.none, td.very_bad {background-color: white; text-align: center;}
+td.some {background-color: white;text-align: center;}
+td.quite {background-color: lightgray;text-align: center;}
+td.lot {background-color: white;text-align: center;}
+td.full {background-color: gray;text-align: center;}
+
+/* TABLAS FUERA DE FORMULARIOS */
 
 
