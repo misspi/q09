@@ -90,6 +90,43 @@
     <% end %>
   </p>
 
+    <p>
+    <%= form.label :administration, t(:administration) %>
+    <table>
+      <thead>
+        <tr>
+          <td></td>
+          <% Reu09::QUALITY.each do |quality| %>
+            <td><%= t(quality) %></td>
+          <% end %>
+        </tr>
+      </thead>
+      <% Reu09.c(:comun, :administration).each do |topic| %>
+        <tr>
+          <td><%= t(topic) %></td>
+          <% Reu09::QUALITY.each do |quality| %>
+            <td><%= form.radio_button "administration_#{topic}", quality %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+  </p>
+
+    <p>
+       <%= form.label :future, t(:future) %>
+             <% Reu09.c(:comun, :future).each do |topic| %>
+            <%= form.check_box "future_#{topic}_#" %>
+            <%= t(topic) %>
+          <% end %>
+    </p>
+
+ <p>
+    <%= form.label :future_desc, t(:future_desc) %>
+    <%= form.text_area :future_desc %>
+  </p>
+
+
+
   <p>
     <label>&nbsp;</label>
     <%= form.submit "Guardar" %>

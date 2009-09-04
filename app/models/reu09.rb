@@ -18,6 +18,8 @@ class Reu09
 
   IMPORTANCE = [:nimp, :few, :moderate, :important, :very]
 
+  QUALITY = [:very_good, :good, :acceptable, :bad, :very_bad]
+
   PREGUNTAS = {
     :presentacion => {
       :ambito =>  [:actividad_arquitectura, :actividad_plasticas, :actividad_cine, :actividad_comic,
@@ -67,7 +69,9 @@ class Reu09
       :culture_steps => [:budget, :sponsors, :space, :participate, :industry, :free_net, :pirate, :events, :law],
       :culture_action => [:sindicate, :asociation, :movement, :group],
       :polis_action => [:manifestation, :act, :campaign],
-      :conditions => [:excelent, :dignified, :normal, :precarious, :miserable]
+      :conditions => [:excelent, :dignified, :normal, :precarious, :miserable],
+      :administration => [:culture, :home, :inmigration, :work, :health, :gender],
+      :future => [:platform, :asociation, :syndicate, :campaign, :festival, :ofices, :online, :ocupy]
     },
 
   }
