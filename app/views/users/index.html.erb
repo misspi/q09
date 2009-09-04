@@ -5,7 +5,7 @@
     <td><%= t(:username) %>
   </tr></thead>
   <% @users.each do |user| %>
-    <tr>
+    <tr class="<%=  cycle('even', 'odd') %>">
       <td><%= link_to h(user.username), user_path(user) %></td>
     </tr>
     <% end %>
