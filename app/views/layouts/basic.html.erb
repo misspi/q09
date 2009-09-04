@@ -14,7 +14,7 @@
     <div id="app">
       <div id="account">
         <% if current_user %>
-          <span>Hola <%= current_user.username %></span>
+          <span><%= t(:welcome, :name => current_user.username) %></span>
           <%= link_to t(:edit_profile), edit_user_path(:current) %>
           <%= link_to t(:logout), logout_path %>
         <% else %>

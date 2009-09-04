@@ -22,10 +22,12 @@ class UserSurvey
 
   end
 
-  def upate_attributes(params)
+  def update_attributes(params)
+    puts "SAVE SURVEY!"
     Answer.transaction do
       params.each_key do |name|
-        answer = survey.answer(name)
+        puts "SAVING #{name}: #{params[name]}"
+        answer = answer(name)
         answer.value = params[name]
         answer.save
       end
