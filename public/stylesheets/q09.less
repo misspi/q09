@@ -1,0 +1,119 @@
+/*
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.6.0
+*/
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}
+
+/* COSAS RARAS */
+@fondo: #CDD4DC;
+@medio: #9C9E9F;
+@oscuro: #414042;
+
+.round {
+    -moz-border-radius: 0.2em;
+    -webkit-border-radius: 0.2em;
+}
+.tab-borders {
+    -moz-border-radius:  0.2em 0.2em 0 0;
+    -webkit-border-top-left-radius: 0.2em; -webkit-border-top-right-radius: 0.2em;
+}
+
+
+html {
+    background-color: @fondo;
+    font-family: "Lucida Grande", Verdana, sans-serif;
+}
+
+/* ELEMENTOS HTML */
+a {text-decoration: none;}
+a:hover {text-decoration: underline;}
+
+h1 {font-size: 200%; color: @medio;}
+
+/* BARRA SUPERIOR */
+#app {
+    background-image: url(../images/header_presentacion.jpg);
+    background-repeat: no-repeat;
+    height: 160px;
+}
+
+#app h1 {
+    text-indent: -1000px;
+    width: 113px;
+    height: 113px;
+    background-image: url(../images/logo_r08.gif);
+}
+
+#account {
+    float: right;
+    margin-top: 130px;
+    padding-right: 10px;
+}
+#account a {
+    background-color: @oscuro;
+    color: white;
+    padding: 4px 10px;
+    margin: 0 0 10px 0;
+    .round;
+}
+
+.flash {
+    width: 600px;
+    margin-left: 113px;
+    margin-top: -34px;
+    background-color: @medio;
+    padding: 4px 10px;
+    color: white;
+    .round;
+}
+
+/* PAGINA */
+.container { width: 960px; margin: 0 auto; background-color: white; }
+.column-1 { padding-left: 1em; padding-top: 3em; width: 900px;}
+
+#navigation { margin-top: 3em; background-color: @fondo; }
+#navigation ul {width: 100%; overflow: hidden;}
+#navigation li {display: block; float: left; padding: 0.6em 1em 0.4em 1em;
+    font-weight: bold;
+    background-color: @medio;
+    margin-right: 0.5em;
+    .tab-borders;
+    color: white;
+}
+#navigation li a { 
+    color: @oscuro; }
+
+#credits {
+    background-color:@fondo; color: @medio;
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+/* FORMULARIOS */
+form p {width: 100%; overflow: hidden;}
+form p label {display: block; margin-top: 1.5em; margin-bottom: 0.3em;
+    color: @medio; font-weight: bold;}
+form input[type=text], form p input[type=password], form textarea {
+    border: 1px solid @medio; color: @oscuro;
+    padding: 1px 2px; margin-left: 1em;
+    width: 80%;}
+form textarea {height: 4em;}
+form input[type=submit] { margin-bottom: 1em; margin-top: 1em;}
+
+
+form input[type=radio], form input[type=checkbox]  {
+    display: block; float: left; clear: left; margin-bottom: 3px; margin-left: 1em; margin-top: 2px;
+}
+form label.radio, form label.checkbox  {
+    display: block; float: left; clear: none; color: @oscuro;
+    margin: 2px 0 3px 5px;}
+
+form table {margin-left: 1em; width: 80%; }
+form td {padding: 2px;}
+td input[type=text] {width: 96%;}
+
+/* TABLAS */
+
+

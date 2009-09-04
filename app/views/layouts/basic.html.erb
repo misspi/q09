@@ -4,7 +4,7 @@
   <head>
     <title>Reu08 Cuestionario Online <%= yield(:title) || 'Bienvenida' %></title>
     <!-- link rel="icon" href="images/e3e.ico" type="image/x-icon" / -->
-    <%= stylesheet_link_tag 'basic' %>
+    <%= stylesheet_link_tag 'q09' %>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
     <%#= javascript_include_tag 'jquery.validator.js'  %>
     <%= yield :header %>
@@ -28,7 +28,7 @@
     </div>
 
     <% unless flash[:notice].blank? %>
-      <div class="container flash"><%= flash[:notice] %></div>
+      <div class="flash"><%= flash[:notice] %></div>
     <% end %>
 
     <div id="navigation" class="container">
