@@ -16,17 +16,17 @@ class UserSurvey
       :conditions => {:user_id => user_id, :question_id => q})
 
     a.each do |answer|
-      @questions[answer.question.name] = answer.question
-      @answers[answer.question.name] = answer
+      name = answer.question.name
+      @questions[name] = answer.question
+      @answers[name] = answer
+      instance_eval("def #{name}()\n '#{answer.value}'\n end")
     end
 
   end
 
   def update_attributes(params)
-    puts "SAVE SURVEY!"
     Answer.transaction do
       params.each_key do |name|
-        puts "SAVING #{name}: #{params[name]}"
         answer = answer(name)
         answer.value = params[name]
         answer.save
@@ -63,6 +63,7 @@ class UserSurvey
   end
 
   def method_missing(name, *args)
+    puts "METHOD MISSING!! #{name}"
     answer(name.to_s).value
   end
 

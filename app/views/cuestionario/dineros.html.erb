@@ -65,7 +65,7 @@
     <%= form.label :ajob_money, t(:ajob_money) %>
     <% Reu09.c(:dineros, :job_money).each do |topic| %>
       <%= form.radio_button "ajob_money", topic %>
-      <%= t(topic) %>
+      <label class="radio"><%= t(topic) %></label>
     <% end %>
   </p>
 
@@ -73,7 +73,7 @@
     <%= form.label :ajob_decision, t(:ajob_decision) %>
     <% Reu09.c(:dineros, :ajob_decision).each do |topic| %>
       <%= form.radio_button "ajob_decision", topic %>
-      <%= t(topic) %>
+      <label class="radio"><%= t(topic) %></label>
     <% end %>
   </p>
 
@@ -92,7 +92,7 @@
     <%= form.label :ajob_vocation_money, t(:ajob_vocation_money) %>
     <% Reu09.c(:dineros, :ajob_vocation_money).each do |topic| %>
       <%= form.check_box "ajob_vocation_money_#{topic}_#" %>
-      <%= t(topic) %>
+      <label class="checkbox"><%= t(topic) %></label>
     <% end %>
   </p>
 
@@ -116,7 +116,7 @@
     <%= form.label :grants_bad, t(:grants_bad) %>
     <% Reu09.c(:dineros, :grants_bad).each do |topic| %>
       <%= form.check_box "grants_bad_#{topic}_#" %>
-      <%= t(topic) %>
+      <label class="checkbox"><%= t(topic) %></label>
     <% end %>
   </p>
 
@@ -149,13 +149,12 @@
     <%= form.label :bjob_money, t(:bjob_money) %>
     <% Reu09.c(:dineros, :job_money).each do |topic| %>
       <%= form.radio_button "bjob_money", topic %>
-      <%= t(topic) %>
+      <label class="radio"><%= t(topic) %></label>
     <% end %>
   </p>
 
 
   <p>
-    <label>&nbsp;</label>
     <%= form.submit "Guardar" %>
   </p>
 

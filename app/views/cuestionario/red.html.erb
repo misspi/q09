@@ -12,7 +12,7 @@
     <%= form.label :operating, t(:operating) %>
     <% Reu09.c(:redes, :operating).each do |topic| %>
       <%= form.radio_button "operating", topic %>
-      <%= t(topic) %>
+      <label class="radio"><%= t(topic) %></label>
     <% end %>
   </p>
 
@@ -25,7 +25,7 @@
     <%= form.label :internet, t(:internet) %>
     <% Reu09.c(:redes, :internet).each do |topic| %>
       <%= form.radio_button "internet", topic %>
-      <%= t(topic) %>
+      <label class="radio"><%= t(topic) %></label>
     <% end %>
   </p>
 
@@ -38,7 +38,7 @@
     <%= form.label :internet_time, t(:internet_time) %>
     <% Reu09.c(:redes, :internet_time).each do |topic| %>
       <%= form.radio_button "internet_time", topic %>
-      <%= t(topic) %>
+      <label class="radio"><%= t(topic) %></label>
     <% end %>
   </p>
 
@@ -51,7 +51,7 @@
     <%= form.label :p2p, t(:p2p) %>
     <% Reu09.c(:redes, :p2p).each do |topic| %>
       <%= form.radio_button "p2p", topic %>
-      <%= t(topic) %>
+      <label class="radio"><%= t(topic) %></label>
     <% end %>
   </p>
 
@@ -59,7 +59,7 @@
     <%= form.label :access, t(:access) %>
     <% Reu09.c(:redes, :access).each do |topic| %>
       <%= form.radio_button "access", topic %>
-      <%= t(topic) %>
+      <label class="radio"><%= t(topic) %></label>
     <% end %>
   </p>
 
@@ -70,7 +70,6 @@
   </p>
 
   <p>
-    <label>&nbsp;</label>
     <%= form.submit "Guardar" %>
   </p>
 <% end %>

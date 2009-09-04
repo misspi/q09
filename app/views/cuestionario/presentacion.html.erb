@@ -8,11 +8,6 @@
 <% form_for @survey do |form| %>
   <%= next_step cuestionario_path(:id => 'presentacion') %>
   <p>
-    <label>&nbsp;</label>
-    <%= form.submit "Guardar" %>
-  </p>
-
-  <p>
     <%= form.label :name, t(:name) %>
     <%= form.text_field :name %>
   </p>
@@ -60,7 +55,6 @@
 
 
   <p>
-    <label>&nbsp;</label>
     <%= form.submit "Guardar" %>
   </p>
 <% end %>
