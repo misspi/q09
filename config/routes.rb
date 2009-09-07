@@ -12,6 +12,7 @@ ActionController::Routing::Routes.draw do |map|
   map.logout "salir", :controller => "user_sessions", :action => "destroy"
   map.resources :user_sessions, :as => 'sesion'
   map.resources :users, :as => 'usuarios'
+  map.resources :buckets
 
   map.simple '/simple', :controller => 'about', :action => 'simple'
 end

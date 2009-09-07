@@ -1,0 +1,42 @@
+<h1><%= t('bucket.index') %></h1>
+
+<%= link_to t('bucket.action.new'), new_bucket_path %>
+<%= link_to t('bucket.action.ajax_new'), new_bucket_path(:ui => 'ajax') %>
+
+<table>
+  <thead>
+    <tr>
+      <td><%= t('bucket.thumbnail') %> </td>
+      <td><%= t('bucket.description') %> </td>
+      <td><%= t('bucket.extra') %> </td>
+      <td><%= t('bucket.owner_id') %> </td>
+      <td><%= t('bucket.owner_type') %> </td>
+      <td><%= t('bucket.media_file_name') %> </td>
+      <td><%= t('bucket.media_content_type') %> </td>
+      <td><%= t('bucket.media_file_size') %> </td>
+      <td><%= t('bucket.media_updated_at') %> </td>
+      <td><%= t('bucket.actions') %> </td>
+    </tr>
+  </thead>
+  <tbody>
+
+  <% @buckets.each do |bucket| %>
+    <tr>
+      <td><%= image_tag bucket.media.url(:small) if bucket.media %></td>
+      <td><%=h bucket.description %></td>
+      <td><%=h bucket.extra %></td>
+      <td><%= bucket.owner_id %></td>
+      <td><%= bucket.owner_type %></td>
+      <td><%= bucket.media_file_name %></td>
+      <td><%= bucket.media_content_type %></td>
+      <td><%= bucket.media_file_size %></td>
+      <td><%= bucket.media_updated_at %></td>
+      <td>
+        <%= link_to t('bucket.action.show'), bucket %>
+        <%= link_to t('bucket.action.edit'), edit_bucket_path(bucket) %>
+        <%= link_to t('bucket.action.destroy'), bucket, :confirm => 'Are you sure?', :method => :delete %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
