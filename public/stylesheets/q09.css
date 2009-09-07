@@ -73,6 +73,16 @@ h1 {
   width: 113px;
   height: 113px;
   background-image: url(../images/logo_r08.gif);
+  display: block;
+  float: left;
+}
+#header {
+  background-image: url(../images/header_presentacion_txt.gif);
+  background-repeat: no-repeat;
+  border: 1px solid red;
+  height: 60px;
+  margin: 0 0 0 1100px;
+  padding-top: 40px;
 }
 #app a {
   width: 113px;
