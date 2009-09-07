@@ -30,7 +30,7 @@
         <tr>
           <td><%= t(topic) %></td>
           <% Reu09::RELEVANCE.each do |relevance| %>
-            <td><%= form.radio_button "studies_eval_#{topic}", relevance %></td>
+             <td class="<%= relevance %>"><%= form.radio_button "studies_eval_#{topic}", relevance %></td>
           <% end %>
         </tr>
       <% end %>

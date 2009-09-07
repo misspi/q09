@@ -11,7 +11,9 @@
   </head>
   <body>
 
-    <div id="app">   
+    <div id="app">
+            <h1><a href="/">Reu08 Cuestionario</a></h1>
+             <div id="header"></div>
           <div id="account">
         <% if current_user %>
           <span><%= t(:welcome, :name => current_user.username) %></span>
@@ -24,8 +26,8 @@
         <%= link_to 'Performance', '/newrelic' %>
         <%= link_to 'Admin', users_path %>
       </div>
-      <h1><a href="/">Reu08 Cuestionario</a></h1>
-         <div id="header">&nbsp;     </div>
+
+
     </div>
 
     <% unless flash[:notice].blank? %>

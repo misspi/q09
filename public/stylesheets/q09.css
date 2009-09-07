@@ -73,15 +73,15 @@ h1 {
   width: 113px;
   height: 113px;
   background-image: url(../images/logo_r08.gif);
-  display: block;
   float: left;
+  display: block;
 }
 #header {
   background-image: url(../images/header_presentacion_txt.gif);
   background-repeat: no-repeat;
-  border: 1px solid red;
   height: 110px;
   width: 376px;
+  margin-left: 800px;
 }
 #app a {
   width: 113px;
@@ -89,7 +89,7 @@ h1 {
 }
 #account {
   float: right;
-  margin-top: 130px;
+  margin-top: 15px;
   padding-right: 10px;
 }
 #account a {
