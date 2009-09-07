@@ -24,7 +24,7 @@ class UserSurvey
 
   end
 
-  def update_attributes(params)
+  def update(params)
     Answer.transaction do
       params.each_key do |name|
         answer = answer(name)
