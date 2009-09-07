@@ -44,7 +44,7 @@
         <tr>
           <td><%= t(topic) %></td>
           <% Reu09::IMPORTANCE.each do |importance| %>
-            <td><%= form.radio_button "culture_steps_#{topic}", importance %></td>
+            <td class="<%= importance %>"><%= form.radio_button "culture_steps_#{topic}", importance %></td>
           <% end %>
         </tr>
       <% end %>
@@ -105,7 +105,7 @@
         <tr>
           <td><%= t(topic) %></td>
           <% Reu09::QUALITY.each do |quality| %>
-            <td><%= form.radio_button "administration_#{topic}", quality %></td>
+            <td class="<%= quality %>"><%= form.radio_button "administration_#{topic}", quality %></td>
           <% end %>
         </tr>
       <% end %>

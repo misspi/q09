@@ -12,7 +12,7 @@
   <body>
 
     <div id="app">
-      <div id="account">
+          <div id="account">
         <% if current_user %>
           <span><%= t(:welcome, :name => current_user.username) %></span>
           <%= link_to t(:edit_profile), edit_user_path(:current) %>

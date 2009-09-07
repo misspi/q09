@@ -46,7 +46,7 @@
         <tr>
           <td><%= t(topic) %></td>
           <% Reu09::FREQUENCY.each do |frequency| %>
-            <td><%= form.radio_button "ajob_xtra_#{topic}", frequency %></td>
+            <td class="<%= frequency %>"><%= form.radio_button "ajob_xtra_#{topic}", frequency %></td>
           <% end %>
         </tr>
       <% end %>

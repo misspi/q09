@@ -125,7 +125,7 @@ h1 {
   padding: 0.6em 1em 0.4em 1em;
   font-weight: bold;
   background-color: #9c9e9f;
-  margin-right: 0.5em;
+  margin-right: 0.3em;
   -moz-border-radius: 0.2em 0.2em 0 0;
   -webkit-border-top-left-radius: 0.2em;
   -webkit-border-top-right-radius: 0.2em;
@@ -229,20 +229,24 @@ td input[type=radio] {
   clear: none;
   margin: 0 3px;
 }
-td.none, td.very_bad, td.some {
+td.none, td.nimp, td.very_bad, td.never {
   background-color: white;
   text-align: center;
 }
-td.quite {
-  background-color: lightgray;
+td.some, td.few, td.bad, td.sometimes {
+  background-color: #cbced0;
   text-align: center;
 }
-td.lot {
-  background-color: white;
+td.quite, td.moderate, td.acceptable, td.usually {
+  background-color: #9c9e9f;
   text-align: center;
 }
-td.full {
-  background-color: gray;
+td.lot, td.important, td.good, td.always {
+  background-color: #646265;
+  text-align: center;
+}
+td.full, td.very, td.very_good {
+  background-color: #414042;
   text-align: center;
 }
 table {

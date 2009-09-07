@@ -79,7 +79,7 @@ h1 {font-size: 200%; color: @medio;}
 #navigation li {display: block; float: left; padding: 0.6em 1em 0.4em 1em;
     font-weight: bold;
     background-color: @medio;
-    margin-right: 0.5em;
+    margin-right: 0.3em;
     .tab-borders;
     color: white;
 }
@@ -120,11 +120,12 @@ form td {padding: 2px; font-size: 85%;}
 td input[type=text] {width: 96%;}
 
 td input[type=radio] {display: inline; float: none; clear: none; margin: 0 3px;}
-td.none, td.very_bad {background-color: white; text-align: center;}
-td.some {background-color: white;text-align: center;}
-td.quite {background-color: lightgray;text-align: center;}
-td.lot {background-color: white;text-align: center;}
-td.full {background-color: gray;text-align: center;}
+td.none, td.nimp, td.very_bad, td.never {background-color: white; text-align: center;}
+td.some, td.few, td.bad, td.sometimes {background-color: #cbced0;text-align: center;}
+td.quite, td.moderate, td.acceptable, td.usually {background-color: #9c9e9f;text-align: center;}
+td.lot, td.important, td.good, td.always {background-color: #646265;text-align: center;}
+td.full, td.very, td.very_good {background-color: #414042;text-align: center;}
+
 
 /* TABLAS FUERA DE FORMULARIOS */
 table {width: 100%; margin-bottom: 2em;}
