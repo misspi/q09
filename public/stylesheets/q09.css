@@ -81,13 +81,15 @@ h1 {
   background-repeat: no-repeat;
   height: 110px;
   width: 376px;
-  margin-left: 800px;
+  float: right;
+  margin-right: 80px;
 }
 #app a {
   width: 113px;
   height: 113px;
 }
 #account {
+  clear: both;
   float: right;
   margin-top: 15px;
   padding-right: 10px;
@@ -195,33 +197,31 @@ form input[type=radio] {
   display: block;
   float: left;
   clear: left;
-  margin-bottom: 3px;
-  margin-left: 1em;
-  margin-top: 2px;
+  vertical-align: middle;
+  padding: 0;
+  margin-left: 15px;
+  height: 12px;
 }
 form input[type=checkbox] {
   display: block;
   float: left;
   clear: left;
-  margin-bottom: 3px;
-  margin-left: 1em;
-  margin-top: 2px;
+  vertical-align: middle;
+  padding: 0;
+  margin-left: 15px;
+  height: 12px;
 }
 form label.radio {
-  font-size: 85%;
-  display: block;
-  float: left;
-  clear: none;
+  font-size: 12px;
+  vertical-align: middle;
   color: #414042;
-  margin: 2px 0 3px 5px;
+  margin: 0 0 3px 35px;
 }
 form label.checkbox {
-  font-size: 85%;
-  display: block;
-  float: left;
-  clear: none;
+  font-size: 12px;
+  vertical-align: middle;
   color: #414042;
-  margin: 2px 0 3px 5px;
+  margin: 0 0 3px 35px;
 }
 form table {
   margin-left: 1em;
