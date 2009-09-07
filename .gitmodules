@@ -1,3 +1,0 @@
-[submodule "vendor/plugins/buckets"]
-	path = vendor/plugins/buckets
-	url = git://github.com/danigb/buckets.git
