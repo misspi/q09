@@ -1,4 +1,5 @@
 
-Buckets.config do |config|
-  config.layout = 'admin'
+Buckets.configure do |config|
+  config.layout = 'basic'
+  config.before_filter :admin_required
 end
