@@ -12,9 +12,9 @@
   <body>
 
     <div id="app">
-            <h1><a href="/">Reu08 Cuestionario</a></h1>
-             <div id="header"></div>
-          <div id="account">
+      <a href="/"><h1>Reu08 Cuestionario</h1></a>
+      <div id="header"></div>
+      <div id="account">
         <% if current_user %>
           <span><%= t(:welcome, :name => current_user.username) %></span>
           <%= link_to t(:edit_profile), edit_user_path(:current) %>
@@ -23,8 +23,10 @@
           <%= link_to t(:signup), new_user_path %>
           <%= link_to t(:login), login_path %>
         <% end %>
-        <%= link_to 'Performance', '/newrelic' %>
-        <%= link_to 'Admin', users_path %>
+        <% if RAILS_ENV == 'development' %>
+          <%= link_to 'Performance', '/newrelic' %>
+          <%= link_to 'Admin', users_path %>
+        <% end -%>
       </div>
 
 
@@ -35,11 +37,19 @@
     <% end %>
 
     <div id="navigation" class="container">
-      <ul>
-        <% Reu09.cuestionarios.each do |name| %>
-          <li><%= cuestionario_nav(name) %></li>
-        <% end %>
-      </ul>
+      <% if admin_page? %>
+        <ul>
+          <li><%= link_to_unless_current t('admin.users'), users_path %></li>
+          <li><%= link_to_unless_current t('admin.questions'), questions_path %></li>
+          <li><%= link_to_unless_current t('admin.buckets'), buckets_path %></li>
+        </ul>
+      <% else %>
+        <ul>
+          <% Reu09.cuestionarios.each do |name| %>
+            <li><%= cuestionario_nav(name) %></li>
+          <% end %>
+        </ul>
+      <% end %>
     </div>
 
     <div class="container">

@@ -8,7 +8,14 @@ class ApplicationController < ActionController::Base
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   filter_parameter_logging :password
   include AuthModule
-  helper_method :current_user
+  helper_method :current_user, :admin_page?
 
 
+  def admin_required
+    @admin_page = true
+  end
+
+  def admin_page?
+    @admin_page == true
+  end
 end

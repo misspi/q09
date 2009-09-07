@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  layout 'admin'
+  before_filter :admin_required
 
   def index
     if params[:group]

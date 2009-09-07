@@ -15,7 +15,7 @@ set :scm, "git"
 set :repository,  "git@github.com:misspi/q09.git"
 set :branch, "master"
 set :deploy_via, :remote_cache
-set :scm_verbose, false
+set :scm_verbose, true # dont change!!
 set :scm_passphrase, GIT['password']
 
 role :app, "toami.net"
