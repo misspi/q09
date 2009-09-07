@@ -57,15 +57,16 @@ background-image: url(../images/header_presentacion_txt.gif);
 background-repeat: no-repeat;
 height: 110px;
 width: 376px;
-margin-left: 800px;
-
+float: right;
+margin-right: 80px;
 }
 
 
 #app a {width: 113px; height: 113px;}
 
 #account {
-    float: right;
+clear: both;
+float:right;
     margin-top: 15px;
     padding-right: 10px;
 }
@@ -123,13 +124,14 @@ form input[type=submit] { margin-bottom: 1em; margin-top: 1em; margin-left: 0.9e
 
 
 form input[type=radio], form input[type=checkbox]  {
-    display: block; float: left; clear: left; margin-bottom: 3px; margin-left: 1em; margin-top: 2px;
+    display: block; float: left; clear: left; vertical-align: middle; padding: 0;
+	margin-left: 15px;  height: 12px;
 
 }
 form label.radio, form label.checkbox  {
-    font-size: 85%;
-    display: block; float: left; clear: none; color: @oscuro;
-    margin: 2px 0 3px 5px;}
+    font-size: 12px;
+    vertical-align: middle; color: @oscuro;
+    margin: 0 0 3px 35px;}
 
 /* TABLAS DENTRO DE FORMULARIOS */
 
