@@ -271,3 +271,31 @@ thead {
   font-weight: bold;
 }
 tr.odd { background-color: #efefef; }
+.uploader {
+  padding: 1em;
+  background-color: #efefef;
+  -moz-border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+}
+.uploader a {
+  padding: 0.2em 0.5em;
+  color: white;
+  background-color: #9c9e9f;
+  -moz-border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+}
+.uploader .thumbnails {
+  width: 100%;
+  overflow: hidden;
+}
+.uploader .bucket {
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.uploader .bucket a {
+  display: block;
+  font-size: 75%;
+  margin: 0.3em 0;
+  text-align: center;
+}

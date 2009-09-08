@@ -8,7 +8,8 @@ class JsonDump
 
   def call(env)
     status, headers, response = @app.call(env)
-    puts "JSON RESPONSE: #{response.body}" if env['PATH_INFO'] =~ /.js/
+    path = env['PATH_INFO']
+    puts "JSON REQUEST #{path}: #{response.body}" if path =~ /.js/
     [status, headers, response]
   end
 end
