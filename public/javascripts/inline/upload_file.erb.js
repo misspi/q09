@@ -1,14 +1,20 @@
 (function($) {
 
-    var setThumbnail = function(src) {
-        $("#<%= id %>_ajax .thumbnail").html('<img src="' + src + '" />');
+    var id = "#<%= id %>";
+
+    var addThumbnail = function(src) {
+        $(id +"_ajax .thumbnail").append('<img src="' + src + '" />');
     }
 
     var setBucketID = function(id) { 
-        $("#<%= id %>").val(id);
+        $(id).val(id);
     }
     var getBucketID = function() { 
-        return $("#<%= id %>").val();
+        return 
+    }
+
+    var addBucketID = function(id) {
+        var current = $(id).val();
     }
 
     var setWorking = function(isWorking) {
@@ -37,7 +43,7 @@
             '<%= label %></a><img src="/images/spinner.gif" style="display: none" />');
 
         $.getJSON("<%= load_path %>", function(data) {
-            setThumbnail(data['thumbnail']);
+            addThumbnail(data['thumbnail']);
         });
 
         new AjaxUpload("#<%= id %>_link",
@@ -53,9 +59,8 @@
                 setWorking(true);
             },
             onComplete: function(file, response) {
-                console.log(response);
                 var data = parseJSON(response);
-                setThumbnail(data['thumbnail']);
+                addThumbnail(data['thumbnail']);
                 setBucketID(data['bucket_id']);
                 setWorking(false);
             }
