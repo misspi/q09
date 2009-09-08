@@ -11,6 +11,9 @@ if false
   end
 end
 
+ config.middleware.use "JsonDump"
+
+
 # Settings specified here will take precedence over those in
 # config/environment.rb
 

@@ -1,4 +1,10 @@
 (function($) {
+    Array.remove = function(array, from, to) {
+        var rest = array.slice((to || from) + 1 || array.length);
+        array.length = from < 0 ? array.length + from : from;
+        return array.push.apply(array, rest);
+    };
+
     var id = "#<%= id %>";
 
     var addThumbnail = function(bucket_id, src) {
@@ -8,7 +14,14 @@
                 
         $("#destroy_" + bucket_id).click(function() {
             if (confirm("¿Estás segura segura?")) {
+                var url = "/buckets/"+ bucket_id + ".js";
+                console.log(url);
+                $.post(url, {
+                    _method: "delete",
+                    authenticity_token : '<%= token %>'
+                }, null, "json")
                 $("#bucket_" + bucket_id).remove();
+                removeBucketID(bucket_id);
             }
             return false;
         });
@@ -27,6 +40,14 @@
         var current = $.trim($(id).val());
         var value = (current.length == 0) ? id : current + "," + id
         $(id).val(value);
+    }
+
+    var removeBucketID = function(id) {
+        var current = $.trim($(id).val()).split(',');
+        var index = current.indexOf(id);
+        if (index >= 0)
+            Array.remove(current, index)
+        $(id).val(current.join(','));
     }
 
     var setWorking = function(isWorking) {
@@ -49,11 +70,12 @@
     }
 
     jQuery(function() {
-        $("#<%= id %>").hide();
-        var uno = tag("div", ["class", "thumbnails"], "") + tag("a", ["id", "<%= id %>_link", "href", "#"], "<%= label %>") +
+       // $("#<%= id %>").hide();
+        var extra = tag("div", ["class", "thumbnails"], "") +
+        tag("a", ["id", "<%= id %>_link", "href", "#"], "<%= label %>") +
         tag("img", ["src", "/images/spinner.gif", "style", "display: none"], "");
         $("#<%= id %>").wrap(tag('div', ['id', "<%= id %>_ajax", 'class', 'uploader'], '')).
-        after(uno);
+        after(extra);
 
         $.getJSON("<%= load_path %>", function(data) {
             $.each(data, function(val, key) {
@@ -69,7 +91,7 @@
                 authenticity_token : '<%= token %>',
                 response: 'all'
             },
-            onSubmit: function(file, extension) {
+            onSubmit: function() {
                 setWorking(true);
             },
             onComplete: function(file, response) {
