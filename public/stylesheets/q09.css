@@ -159,6 +159,7 @@ form p label {
   margin-bottom: 0.3em;
   color: #9c9e9f;
   font-weight: bold;
+  font-size: 90%;
 }
 form input[type=text] {
   font-size: 85%;
@@ -231,7 +232,7 @@ form td {
   padding: 2px;
   font-size: 85%;
 }
-td input[type=text] { width: 96%; }
+td input[type=text] { width: 90%; }
 td input[type=radio] {
   display: inline;
   float: none;
