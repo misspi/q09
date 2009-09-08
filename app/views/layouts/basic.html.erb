@@ -9,8 +9,8 @@
     <%#= javascript_include_tag 'jquery.validator.js'  %>
     <%= yield :header %>
     <style type="text/css">
-      .mi_id {background-image: <%= "/images/headers/#{@image}_normal.jpg" %> }
-      .mi_id {background-image: <%= "#{@image}_ext.jpg" %> }
+      #header {background-image: <%= "url(/images/headers/#{@image}_header_txt.gif)" %> }
+      #app {background-image: <%= "url(/images/headers/#{@image}_header.jpg)" %> }
     </style>
   </head>
   <body>
