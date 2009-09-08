@@ -2,29 +2,40 @@
 
     var id = "#<%= id %>";
 
-    var addThumbnail = function(src) {
-        $(id +"_ajax .thumbnail").append('<img src="' + src + '" />');
+    var addThumbnail = function(bucket_id, src) {
+        console.log("ADD: " + bucket_id + ", " + src);
+        $(id +"_ajax .thumbnails").append(tag("div", {'class':"simple"},
+            tag("img", {src: src }, "") + 
+                tag("a", {href: '#', id:"destroy_" +bucket_id, 'class': 'destroy_bucket'}, "borrar")));
+        $("#destroy_" + bucket_id).click(function() {
+            alert("Epa!");
+            return false;
+        });
     }
 
-    var setBucketID = function(id) { 
-        $(id).val(id);
-    }
-    var getBucketID = function() { 
-        return 
+    var tag = function(name, extra, content) {
+        result = "<" + name;
+        $.each(extra, function(name, value) {
+            result += " " + name + '="' + value + '"'
+        });
+        result += ">" + content + "</" + name + ">";
+        return result;
     }
 
     var addBucketID = function(id) {
-        var current = $(id).val();
+        var current = $.trim($(id).val());
+        var value = (current.length == 0) ? id : current + "," + id
+        $(id).val(value);
     }
 
     var setWorking = function(isWorking) {
         if (isWorking) {
-            $("#<%= id %>_ajax img").show();
-            $("#<%= id %>_ajax a").hide();
+            $(id + "_ajax img").show();
+            $(id + "_ajax a").hide();
         }else{
-            $("#<%= id %>_ajax img").hide();
-            $(".thumbnail img").show();
-            $("#<%= id %>_ajax a").show();
+            $(id + "_ajax img").hide();
+            $(".thumbnails img").show();
+            $(id + "_ajax a").show();
         }
     }
 
@@ -39,11 +50,13 @@
     jQuery(function() {
         $("#<%= id %>").hide();
         $("#<%= id %>").wrap('<div id="<%= id %>_ajax" class="uploader"></div>').
-        after('<div class="thumbnail"></div><a id="<%= id %>_link" href="#">' +
+        after('<div class="thumbnails"></div><a id="<%= id %>_link" href="#">' +
             '<%= label %></a><img src="/images/spinner.gif" style="display: none" />');
 
         $.getJSON("<%= load_path %>", function(data) {
-            addThumbnail(data['thumbnail']);
+            $.each(data, function(val, key) {
+                addThumbnail(key['bucket_id'], key['thumbnail']);
+            });
         });
 
         new AjaxUpload("#<%= id %>_link",
@@ -52,8 +65,7 @@
             name: 'bucket[media]',
             data: {
                 authenticity_token : '<%= token %>',
-                response: 'all',
-                replace: getBucketID()
+                response: 'all'
             },
             onSubmit: function(file, extension) {
                 setWorking(true);
@@ -61,7 +73,7 @@
             onComplete: function(file, response) {
                 var data = parseJSON(response);
                 addThumbnail(data['thumbnail']);
-                setBucketID(data['bucket_id']);
+                addBucketID(data['bucket_id']);
                 setWorking(false);
             }
         });

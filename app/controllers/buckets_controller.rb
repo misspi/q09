@@ -2,11 +2,16 @@ class BucketsController < ApplicationController
   before_filter :admin_required
 
   def index
-    @buckets = Bucket.all
+    if params[:only]
+      @buckets = Bucket.find(:all, :conditions => {:id => params[:only].split(',')})
+    else
+      @buckets = Bucket.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @buckets }
+      format.js { render :json => "[#{@buckets.map {|b| b.to_json}.join(',')}]"}
     end
   end
 
@@ -16,7 +21,7 @@ class BucketsController < ApplicationController
     respond_to do |format|
       format.html
       format.xml  { render :xml => @bucket }
-        format.js { render :json => @bucket.to_json}
+      format.js { render :json => @bucket.to_json}
     end
   end
 

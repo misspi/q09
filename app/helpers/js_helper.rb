@@ -2,9 +2,9 @@
 
 module JsHelper
   
-  def js_upload_file(bucket_id, extra = {})
+  def js_upload_file(bucket_ids, extra = {})
     js_tag(:upload_file, {
-      :load_path => "/buckets/#{bucket_id}.js",
+      :load_path => buckets_path(:only => bucket_ids, :format => 'js'),
       :save_path => buckets_path(:format => 'js'),
       :token => form_authenticity_token 
       }, extra)

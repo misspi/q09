@@ -13,8 +13,8 @@
   <% @user.answers.each do |a| %>
     <tr class="<%= cycle('even', 'odd') %>">
       <td><%= h a.question.group %></td>
-      <td><%= h a.question.name %></td>
-      <td><%= h a.value %></td>
+      <td><%= link_to a.question.name, a.question %></td>
+      <td><%= link_to a.value, edit_answer_path(a) %></td>
     </tr>
   <% end %>
 </table>

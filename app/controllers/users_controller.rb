@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :admin_required, :only => [:index]
+  before_filter :admin_required, :only => [:index, :show]
 
   def index
     @users = User.all
@@ -11,7 +11,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    render :layout => 'admin'
   end
 
   def create
