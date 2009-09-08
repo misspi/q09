@@ -1,7 +1,7 @@
 class CuestionarioController < ApplicationController
   before_filter :require_user
 
-  IMAGENES = {'presentacion' => 'XXX', 'tumisma' => 'mis_cositas'}
+  IMAGENES = {'presentacion' => 'presentacion', 'tumisma' => 'tumisma'}
 
   def show
     name = params[:id]
