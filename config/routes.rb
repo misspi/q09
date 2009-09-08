@@ -10,9 +10,11 @@ ActionController::Routing::Routes.draw do |map|
 
   map.login "entrar", :controller => "user_sessions", :action => "new"
   map.logout "salir", :controller => "user_sessions", :action => "destroy"
+
   map.resources :user_sessions, :as => 'sesion'
   map.resources :users, :as => 'usuarios'
   map.resources :buckets
+  map.resources :answers, :as => 'respuestas'
 
   map.simple '/simple', :controller => 'about', :action => 'simple'
 end

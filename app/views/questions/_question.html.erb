@@ -1,0 +1,9 @@
+    <tr class="<%= cycle('even', 'odd')  %>">
+      <td><%=link_to h(question.group), questions_path(:group => question.group) %></td>
+      <td><%=link_to h(question.name), question_path(question) %></td>
+      <td>
+        <%= link_to 'Show', question %>
+        <%= link_to 'Edit', edit_question_path(question) %>
+        <%= link_to 'Destroy', question, :confirm => 'Are you sure?', :method => :delete %>
+      </td>
+    </tr>

@@ -20,7 +20,7 @@ es:
     sometimes: ""
     usually: ""
     always: ""
-    upload: "Subir fichero"
+    upload: "Añadir fichero"
     presentacion:
       title: "Presentación"
       name: "Nombre / colectivo"
