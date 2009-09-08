@@ -16,6 +16,7 @@ class BucketsController < ApplicationController
     respond_to do |format|
       format.html
       format.xml  { render :xml => @bucket }
+        format.js { render :json => @bucket.to_json}
     end
   end
 
@@ -40,7 +41,7 @@ class BucketsController < ApplicationController
         flash[:notice] = t('bucket.flash.created')
         format.html { redirect_to buckets_path }
         format.xml  { render :xml => @bucket, :status => :created, :location => @bucket }
-        format.js { render :json => @bucket}
+        format.js { render :json => @bucket.to_json}
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @bucket.errors, :status => :unprocessable_entity }
