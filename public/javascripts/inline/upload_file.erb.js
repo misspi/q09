@@ -1,23 +1,24 @@
 (function($) {
-
     var id = "#<%= id %>";
 
     var addThumbnail = function(bucket_id, src) {
-        console.log("ADD: " + bucket_id + ", " + src);
-        $(id +"_ajax .thumbnails").append(tag("div", {'class':"simple"},
-            tag("img", {src: src }, "") + 
-                tag("a", {href: '#', id:"destroy_" +bucket_id, 'class': 'destroy_bucket'}, "borrar")));
+        $(id +"_ajax .thumbnails").append(tag("div", ['class', 'bucket', 'id', 'bucket_' + bucket_id],
+            tag("img", ['src', src], "") +
+            tag("a", ['href', '#', 'id',"destroy_" +bucket_id, 'class', 'destroy_bucket']  , "borrar")));
+                
         $("#destroy_" + bucket_id).click(function() {
-            alert("Epa!");
+            if (confirm("¿Estás segura segura?")) {
+                $("#bucket_" + bucket_id).remove();
+            }
             return false;
         });
     }
 
     var tag = function(name, extra, content) {
         result = "<" + name;
-        $.each(extra, function(name, value) {
-            result += " " + name + '="' + value + '"'
-        });
+        for (var index = 0; index < extra.length; index += 2) {
+            result += " " + extra[index] + '="' + extra[index + 1] + '"'
+        }
         result += ">" + content + "</" + name + ">";
         return result;
     }
@@ -49,9 +50,10 @@
 
     jQuery(function() {
         $("#<%= id %>").hide();
-        $("#<%= id %>").wrap('<div id="<%= id %>_ajax" class="uploader"></div>').
-        after('<div class="thumbnails"></div><a id="<%= id %>_link" href="#">' +
-            '<%= label %></a><img src="/images/spinner.gif" style="display: none" />');
+        var uno = tag("div", ["class", "thumbnails"], "") + tag("a", ["id", "<%= id %>_link", "href", "#"], "<%= label %>") +
+        tag("img", ["src", "/images/spinner.gif", "style", "display: none"], "");
+        $("#<%= id %>").wrap(tag('div', ['id', "<%= id %>_ajax", 'class', 'uploader'], '')).
+        after(uno);
 
         $.getJSON("<%= load_path %>", function(data) {
             $.each(data, function(val, key) {
