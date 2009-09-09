@@ -1,31 +1,52 @@
 (function($) {
+    Array.remove = function(array, from, to) {
+        var rest = array.slice((to || from) + 1 || array.length);
+        array.length = from < 0 ? array.length + from : from;
+        return array.push.apply(array, rest);
+    };
 
     var id = "#<%= id %>";
 
     var addThumbnail = function(bucket_id, src) {
-        console.log("ADD: " + bucket_id + ", " + src);
-        $(id +"_ajax .thumbnails").append(tag("div", {'class':"simple"},
-            tag("img", {src: src }, "") + 
-                tag("a", {href: '#', id:"destroy_" +bucket_id, 'class': 'destroy_bucket'}, "borrar")));
+        $(id +"_ajax .thumbnails").append(tag("div", ['class', 'bucket', 'id', 'bucket_' + bucket_id],
+            tag("img", ['src', src], "") +
+            tag("a", ['href', '#', 'id',"destroy_" +bucket_id, 'class', 'destroy_bucket']  , "borrar")));
+                
         $("#destroy_" + bucket_id).click(function() {
-            alert("Epa!");
+            if (confirm("¿Estás segura segura?")) {
+                var url = "/buckets/"+ bucket_id + ".js";
+                console.log(url);
+                $.post(url, {
+                    _method: "delete",
+                    authenticity_token : '<%= token %>'
+                }, null, "json")
+                $("#bucket_" + bucket_id).remove();
+                removeBucketID(bucket_id);
+            }
             return false;
         });
     }
 
     var tag = function(name, extra, content) {
         result = "<" + name;
-        $.each(extra, function(name, value) {
-            result += " " + name + '="' + value + '"'
-        });
+        for (var index = 0; index < extra.length; index += 2) {
+            result += " " + extra[index] + '="' + extra[index + 1] + '"'
+        }
         result += ">" + content + "</" + name + ">";
         return result;
     }
 
-    var addBucketID = function(id) {
-        var current = $.trim($(id).val());
-        var value = (current.length == 0) ? id : current + "," + id
-        $(id).val(value);
+    var addBucketID = function(bucket_id) {
+        var current = getCurrentValue();
+        setCurrentValue((current.length == 0) ? bucket_id : current + "," + bucket_id);
+    }
+
+    var removeBucketID = function(bucket_id) {
+        var current = getCurrentValue().split(',');
+        var index = current.indexOf(bucket_id.toString());
+        if (index >= 0)
+            Array.remove(current, index)
+        setCurrentValue(current.join(','));
     }
 
     var setWorking = function(isWorking) {
@@ -47,17 +68,33 @@
         return eval(response);
     }
 
+    var getCurrentValue = function() {
+        return $.trim($(id).val());
+    }
+
+    var setCurrentValue = function(value) {
+        $(id).val(value);
+    }
+
+    var getCurrentThumbnails = function() {
+        if (getCurrentValue().length > 0) {
+            $.getJSON("<%= load_path %>", function(data) {
+                $.each(data, function(val, key) {
+                    addThumbnail(key['bucket_id'], key['thumbnail']);
+                });
+            });
+        }
+    }
+
     jQuery(function() {
         $("#<%= id %>").hide();
-        $("#<%= id %>").wrap('<div id="<%= id %>_ajax" class="uploader"></div>').
-        after('<div class="thumbnails"></div><a id="<%= id %>_link" href="#">' +
-            '<%= label %></a><img src="/images/spinner.gif" style="display: none" />');
+        var extra = tag("div", ["class", "thumbnails"], "") +
+        tag("a", ["id", "<%= id %>_link", "href", "#"], "<%= label %>") +
+        tag("img", ["src", "/images/spinner-gray.gif", "style", "display: none"], "");
+        $("#<%= id %>").wrap(tag('div', ['id', "<%= id %>_ajax", 'class', 'uploader'], '')).
+        after(extra);
 
-        $.getJSON("<%= load_path %>", function(data) {
-            $.each(data, function(val, key) {
-                addThumbnail(key['bucket_id'], key['thumbnail']);
-            });
-        });
+        getCurrentThumbnails();
 
         new AjaxUpload("#<%= id %>_link",
         {
@@ -67,12 +104,12 @@
                 authenticity_token : '<%= token %>',
                 response: 'all'
             },
-            onSubmit: function(file, extension) {
+            onSubmit: function() {
                 setWorking(true);
             },
             onComplete: function(file, response) {
                 var data = parseJSON(response);
-                addThumbnail(data['thumbnail']);
+                addThumbnail(data['bucket_id'], data['thumbnail']);
                 addBucketID(data['bucket_id']);
                 setWorking(false);
             }

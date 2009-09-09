@@ -76,6 +76,7 @@ class BucketsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(buckets_url) }
       format.xml  { head :ok }
+      format.js { render :json => "true"}
     end
   end
 end

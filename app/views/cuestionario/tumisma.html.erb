@@ -1,7 +1,11 @@
+<% content_for(:header) do %>
+  <%=  javascript_include_tag 'ajaxupload.3.5.js' %>
+<% end %>
 
 <%= title t(:title) %>
 
 <% form_for @survey do |form| %>
+  <%= next_step cuestionario_path(:id => 'tumisma') %>
 
   <p>
     <%= form.label :birth, t(:birth) %>
@@ -70,7 +74,8 @@
   </p>
   <p>
     <%= form.label :proj_good_att, t(:proj_good_att) %>
-    <%= form.text_field :proj_good_att %>
+    <%= form.text_field :proj_good_att, :id => 'upload_proj_good' %>
+    <%= js_upload_file(@survey.proj_good_att, :id => 'upload_proj_good', :label => t('upload')) %>
   </p>
 
   <p>
@@ -79,7 +84,9 @@
   </p>
   <p>
     <%= form.label :proj_bad_att, t(:proj_bad_att) %>
-    <%= form.text_field :proj_bad_att %>
+    <%= form.text_field :proj_bad_att, :id => 'upload_proj_bad' %>
+    <%= js_upload_file(@survey.proj_bad_att, :id => 'upload_proj_bad', :label => t('upload')) %>
+
   </p>
 
   <p>
@@ -102,7 +109,7 @@
         <tr>
           <td><%= t(topic) %></td>
           <% Reu09::RELEVANCE.each do |relevance| %>
-             <td class="<%= relevance %>"><%= form.radio_button "traject_eval_#{topic}", relevance %></td>
+            <td class="<%= relevance %>"><%= form.radio_button "traject_eval_#{topic}", relevance %></td>
           <% end %>
         </tr>
       <% end %>
