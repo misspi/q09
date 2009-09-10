@@ -92,17 +92,46 @@ h1 {font-size: 200%; color: @medio;}
 .container { width: 960px; margin: 0 auto; background-color: white; }
 .column-1 { padding-left: 1em; padding-top: 3em; width: 900px;}
 #page {padding-bottom: 2em;}
-#navigation { margin-top: 3em; background-color: @fondo; }
-#navigation ul {width: 100%; overflow: hidden;}
-#navigation li {display: block; float: left; padding: 0.6em 1em 0.4em 1em;
+#navigation {text-indent: -1000px; margin-top: 3em; background-color: @fondo;  }
+#navigation ul {width: 100%; overflow: hidden; }
+#navigation li {display: block; float: left; padding: 0; }
+#navigation li a, #navigation li span {display: block;height: 34px;}
+#nada {display: block; float: left; padding: 0.6em 1em 0.4em 1em;
     font-weight: bold;
     background-color: @medio;
     margin-right: 0.3em;
     .tab-borders;
     color: white;
+    height: 25px;
 }
 #navigation li a {
-    color: @oscuro; }
+    color: @oscuro;
+ }
+
+#nav_presentacion a {width: 139px; background: transparent url(../images/nav_grey.gif) 0 0 no-repeat;}
+#nav_presentacion a:hover {width: 139px; background: transparent url(../images/nav_white.gif) 0 0 no-repeat;}
+#nav_presentacion span {width: 139px; background: transparent url(../images/nav_white.gif) 0 0 no-repeat;}
+#nav_tumisma a {width: 113px; background: transparent url(../images/nav_grey.gif) -139px 0 no-repeat;}
+#nav_tumisma a:hover {width: 113px; background: transparent url(../images/nav_white.gif) -139px 0 no-repeat;}
+#nav_tumisma span {width: 113px; background: transparent url(../images/nav_white.gif) -139px 0 no-repeat;}
+#nav_experiencias a {width: 135px; background: transparent url(../images/nav_grey.gif) -253px 0 no-repeat;}
+#nav_experiencias a:hover {width: 135px; background: transparent url(../images/nav_white.gif) -253px 0 no-repeat;}
+#nav_experiencias span {width: 135px; background: transparent url(../images/nav_white.gif) -253px 0 no-repeat;}
+#nav_dineros a {width: 95px; background: transparent url(../images/nav_grey.gif) -388px 0 no-repeat;}
+#nav_dineros a:hover {width: 95px; background: transparent url(../images/nav_white.gif) -388px 0 no-repeat;}
+#nav_dineros span {width: 95px; background: transparent url(../images/nav_white.gif) -388px 0 no-repeat;}
+#nav_autoria {width: 94px; background: transparent url(../images/nav_grey.gif) -483px 0 no-repeat;}
+#nav_autoria a:hover {width: 94px; background: transparent url(../images/nav_white.gif) -483px 0 no-repeat;}
+#nav_autoria span {width: 94px; background: transparent url(../images/nav_white.gif) -483px 0 no-repeat;}
+#nav_habitat a {width: 93px; background: transparent url(../images/nav_grey.gif) -577px 0 no-repeat;}
+#nav_habitat a:hover {width: 93px; background: transparent url(../images/nav_white.gif) -577px 0 no-repeat;}
+#nav_habitat span {width: 93px; background: transparent url(../images/nav_white.gif) -577px 0 no-repeat;}
+#nav_red a {width: 84px; background: transparent url(../images/nav_grey.gif) -670px 0 no-repeat;}
+#nav_red a:hover {width: 84px; background: transparent url(../images/nav_white.gif) -670px 0 no-repeat;}
+#nav_red span {width: 84px; background: transparent url(../images/nav_white.gif) -670px 0 no-repeat;}
+#nav_comun a {width: 117px; background: transparent url(../images/nav_grey.gif) -755px 0 no-repeat;}
+#nav_comun a:hover {width: 117px; background: transparent url(../images/nav_white.gif) -755px 0 no-repeat;}
+#nav_comun span {width: 117px; background: transparent url(../images/nav_white.gif) -755px 0 no-repeat;}
 
 #credits {
     font-size: 75%;
@@ -138,14 +167,16 @@ form .field_info {font-size: 75%; color: @medio; margin-left: 1em;}
 /* TABLAS DENTRO DE FORMULARIOS */
 
 form table {margin-left: 1em; width: 81.5%; }
-form td {padding: 2px; font-size: 85%;}
-td input[type=text] {width: 90%; font-size: 80%;}
-td input[type=radio] {display: inline; float: none; clear: none; margin: 0 3px;}
-td.none, td.nimp, td.very_bad, td.never {background-color: white; text-align: center;}
+form table tr {border-bottom: 1px solid @fondo;}
+form table td {padding: 2px; font-size: 85%;}
+form table td input[type=text] {width: 90%; font-size: 80%;}
+form table td input[type=radio] {display: inline; float: none; clear: none; margin: 0 3px;}
+td.none, form td.nimp, td.very_bad, td.never {background-color: white; text-align: center;}
 td.some, td.few, td.bad, td.sometimes {background-color: #cbced0;text-align: center;}
 td.quite, td.moderate, td.acceptable, td.usually {background-color: #9c9e9f;text-align: center;}
 td.lot, td.important, td.good, td.always {background-color: #646265;text-align: center;}
 td.full, td.very, td.very_good {background-color: #414042;text-align: center;}
+form td.radio {width: 1em;}
 .tooltip {
     display: none;
     position: absolute; margin-top: 1em; margin-left: 1em;
