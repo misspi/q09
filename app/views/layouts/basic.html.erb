@@ -32,17 +32,13 @@
       <div id="header"></div>
       <div id="account">
         <% if current_user %>
-          <span><%= t(:welcome, :name => current_user.username) %></span>
-          <%= link_to t(:edit_profile), edit_user_path(:current) %>
-          <%= link_to t(:logout), logout_path %>
+          <%= link_to t(:logout), logout_path, :id => 'logout' %>
+          <%= link_to t(:edit_profile), edit_user_path(:current), :id => 'edit_profile' %>
+          <span style="display: none"><%= t(:welcome, :name => current_user.username) %></span>
         <% else %>
-          <%= link_to t(:signup), new_user_path %>
-          <%= link_to t(:login), login_path %>
+          <%= link_to t(:signup), new_user_path, :id => 'signup' %>
+          <%= link_to t(:login), login_path, :id => 'login' %>
         <% end %>
-        <% if RAILS_ENV == 'development' %>
-          <%= link_to 'Performance', '/newrelic' %>
-          <%= link_to 'Admin', users_path %>
-        <% end -%>
       </div>
 
 

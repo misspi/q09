@@ -84,24 +84,6 @@ h1 {
   float: right;
   margin-right: 80px;
 }
-#app a {
-  width: 113px;
-  height: 113px;
-}
-#account {
-  clear: both;
-  float: right;
-  margin-top: 15px;
-  padding-right: 10px;
-}
-#account a {
-  background-color: #414042;
-  color: white;
-  padding: 4px 10px;
-  margin: 0 0 10px 0;
-  -moz-border-radius: 0.2em;
-  -webkit-border-radius: 0.2em;
-}
 .flash {
   width: 600px;
   margin-left: 113px;
@@ -255,6 +237,52 @@ h1 {
   width: 117px;
   background: transparent url(../images/nav_white.gif) -755px 0 no-repeat;
 }
+#account {
+  clear: both;
+  float: right;
+  margin-top: 15px;
+  padding-right: 10px;
+}
+#account a {
+  display: block;
+  float: right;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+#signup {
+  height: 25px;
+  text-indent: -1000px;
+  width: 106px;
+  background: transparent url(../images/account.gif) 0 0 no-repeat;
+}
+#login {
+  height: 25px;
+  text-indent: -1000px;
+  width: 69px;
+  background: transparent url(../images/account.gif) -106px 0 no-repeat;
+}
+#edit_profile {
+  height: 25px;
+  text-indent: -1000px;
+  width: 106px;
+  background: transparent url(../images/account.gif) -175px 0 no-repeat;
+}
+#logout {
+  height: 25px;
+  text-indent: -1000px;
+  width: 49px;
+  background: transparent url(../images/account.gif) -281px 0 no-repeat;
+}
+#account a.admin {
+  padding: 0.2em 1em;
+  color: white;
+  margin-right: 1em;
+  font-size: 75%;
+  background-color: #414042;
+  -moz-border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+}
 #credits {
   font-size: 75%;
   background-color: #cdd4dc;
@@ -346,7 +374,6 @@ form table {
   margin-left: 1em;
   width: 81.5%;
 }
-form table tr { border-bottom: 1px solid #cdd4dc; }
 form table td {
   padding: 2px;
   font-size: 85%;

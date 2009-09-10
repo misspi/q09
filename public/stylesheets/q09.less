@@ -62,21 +62,8 @@ h1 {font-size: 200%; color: @medio;}
 }
 
 
-#app a {width: 113px; height: 113px;}
 
-#account {
-    clear: both;
-    float:right;
-    margin-top: 15px;
-    padding-right: 10px;
-}
-#account a {
-    background-color: @oscuro;
-    color: white;
-    padding: 4px 10px;
-    margin: 0 0 10px 0;
-    .round;
-}
+
 
 .flash {
     width: 600px;
@@ -133,6 +120,22 @@ h1 {font-size: 200%; color: @medio;}
 #nav_comun a:hover {width: 117px; background: transparent url(../images/nav_white.gif) -755px 0 no-repeat;}
 #nav_comun span {width: 117px; background: transparent url(../images/nav_white.gif) -755px 0 no-repeat;}
 
+#account {
+    clear: both;
+    float:right;
+    margin-top: 15px;
+    padding-right: 10px;
+}
+#account a {display: block; float: right; padding: 0; margin: 0; overflow: hidden;}
+#signup {height: 25px; text-indent: -1000px;
+        width: 106px; background: transparent url(../images/account.gif) 0 0 no-repeat;}
+#login {height: 25px; text-indent: -1000px;
+        width: 69px; background: transparent url(../images/account.gif) -106px 0 no-repeat;}
+#edit_profile {height: 25px; text-indent: -1000px; width: 106px; background: transparent url(../images/account.gif) -175px 0 no-repeat;}
+#logout {height: 25px; text-indent: -1000px;
+        width: 49px; background: transparent url(../images/account.gif) -281px 0 no-repeat;}
+#account a.admin {padding: 0.2em 1em; color: white; margin-right: 1em; font-size: 75%;
+        background-color: @oscuro; .round; }
 #credits {
     font-size: 75%;
     background-color:@fondo; color: @medio;
@@ -167,7 +170,6 @@ form .field_info {font-size: 75%; color: @medio; margin-left: 1em;}
 /* TABLAS DENTRO DE FORMULARIOS */
 
 form table {margin-left: 1em; width: 81.5%; }
-form table tr {border-bottom: 1px solid @fondo;}
 form table td {padding: 2px; font-size: 85%;}
 form table td input[type=text] {width: 90%; font-size: 80%;}
 form table td input[type=radio] {display: inline; float: none; clear: none; margin: 0 3px;}
