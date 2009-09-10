@@ -64,7 +64,7 @@ h1 {
   color: #9c9e9f;
 }
 #app {
-  background-image: url(../images/headers/presentacion_header.jpg);
+  background-image: url(../images/headers/cuestionario_header.jpg);
   background-repeat: no-repeat;
   height: 160px;
 }
@@ -77,7 +77,7 @@ h1 {
   display: block;
 }
 #header {
-  background-image: url(../images/headers/presentacion_header_txt.gif);
+  background-image: url(../images/headers/cuestionario_header_txt.gif);
   background-repeat: no-repeat;
   height: 110px;
   width: 376px;
@@ -122,6 +122,7 @@ h1 {
   padding-top: 3em;
   width: 900px;
 }
+#page { padding-bottom: 2em; }
 #navigation {
   margin-top: 3em;
   background-color: #cdd4dc;
@@ -144,6 +145,7 @@ h1 {
 }
 #navigation li a { color: #414042; }
 #credits {
+  font-size: 75%;
   background-color: #cdd4dc;
   color: #9c9e9f;
   text-align: center;
@@ -224,6 +226,11 @@ form label.checkbox {
   color: #414042;
   margin: 0 0 3px 35px;
 }
+form .field_info {
+  font-size: 75%;
+  color: #9c9e9f;
+  margin-left: 1em;
+}
 form table {
   margin-left: 1em;
   width: 81.5%;
@@ -262,6 +269,20 @@ td.full, td.very, td.very_good {
   background-color: #414042;
   text-align: center;
 }
+.tooltip {
+  display: none;
+  position: absolute;
+  margin-top: 1em;
+  margin-left: 1em;
+  padding: 0.1em 0 0.3em 0;
+  font-weight: 100;
+  font-size: 75%;
+  width: 10em;
+  height: 1em;
+  text-align: center;
+  border: 1px solid #414042;
+  background-color: #cdd4dc;
+}
 table {
   width: 100%;
   margin-bottom: 2em;
@@ -279,9 +300,9 @@ td.else {
   font-size: 85%;
 }
 thead {
-  background-color: #414042;
   color: white;
   font-weight: bold;
+  text-align: center;
 }
 tr.odd { background-color: #efefef; }
 .uploader {
@@ -311,4 +332,15 @@ tr.odd { background-color: #efefef; }
   font-size: 75%;
   margin: 0.3em 0;
   text-align: center;
+}
+.about { padding: 1em 5em; }
+.about p { margin: 0.5em 0; }
+.about ol li {
+  margin-left: 2em;
+  list-style-type: decimal;
+  margin-bottom: 0.5em;
+}
+.about ul li {
+  margin-left: 2em;
+  list-style-type: circle;
 }

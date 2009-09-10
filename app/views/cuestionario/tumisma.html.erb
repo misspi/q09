@@ -98,18 +98,15 @@
     <%= form.label :traject_eval, t(:traject_eval) %>
     <table>
       <thead>
-        <tr>
-          <td></td>
-          <% Reu09::RELEVANCE.each do |relevance| %>
-            <td><%= t(relevance) %></td>
-          <% end %>
-        </tr>
       </thead>
       <% Reu09.c(:tumisma, :traject_eval).each do |topic| %>
         <tr>
           <td><%= t(topic) %></td>
           <% Reu09::RELEVANCE.each do |relevance| %>
-            <td class="<%= relevance %>"><%= form.radio_button "traject_eval_#{topic}", relevance %></td>
+            <td class="<%= relevance %>">
+              <%= form.radio_button "traject_eval_#{topic}", relevance %>
+              <span class="tooltip"><%= t(relevance) %> </span>
+            </td>
           <% end %>
         </tr>
       <% end %>

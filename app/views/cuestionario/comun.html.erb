@@ -11,18 +11,13 @@
     <%= form.label :policy, t(:policy) %>
     <table>
       <thead>
-        <tr>
-          <td></td>
-          <% Reu09::RELEVANCE.each do |relevance| %>
-            <td><%= t(relevance) %></td>
-          <% end %>
-        </tr>
       </thead>
       <% Reu09.c(:comun, :policy).each do |topic| %>
         <tr>
           <td><%= t(topic) %></td>
           <% Reu09::RELEVANCE.each do |relevance| %>
-            <td class="<%= relevance %>"><%= form.radio_button "policy_#{topic}", relevance %></td>
+            <td class="<%= relevance %>"><%= form.radio_button "policy_#{topic}", relevance %>
+            <span class="tooltip"><%= t(relevance) %> </span></td>
           <% end %>
         </tr>
       <% end %>
@@ -34,17 +29,14 @@
     <table>
       <thead>
         <tr>
-          <td></td>
-          <% Reu09::IMPORTANCE.each do |importance| %>
-            <td><%= t(importance) %></td>
-          <% end %>
         </tr>
       </thead>
       <% Reu09.c(:comun, :culture_steps).each do |topic| %>
         <tr>
           <td><%= t(topic) %></td>
           <% Reu09::IMPORTANCE.each do |importance| %>
-            <td class="<%= importance %>"><%= form.radio_button "culture_steps_#{topic}", importance %></td>
+            <td class="<%= importance %>"><%= form.radio_button "culture_steps_#{topic}", importance %>
+            <span class="tooltip"><%= t(importance) %> </span></td>
           <% end %>
         </tr>
       <% end %>
@@ -94,18 +86,13 @@
     <%= form.label :administration, t(:administration) %>
     <table>
       <thead>
-        <tr>
-          <td></td>
-          <% Reu09::QUALITY.each do |quality| %>
-            <td><%= t(quality) %></td>
-          <% end %>
-        </tr>
       </thead>
       <% Reu09.c(:comun, :administration).each do |topic| %>
         <tr>
           <td><%= t(topic) %></td>
           <% Reu09::QUALITY.each do |quality| %>
-            <td class="<%= quality %>"><%= form.radio_button "administration_#{topic}", quality %></td>
+            <td class="<%= quality %>"><%= form.radio_button "administration_#{topic}", quality %>
+            <span class="tooltip"><%= t(quality) %> </span></td>
           <% end %>
         </tr>
       <% end %>
