@@ -35,18 +35,15 @@
     <%= form.label :ajob_xtra, t(:ajob_xtra) %>
     <table>
       <thead>
-        <tr>
-          <td></td>
-          <% Reu09::FREQUENCY.each do |frequency| %>
-            <td><%= t(frequency) %></td>
-          <% end %>
-        </tr>
       </thead>
       <% Reu09.c(:dineros, :ajob_xtra).each do |topic| %>
         <tr>
           <td><%= t(topic) %></td>
           <% Reu09::FREQUENCY.each do |frequency| %>
-            <td class="<%= frequency %>"><%= form.radio_button "ajob_xtra_#{topic}", frequency %></td>
+            <td class="<%= frequency %>">
+              <%= form.radio_button "ajob_xtra_#{topic}", frequency %>
+              <span class="tooltip"><%= t(frequency) %> </span>
+            </td>
           <% end %>
         </tr>
       <% end %>

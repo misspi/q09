@@ -38,7 +38,7 @@ h1 {font-size: 200%; color: @medio;}
 
 
 #app {
-    background-image: url(../images/headers/presentacion_header.jpg);
+    background-image: url(../images/headers/cuestionario_header.jpg);
     background-repeat: no-repeat;
     height: 160px;
 }
@@ -48,25 +48,25 @@ h1 {font-size: 200%; color: @medio;}
     width: 113px;
     height: 113px;
     background-image: url(../images/logo_r08.gif);
-float: left;
-display: block;
+    float: left;
+    display: block;
 }
 
 #header {
-background-image: url(../images/headers/presentacion_header_txt.gif);
-background-repeat: no-repeat;
-height: 110px;
-width: 376px;
-float: right;
-margin-right: 80px;
+    background-image: url(../images/headers/cuestionario_header_txt.gif);
+    background-repeat: no-repeat;
+    height: 110px;
+    width: 376px;
+    float: right;
+    margin-right: 80px;
 }
 
 
 #app a {width: 113px; height: 113px;}
 
 #account {
-clear: both;
-float:right;
+    clear: both;
+    float:right;
     margin-top: 15px;
     padding-right: 10px;
 }
@@ -91,7 +91,7 @@ float:right;
 /* PAGINA */
 .container { width: 960px; margin: 0 auto; background-color: white; }
 .column-1 { padding-left: 1em; padding-top: 3em; width: 900px;}
-
+#page {padding-bottom: 2em;}
 #navigation { margin-top: 3em; background-color: @fondo; }
 #navigation ul {width: 100%; overflow: hidden;}
 #navigation li {display: block; float: left; padding: 0.6em 1em 0.4em 1em;
@@ -105,6 +105,7 @@ float:right;
     color: @oscuro; }
 
 #credits {
+    font-size: 75%;
     background-color:@fondo; color: @medio;
     text-align: center;
     margin-bottom: 4em;
@@ -125,13 +126,14 @@ form input[type=submit] {margin-bottom: 1em; margin-top: 1em; margin-left: 0.9em
 
 form input[type=radio], form input[type=checkbox]  {
     display: block; float: left; clear: left; vertical-align: middle; padding: 0;
-	margin-left: 15px;  height: 12px;
+    margin-left: 15px;  height: 12px;
 
 }
 form label.radio, form label.checkbox  {
     font-size: 12px;
     vertical-align: middle; color: @oscuro;
     margin: 0 0 3px 35px;}
+form .field_info {font-size: 75%; color: @medio; margin-left: 1em;}
 
 /* TABLAS DENTRO DE FORMULARIOS */
 
@@ -144,14 +146,20 @@ td.some, td.few, td.bad, td.sometimes {background-color: #cbced0;text-align: cen
 td.quite, td.moderate, td.acceptable, td.usually {background-color: #9c9e9f;text-align: center;}
 td.lot, td.important, td.good, td.always {background-color: #646265;text-align: center;}
 td.full, td.very, td.very_good {background-color: #414042;text-align: center;}
-
+.tooltip {
+    display: none;
+    position: absolute; margin-top: 1em; margin-left: 1em;
+    padding: 0.1em 0 0.3em 0; font-weight: 100; font-size: 75%;
+    width: 10em; height: 1em; text-align: center;
+    border: 1px solid @oscuro; background-color: @fondo;
+}
 
 /* TABLAS FUERA DE FORMULARIOS */
-table {width: 100%; margin-bottom: 2em;}
+table {width: 100%; margin-bottom: 2em; }
 table td {padding: 2px; font-weight: bold; font-size: 85%; color: @oscuro;}
 table td a {color: @oscuro;}
 td.else {width: 10%; font-weight: bold; font-size: 85%;}
-thead {background-color: @oscuro; color: white; font-weight: bold;}
+thead { color: white; font-weight: bold; text-align: center;}
 tr.odd {background-color: #efefef;}
 
 /* UPLOAD FORM */
@@ -161,3 +169,8 @@ tr.odd {background-color: #efefef;}
 .uploader .bucket {float: left; margin-right: 1em; margin-bottom: 1em;}
 .uploader .bucket a {display: block; font-size: 75%; margin: 0.3em 0; text-align: center;}
 
+/* ABOUT */
+.about {padding: 1em 5em;}
+.about p {margin: 0.5em 0;}
+.about ol li {margin-left: 2em; list-style-type:decimal; margin-bottom: 0.5em;}
+.about ul li {margin-left: 2em; list-style-type:circle;}

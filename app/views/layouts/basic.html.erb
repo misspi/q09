@@ -2,16 +2,28 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>Reu08 Cuestionario Online <%= yield(:title) || 'Bienvenida' %></title>
+    <title><%= yield(:title) || 'Bienvenida' %> - Reu08 Cuestionario Online </title>
     <!-- link rel="icon" href="images/e3e.ico" type="image/x-icon" / -->
     <%= stylesheet_link_tag 'q09' %>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
     <%#= javascript_include_tag 'jquery.validator.js'  %>
+    <%#= javascript_include_tag 'jquery.bt.min.js'  %>
     <%= yield :header %>
-    <style type="text/css">
+    <% if @image %>
+      <style type="text/css">
       #header {background-image: <%= "url(/images/headers/#{@image}_header_txt.gif)" %> }
       #app {background-image: <%= "url(/images/headers/#{@image}_header.jpg)" %> }
-    </style>
+      </style>
+    <% end %>
+    <script type="text/javascript">
+      jQuery(function($) {
+        $("td input").hover(function() {
+          $(this).parent().find(".tooltip").show();
+        }, function() {
+          $(this).parent().find(".tooltip").hide();
+        });
+      });
+    </script>
   </head>
   <body>
 
@@ -56,7 +68,7 @@
       <% end %>
     </div>
 
-    <div class="container">
+    <div id="page" class="container">
       <div class="column-1">
         <%= yield  %>
       </div>
