@@ -62,7 +62,7 @@
       <% else %>
         <ul>
           <% Reu09.cuestionarios.each do |name| %>
-            <li><%= cuestionario_nav(name) %></li>
+            <li id="nav_<%= name  %>"><%= cuestionario_nav(name) %></li>
           <% end %>
         </ul>
       <% end %>

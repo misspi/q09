@@ -124,6 +124,7 @@ h1 {
 }
 #page { padding-bottom: 2em; }
 #navigation {
+  text-indent: -1000px;
   margin-top: 3em;
   background-color: #cdd4dc;
 }
@@ -134,6 +135,19 @@ h1 {
 #navigation li {
   display: block;
   float: left;
+  padding: 0;
+}
+#navigation li a {
+  display: block;
+  height: 34px;
+}
+#navigation li span {
+  display: block;
+  height: 34px;
+}
+#nada {
+  display: block;
+  float: left;
   padding: 0.6em 1em 0.4em 1em;
   font-weight: bold;
   background-color: #9c9e9f;
@@ -142,8 +156,105 @@ h1 {
   -webkit-border-top-left-radius: 0.2em;
   -webkit-border-top-right-radius: 0.2em;
   color: white;
+  height: 25px;
 }
 #navigation li a { color: #414042; }
+#nav_presentacion a {
+  width: 139px;
+  background: transparent url(../images/nav_grey.gif) 0 0 no-repeat;
+}
+#nav_presentacion a:hover {
+  width: 139px;
+  background: transparent url(../images/nav_white.gif) 0 0 no-repeat;
+}
+#nav_presentacion span {
+  width: 139px;
+  background: transparent url(../images/nav_white.gif) 0 0 no-repeat;
+}
+#nav_tumisma a {
+  width: 113px;
+  background: transparent url(../images/nav_grey.gif) -139px 0 no-repeat;
+}
+#nav_tumisma a:hover {
+  width: 113px;
+  background: transparent url(../images/nav_white.gif) -139px 0 no-repeat;
+}
+#nav_tumisma span {
+  width: 113px;
+  background: transparent url(../images/nav_white.gif) -139px 0 no-repeat;
+}
+#nav_experiencias a {
+  width: 135px;
+  background: transparent url(../images/nav_grey.gif) -253px 0 no-repeat;
+}
+#nav_experiencias a:hover {
+  width: 135px;
+  background: transparent url(../images/nav_white.gif) -253px 0 no-repeat;
+}
+#nav_experiencias span {
+  width: 135px;
+  background: transparent url(../images/nav_white.gif) -253px 0 no-repeat;
+}
+#nav_dineros a {
+  width: 95px;
+  background: transparent url(../images/nav_grey.gif) -388px 0 no-repeat;
+}
+#nav_dineros a:hover {
+  width: 95px;
+  background: transparent url(../images/nav_white.gif) -388px 0 no-repeat;
+}
+#nav_dineros span {
+  width: 95px;
+  background: transparent url(../images/nav_white.gif) -388px 0 no-repeat;
+}
+#nav_autoria {
+  width: 94px;
+  background: transparent url(../images/nav_grey.gif) -483px 0 no-repeat;
+}
+#nav_autoria a:hover {
+  width: 94px;
+  background: transparent url(../images/nav_white.gif) -483px 0 no-repeat;
+}
+#nav_autoria span {
+  width: 94px;
+  background: transparent url(../images/nav_white.gif) -483px 0 no-repeat;
+}
+#nav_habitat a {
+  width: 93px;
+  background: transparent url(../images/nav_grey.gif) -577px 0 no-repeat;
+}
+#nav_habitat a:hover {
+  width: 93px;
+  background: transparent url(../images/nav_white.gif) -577px 0 no-repeat;
+}
+#nav_habitat span {
+  width: 93px;
+  background: transparent url(../images/nav_white.gif) -577px 0 no-repeat;
+}
+#nav_red a {
+  width: 84px;
+  background: transparent url(../images/nav_grey.gif) -670px 0 no-repeat;
+}
+#nav_red a:hover {
+  width: 84px;
+  background: transparent url(../images/nav_white.gif) -670px 0 no-repeat;
+}
+#nav_red span {
+  width: 84px;
+  background: transparent url(../images/nav_white.gif) -670px 0 no-repeat;
+}
+#nav_comun a {
+  width: 117px;
+  background: transparent url(../images/nav_grey.gif) -755px 0 no-repeat;
+}
+#nav_comun a:hover {
+  width: 117px;
+  background: transparent url(../images/nav_white.gif) -755px 0 no-repeat;
+}
+#nav_comun span {
+  width: 117px;
+  background: transparent url(../images/nav_white.gif) -755px 0 no-repeat;
+}
 #credits {
   font-size: 75%;
   background-color: #cdd4dc;
@@ -235,22 +346,22 @@ form table {
   margin-left: 1em;
   width: 81.5%;
 }
-form tr { border-bottom: 1px solid #cdd4dc; }
-form td {
+form table tr { border-bottom: 1px solid #cdd4dc; }
+form table td {
   padding: 2px;
   font-size: 85%;
 }
-form td input[type=text] {
+form table td input[type=text] {
   width: 90%;
   font-size: 80%;
 }
-form td input[type=radio] {
+form table td input[type=radio] {
   display: inline;
   float: none;
   clear: none;
   margin: 0 3px;
 }
-form td.none {
+td.none {
   background-color: white;
   text-align: center;
 }
@@ -262,11 +373,7 @@ td.very_bad, td.never {
   background-color: white;
   text-align: center;
 }
-form td.some {
-  background-color: #cbced0;
-  text-align: center;
-}
-td.few, td.bad, td.sometimes {
+td.some, td.few, td.bad, td.sometimes {
   background-color: #cbced0;
   text-align: center;
 }
