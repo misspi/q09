@@ -37,10 +37,10 @@
       <thead>
       </thead>
       <% Reu09.c(:dineros, :ajob_xtra).each do |topic| %>
-        <tr>
+        <tr class="">
           <td><%= t(topic) %></td>
           <% Reu09::FREQUENCY.each do |frequency| %>
-            <td class="<%= frequency %>">
+            <td class="<%= frequency %> radio">
               <%= form.radio_button "ajob_xtra_#{topic}", frequency %>
               <span class="tooltip"><%= t(frequency) %> </span>
             </td>

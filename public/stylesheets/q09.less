@@ -138,14 +138,16 @@ form .field_info {font-size: 75%; color: @medio; margin-left: 1em;}
 /* TABLAS DENTRO DE FORMULARIOS */
 
 form table {margin-left: 1em; width: 81.5%; }
+form tr {border-bottom: 1px solid @fondo;}
 form td {padding: 2px; font-size: 85%;}
-td input[type=text] {width: 90%; font-size: 80%;}
-td input[type=radio] {display: inline; float: none; clear: none; margin: 0 3px;}
-td.none, td.nimp, td.very_bad, td.never {background-color: white; text-align: center;}
-td.some, td.few, td.bad, td.sometimes {background-color: #cbced0;text-align: center;}
+form td input[type=text] {width: 90%; font-size: 80%;}
+form td input[type=radio] {display: inline; float: none; clear: none; margin: 0 3px;}
+form td.none, form td.nimp, td.very_bad, td.never {background-color: white; text-align: center;}
+form td.some, td.few, td.bad, td.sometimes {background-color: #cbced0;text-align: center;}
 td.quite, td.moderate, td.acceptable, td.usually {background-color: #9c9e9f;text-align: center;}
 td.lot, td.important, td.good, td.always {background-color: #646265;text-align: center;}
 td.full, td.very, td.very_good {background-color: #414042;text-align: center;}
+form td.radio {width: 1em;}
 .tooltip {
     display: none;
     position: absolute; margin-top: 1em; margin-left: 1em;

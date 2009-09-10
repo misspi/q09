@@ -18,7 +18,7 @@ class Reu09
 
   IMPORTANCE = [:nimp, :few, :moderate, :important, :very]
 
-  QUALITY = [:very_good, :good, :acceptable, :bad, :very_bad]
+  QUALITY = [:very_bad, :bad, :acceptable, :good, :very_good]
 
   PREGUNTAS = {
     :presentacion => {

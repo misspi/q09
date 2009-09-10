@@ -235,25 +235,38 @@ form table {
   margin-left: 1em;
   width: 81.5%;
 }
+form tr { border-bottom: 1px solid #cdd4dc; }
 form td {
   padding: 2px;
   font-size: 85%;
 }
-td input[type=text] {
+form td input[type=text] {
   width: 90%;
   font-size: 80%;
 }
-td input[type=radio] {
+form td input[type=radio] {
   display: inline;
   float: none;
   clear: none;
   margin: 0 3px;
 }
-td.none, td.nimp, td.very_bad, td.never {
+form td.none {
   background-color: white;
   text-align: center;
 }
-td.some, td.few, td.bad, td.sometimes {
+form td.nimp {
+  background-color: white;
+  text-align: center;
+}
+td.very_bad, td.never {
+  background-color: white;
+  text-align: center;
+}
+form td.some {
+  background-color: #cbced0;
+  text-align: center;
+}
+td.few, td.bad, td.sometimes {
   background-color: #cbced0;
   text-align: center;
 }
@@ -269,6 +282,7 @@ td.full, td.very, td.very_good {
   background-color: #414042;
   text-align: center;
 }
+form td.radio { width: 1em; }
 .tooltip {
   display: none;
   position: absolute;
