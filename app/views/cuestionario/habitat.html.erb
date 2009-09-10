@@ -94,7 +94,7 @@
     <table>
       <% Reu09.c(:habitat, :expenses).each do |expenses| %>
         <tr>
-          <td><%= t(expenses) %></td>
+          <td class="else"><%= t(expenses) %></td>
           <td><%= form.text_field expenses %></td>
         </tr>
       <% end %>
