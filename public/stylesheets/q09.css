@@ -232,7 +232,10 @@ form td {
   padding: 2px;
   font-size: 85%;
 }
-td input[type=text] { width: 90%; }
+td input[type=text] {
+  width: 90%;
+  font-size: 80%;
+}
 td input[type=radio] {
   display: inline;
   float: none;
@@ -263,8 +266,18 @@ table {
   width: 100%;
   margin-bottom: 2em;
 }
-table td { padding: 2px; }
+table td {
+  padding: 2px;
+  font-weight: bold;
+  font-size: 85%;
+  color: #414042;
+}
 table td a { color: #414042; }
+td.else {
+  width: 10%;
+  font-weight: bold;
+  font-size: 85%;
+}
 thead {
   background-color: #414042;
   color: white;
