@@ -7,7 +7,13 @@ class Bucket < ActiveRecord::Base
 
 
   def thumbnail
-    self.media.url(:small)
+    if media_content_type =~ /image/
+      self.media.url(:small)
+    elsif media_content_type == 'application/pdf'
+      '/images/archivo.gif'
+    else
+      '/images/archivo.gif'
+    end
   end
 
   def to_json

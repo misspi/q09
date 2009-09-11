@@ -1,0 +1,18 @@
+<%= title t(:title) %>
+
+<% form_for(@feedback) do |f| %>
+  <p>
+    <%= f.label :body, t(:body) %>
+    <%= f.text_area :body %>
+  </p>
+  <% if current_user.nil? %>
+  <p>
+    <%= f.label :email, t(:email) %>
+    <%= f.text_field :email, :class => 'feedback' %>
+  </p>
+  <% end %>
+  <p>
+    <%= f.submit t(:submit) %>
+  </p>
+<% end %>
+

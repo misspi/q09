@@ -5,6 +5,7 @@ es:
     signup: "Registrarse"
     edit_profile: "Editar perfil"
     logout: "Salir"
+    feedback: "Contáctanos"
     welcome: "Hola {{name}}"
     basic:
       presentacion: "Presentación"
@@ -19,6 +20,7 @@ es:
       users: "Usuarios registrados"
       questions: "Preguntas"
       buckets: "Archivos"
+      feedbacks: "La gente opina"
 
   auth:
     user_required: "Necesitas entrar para poder acceder a esta página"
@@ -66,4 +68,15 @@ es:
       title: "Entrar"
       login: "Entrar"
       remember_me: "Mantenerme registradx hasta que pulse 'Salir'"
+  feedbacks:
+    updated: "... eh!? cómo has hecho esto!?"
+    created: "Muchas gracias. Tu opinión será tenida muy en cuenta."
+    new:
+      title: "¿Qué opinas?"
+      email: "Correo electrónico (opcional)"
+      body: "Sugerencias, críticas, alabanzas... suéltanoslo todo!"
+      submit: "Enviar"
+    index:
+      title: "Opiniones"
+
 

@@ -1,29 +1,31 @@
-<% form_for @user do |f| %>
-  <%= f.error_messages %>
-  <p>
-    <%= f.label :username, t(:username) %>
-    <%= f.text_field :username %>
-  </p>
-  <p>
-    <%= f.label :email, t(:email) %>
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :password, t(:password) %>
-    <span class="field_info">La contraseña no se modificará si se dejan vacíos los dos próximos campos</span>
-    <%= f.password_field :password %>
-  </p>
-  <p>
-    <%= f.label :password_confirmation, t(:password_confirmation) %>
-    <%= f.password_field :password_confirmation %>
-  </p>
-  <p><br/>
-    <%= f.check_box :request_info %>
-    <label class="radio"><%= t(:request_info) %></label>
-    <%= f.check_box :allow_publish %>
-    <label class="radio"><%= t(:allow_publish) %></label>
-  </p>
-  <p>
-    <%= f.submit @user.new_record? ? t(:signup) : t(:update) %>
-  </p>
-<% end %>
+<div class="dialog">
+  <% form_for @user do |f| %>
+    <%= f.error_messages %>
+    <p>
+      <%= f.label :username, t(:username) %>
+      <%= f.text_field :username %>
+    </p>
+    <p>
+      <%= f.label :email, t(:email) %>
+      <%= f.text_field :email %>
+    </p>
+    <p>
+      <%= f.label :password, t(:password) %>
+      <span class="field_info">La contraseña no se modificará si se dejan vacíos los dos próximos campos</span>
+      <%= f.password_field :password %>
+    </p>
+    <p>
+      <%= f.label :password_confirmation, t(:password_confirmation) %>
+      <%= f.password_field :password_confirmation %>
+    </p>
+    <p><br/>
+      <%= f.check_box :request_info %>
+      <label class="radio"><%= t(:request_info) %></label>
+      <%= f.check_box :allow_publish %>
+      <label class="radio"><%= t(:allow_publish) %></label>
+    </p>
+    <p>
+      <%= f.submit @user.new_record? ? t(:signup) : t(:update) %>
+    </p>
+  <% end %>
+</div>
