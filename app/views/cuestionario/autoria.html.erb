@@ -1,8 +1,9 @@
+<%= render :partial => 'prevent.html' %>
 <%= title t(:title), :show => false %>
 
 <% form_for @survey do |form| %>
   <%= next_step cuestionario_path(:id => 'autoria') %>
-  
+
   <p>
     <%= form.label :author, t(:author) %>
     <% Reu09.c(:autoria, :author).each do |topic| %>
@@ -37,7 +38,7 @@
     <%= form.radio_button :author_asoc, :no %><label class="radio"><%= t(:author_asoc_no) %></label>
   </p>
 
-    <p>
+  <p>
     <%= form.label :author_asoc_desc, t(:author_asoc_desc) %>
     <%= form.text_area :author_asoc_desc %>
   </p>

@@ -7,37 +7,12 @@
     });
 
     $(".flash").click(function() {$(this).fadeSliderToggle('fast');});
-    $.prevent(function () {
-      return $(".changed").length > 0;
-    });
   });
 
-  $(function(){
-    $("form").dirty_form();
-  });
 
-  (function ($) {
-    $.prevent = function(isDirty) {
-      window.onbeforeunload = function() {
-        if (isDirty()) {
-          return "Cuidado!! No has guardado! Si pulsas 'Continuar' se perderán los cambios. Mejor pulsa 'Cancelar' y luego 'Guardar'";
-        } else {
-          return null;
-        }
-      };
-      $("form").submit(function() {
-        if (!isDirty()) {
-          window.onbeforeunload = null;
-        }
-        var submit = $(this).find("input[type=submit]");
-        submit.val("Un momento por favor...");
-        submit.attr("disabled", "true");
-        window.onbeforeunload = null;
-        return true;
-      });
 
-    }
-  })(jQuery);
+
+
 
   jQuery.fn.fadeSliderToggle = function(settings) {
     /* Damn you jQuery opacity:'toggle' that dosen't work!~!!!*/

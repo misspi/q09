@@ -39,9 +39,12 @@ h1 {font-size: 200%; color: @medio;}
 
 
 #app {
+    position: fixed;
+    left: 0;  top: 0; right: 0;
     background-image: url(../images/headers/cuestionario_header.jpg);
     background-repeat: no-repeat;
-    height: 160px;
+    background-color: @fondo;
+    height: 169px;
 }
 
 #app h1 {
@@ -62,13 +65,12 @@ h1 {font-size: 200%; color: @medio;}
     margin-right: 80px;
 }
 
-
-
+#flashes {margin-top: 170px; overflow: hidden; 
+    background-color: @fondo;}
 
 
 .flash {
     width: 900px;
-    margin: 1em auto -1em auto;
     text-align: center;
     background-color: @flash;
     padding: 4px 2em;

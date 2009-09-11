@@ -33,14 +33,13 @@
           <%= link_to t(:login), login_path, :id => 'login' %>
         <% end %>
       </div>
-
-
+    </div>
+    <div id="flashes" class="container">
+      <% unless flash[:notice].blank? %>
+        <div class="flash"><%= flash[:notice] %></div>
+      <% end %>
     </div>
 
-    <% unless flash[:notice].blank? %>
-      <div class="flash"><%= flash[:notice] %></div>
-    <% end %>
-    
 
     <div id="navigation" class="container">
       <% if admin_page? %>
