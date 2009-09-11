@@ -1,16 +1,14 @@
 
 es:
   cuestionario:
-    none: "nada"
-    some: "algo"
-    quite: "un poco"
-    lot: "mucho"
-    full: "a tope"
-    very: "muy"
-    important: "imporaante"
-    moderate: "asdas"
-    few: "few"
-    nimp: "nimp"
+    none: "no relevante"
+    some: "poco relevante"
+    lot: "relevante"
+    full: "muy relevante"
+    very: "muy importante"
+    important: "importante"
+    few: "importa un poco"
+    nimp: "no importa"
     very_good: "muy guay"
     good: "bien"
     acceptable: "aceptable"
@@ -19,7 +17,7 @@ es:
     never: "nunca jamás"
     sometimes: "alguna vez..."
     usually: "normalmente si..."
-    always: "siempre!"
+    always: "imprescindible!"
     upload: "Añadir fichero"
     presentacion:
       title: "Presentación"

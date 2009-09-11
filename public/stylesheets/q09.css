@@ -80,7 +80,7 @@ h1 {
   background-image: url(../images/headers/cuestionario_header_txt.gif);
   background-repeat: no-repeat;
   height: 110px;
-  width: 376px;
+  width: 800px;
   float: right;
   margin-right: 80px;
 }
@@ -241,7 +241,7 @@ h1 {
   clear: both;
   float: right;
   margin-top: 15px;
-  padding-right: 10px;
+  padding-right: 85px;
 }
 #account a {
   display: block;
@@ -376,7 +376,7 @@ form table {
 }
 form table td {
   padding: 2px;
-  font-size: 85%;
+  font-size: 12px;
 }
 form table td input[type=text] {
   width: 90%;
@@ -445,7 +445,7 @@ table td a { color: #414042; }
 td.else {
   width: 10%;
   font-weight: bold;
-  font-size: 85%;
+  font-size: 12px;
 }
 thead {
   color: white;
@@ -481,7 +481,12 @@ tr.odd { background-color: #efefef; }
   margin: 0.3em 0;
   text-align: center;
 }
-.about { padding: 1em 5em; }
+.about {
+  padding: 1em 5em;
+  font-size: 12px;
+  line-height: 1.8em;
+}
+.start { padding-bottom: 2em; }
 .about p { margin: 0.5em 0; }
 .about ol li {
   margin-left: 2em;
