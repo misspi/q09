@@ -2,6 +2,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <title><%= yield(:title) || 'Bienvenida' %> - Reu08 Cuestionario Online </title>
     <!-- link rel="icon" href="images/e3e.ico" type="image/x-icon" / -->
     <%= stylesheet_link_tag 'q09' %>
@@ -44,6 +45,7 @@
     <div id="navigation" class="container">
       <% if admin_page? %>
         <ol>
+          <li><%= link_to_unless_current t('admin.feedbacks'), feedbacks_path %></li>
           <li><%= link_to_unless_current t('admin.users'), users_path %></li>
           <li><%= link_to_unless_current t('admin.questions'), questions_path %></li>
           <li><%= link_to_unless_current t('admin.buckets'), buckets_path %></li>

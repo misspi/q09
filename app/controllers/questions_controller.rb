@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
   before_filter :admin_required
 
   def index
-    if params[:group]
+    if !params[:group].blank?
       @group = params[:group]
       @questions = Question.all(:conditions => {:group => @group})
     else

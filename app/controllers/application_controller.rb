@@ -12,6 +12,9 @@ class ApplicationController < ActionController::Base
 
 
   def admin_required
+    authenticate_or_request_with_http_basic do |username, password|
+      username == "George" && password == "Gallup"
+    end
     @admin_page = true
   end
 

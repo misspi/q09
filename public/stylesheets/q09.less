@@ -35,9 +35,6 @@ h1 {font-size: 200%; color: @medio;}
 
 /* BARRA SUPERIOR */
 
-
-
-
 #app {
     position: fixed;
     left: 0;  top: 0; right: 0;
@@ -197,8 +194,9 @@ form td.radio {width: 1em;}
 }
 
 /* TABLAS FUERA DE FORMULARIOS */
-table {width: 100%; margin-bottom: 2em; }
-table td {padding: 2px; font-weight: bold; font-size: 85%; color: @oscuro;}
+table {width: 100%; margin-bottom: 2em; font-weight: lighter;}
+table thead {text-align: left; background-color: @medio; color: white; }
+table td {padding: 3px; font-weight: bold; font-size: 85%; color: @oscuro;}
 table td a {color: @oscuro;}
 td.else {width: 10%; font-weight: bold; font-size: 12px;}
 thead { color: white; font-weight: bold; text-align: center;}
@@ -218,3 +216,8 @@ tr.odd {background-color: #efefef;}
 .about p {margin: 0.5em 0;}
 .about ol li {margin-left: 2em; list-style-type:decimal; margin-bottom: 0.5em;}
 .about ul li {margin-left: 2em; list-style-type:circle;}
+
+/* FEEDBACK */
+#feedback_body {height: 15em;}
+.feedback {border-top: 1px solid @medio; margin: 1em auto; width: 80%;}
+.feedback h1 {font-size: 100%;}
