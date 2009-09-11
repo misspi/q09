@@ -91,6 +91,7 @@ h1 {
   background-color: #feff8f;
   padding: 4px 2em;
   color: black;
+  cursor: pointer;
   -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
 }
@@ -498,12 +499,16 @@ tr.odd { background-color: #efefef; }
   margin: 0.3em 0;
   text-align: center;
 }
+.about a {
+  text-decoration: underline;
+  color: #414042;
+}
 .about {
   padding: 1em 5em;
   font-size: 12px;
   line-height: 1.8em;
 }
-.start { padding-bottom: 2em; }
+.about h1 { margin-bottom: 2em; }
 .about p { margin: 0.5em 0; }
 .about ol li {
   margin-left: 2em;

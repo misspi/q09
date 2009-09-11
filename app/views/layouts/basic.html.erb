@@ -8,6 +8,7 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
     <%#= javascript_include_tag 'jquery.validator.js'  %>
     <%#= javascript_include_tag 'jquery.bt.min.js'  %>
+    <%= javascript_include_tag 'jquery.dirty_form.js'  %>
     <%= yield :header %>
     <% if @image %>
       <style type="text/css">
@@ -15,15 +16,7 @@
       #app {background-image: <%= "url(/images/headers/#{@image}_header.jpg)" %> }
       </style>
     <% end %>
-    <script type="text/javascript">
-      jQuery(function($) {
-        $("td input").hover(function() {
-          $(this).parent().find(".tooltip").show();
-        }, function() {
-          $(this).parent().find(".tooltip").hide();
-        });
-      });
-    </script>
+    <%= render :partial => '/layouts/jsextras' %>
   </head>
   <body>
 

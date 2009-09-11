@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(:version => 20090911101543) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "request_info"
+    t.boolean  "allow_publish"
   end
 
 end
