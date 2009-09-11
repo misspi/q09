@@ -46,6 +46,7 @@ es:
     created: "Tenemos una nueva persona registrada."
     request_info: "Mantenerme informada por email del proceso de la coinvestigación y de eventos relacionados con la misma"
     allow_publish: "Permitir que los datos de 'Presentación' (y sólo éstos) aparezcan en la web de Reu08"
+    options: "Opciones (se pueden modificar en cualquier momento)"
     index:
       title: "Usuarios registrados"
     new:

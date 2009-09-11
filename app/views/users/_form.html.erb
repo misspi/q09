@@ -18,7 +18,8 @@
       <%= f.label :password_confirmation, t(:password_confirmation) %>
       <%= f.password_field :password_confirmation %>
     </p>
-    <p><br/>
+    <p>
+      <%= f.label :options, t(:options) %>
       <%= f.check_box :request_info %>
       <label class="radio"><%= t(:request_info) %></label>
       <%= f.check_box :allow_publish %>

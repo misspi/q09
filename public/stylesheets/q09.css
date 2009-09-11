@@ -431,6 +431,10 @@ form table td {
   padding: 2px;
   font-size: 12px;
 }
+form table thead {
+  background-color: white;
+  text-align: center;
+}
 form table td input[type=text] {
   width: 90%;
   font-size: 80%;
@@ -510,6 +514,7 @@ thead {
   color: white;
   font-weight: bold;
   text-align: center;
+  background-color: white;
 }
 tr.odd { background-color: #efefef; }
 .uploader {
