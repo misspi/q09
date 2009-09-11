@@ -30,6 +30,7 @@
           <%= link_to t(:edit_profile), edit_user_path(:current), :id => 'edit_profile' %>
           <span style="display: none"><%= t(:welcome, :name => current_user.username) %></span>
         <% else %>
+          <%= link_to t(:feedback), feedback_path, :id => 'feedback' %>
           <%= link_to t(:signup), new_user_path, :id => 'signup' %>
           <%= link_to t(:login), login_path, :id => 'login' %>
         <% end %>

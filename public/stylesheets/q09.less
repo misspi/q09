@@ -28,7 +28,7 @@ html {
 }
 
 /* ELEMENTOS HTML */
-a {text-decoration: none;}
+a {text-decoration: none; color: @oscuro;}
 a:hover {text-decoration: underline;}
 
 h1 {font-size: 200%; color: @medio;}
@@ -84,7 +84,7 @@ h1 {font-size: 200%; color: @medio;}
 #navigation ul, #navigation ol {width: 100%; overflow: hidden; }
 #navigation ol {text-indent: 0; }
 #navigation ol li { display: block; float:left; margin-right: 0.5em;
-        padding: 0.2em 1em; color: white; background-color: @oscuro; .tab-borders;}
+    padding: 0.2em 1em; color: white; background-color: @oscuro; .tab-borders;}
 #navigation ol li a {color: @fondo;}
 
 #navigation ul li {display: block; float: left; padding: 0; }
@@ -99,7 +99,7 @@ h1 {font-size: 200%; color: @medio;}
 }
 #navigation ul li a {
     color: @oscuro;
- }
+}
 
 #nav_presentacion a {width: 139px; background: transparent url(../images/nav_grey.gif) 0 0 no-repeat;}
 #nav_presentacion a:hover {width: 139px; background: transparent url(../images/nav_white.gif) 0 0 no-repeat;}
@@ -132,21 +132,33 @@ h1 {font-size: 200%; color: @medio;}
     margin-top: 15px;
     padding-right: 85px;
 }
-#account a {display: block; float: right; padding: 0; margin: 0; overflow: hidden;}
-#signup {height: 25px; text-indent: -1000px;
-        width: 106px; background: transparent url(../images/account.gif) 0 0 no-repeat;}
-#login {height: 25px; text-indent: -1000px;
-        width: 69px; background: transparent url(../images/account.gif) -106px 0 no-repeat;}
-#edit_profile {height: 25px; text-indent: -1000px; width: 106px; background: transparent url(../images/account.gif) -175px 0 no-repeat;}
-#logout {height: 25px; text-indent: -1000px;
-        width: 49px; background: transparent url(../images/account.gif) -281px 0 no-repeat;}
+#account a {height: 25px; text-indent: -1000px; display: block; float: right; padding: 0; margin: 0; 
+    overflow: hidden; background-repeat: no-repeat; background-color: transparent;
+    background-image: url(../images/account.gif);}
+#signup {width: 106px; background-position:  0 0;}
+#signup:hover {width: 106px; background-position:  0 -31px;}
+#login {width: 69px; background-position: -106px 0;}
+#login:hover { background-position: -106px -31px;}
+#edit_profile {width: 106px; background-position:  -175px 0 ;}
+#edit_profile:hover {width: 106px; background-position:  -175px -31px ;}
+#logout {width: 49px; background-position: -281px 0 ;}
+#logout:hover {width: 49px; background-position: -281px -31px ;}
+#feedback {width: 101px; background-position:  -335px 0 ;}
+#feedback:hover {width: 101px; background-position:  -335px -31px ;}
+
 #account a.admin {padding: 0.2em 1em; color: white; margin-right: 1em; font-size: 75%;
-        background-color: @oscuro; .round; }
+    background-color: @oscuro; .round; }
 #credits {
     font-size: 75%;
     background-color:@fondo; color: @medio;
     text-align: center;
     margin-bottom: 4em;
+}
+
+.dialog {
+    padding: 1em 0;
+    margin-bottom: 1em;
+    width: 70%;
 }
 
 /* FORMULARIOS */
