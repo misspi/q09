@@ -1,6 +1,7 @@
 <%= title t(:title) %>
 
 <% form_for @survey do |form| %>
+  <%= next_step cuestionario_path(:id => 'red') %>
 
   <p>
     <%= form.label :computer, t(:computer) %>

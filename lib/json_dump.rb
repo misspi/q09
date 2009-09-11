@@ -2,14 +2,18 @@
 require(File.dirname(__FILE__) + "/../../config/environment") unless defined?(Rails)
 
 class JsonDump
-   def initialize(app)
+  def initialize(app)
     @app = app
   end
 
   def call(env)
     status, headers, response = @app.call(env)
     path = env['PATH_INFO']
-    puts "JSON REQUEST #{path}: #{response.body}" if path =~ /.js/
+    begin
+      puts "JSON REQUEST #{path}: #{response.body}" if path =~ /.js/
+    rescue
+      puts "ERROR IN JSON DUMP: #{response.join('|')}" if response.respond_to?(:join)
+    end
     [status, headers, response]
   end
 end

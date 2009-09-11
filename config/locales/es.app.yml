@@ -42,6 +42,7 @@ es:
     update: "Modificar"
     updated: "Tu perfil ha sido modificado."
     created: "Tenemos una nueva persona registrada."
+    request_info: "Mantenerme informada por email del proceso de la coinvestigación y de eventos relacionados con la misma"
     index:
       title: "Usuarios registrados"
     new:
@@ -49,7 +50,7 @@ es:
     show:
       title: "Usuario "
     edit:
-      title: "Editando perfile de '{{name}}'"
+      title: "Editando perfil de '{{name}}'"
   questions:
     edit: "Editar"
     index:
@@ -63,4 +64,5 @@ es:
       password: "Contraseña"
       title: "Entrar"
       login: "Entrar"
+      remember_me: "Mantenerme registradx hasta que pulse 'Salir'"
 

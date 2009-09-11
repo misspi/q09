@@ -17,8 +17,11 @@
     <%= f.label :password_confirmation, t(:password_confirmation) %>
     <%= f.password_field :password_confirmation %>
   </p>
+  <p><br/>
+    <%= f.check_box :request_info %>
+    <label class="radio"><%= t(:request_info) %></label>
+  </p>
   <p>
-    <label>&nbsp;</label>
     <%= f.submit @user.new_record? ? t(:signup) : t(:update) %>
   </p>
 <% end %>

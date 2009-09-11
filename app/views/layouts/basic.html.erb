@@ -47,14 +47,15 @@
     <% unless flash[:notice].blank? %>
       <div class="flash"><%= flash[:notice] %></div>
     <% end %>
+    
 
     <div id="navigation" class="container">
       <% if admin_page? %>
-        <ul>
+        <ol>
           <li><%= link_to_unless_current t('admin.users'), users_path %></li>
           <li><%= link_to_unless_current t('admin.questions'), questions_path %></li>
           <li><%= link_to_unless_current t('admin.buckets'), buckets_path %></li>
-        </ul>
+        </ol>
       <% else %>
         <ul>
           <% Reu09.cuestionarios.each do |name| %>

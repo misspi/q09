@@ -78,10 +78,12 @@
 
     var getCurrentThumbnails = function() {
         if (getCurrentValue().length > 0) {
+            setWorking(true);
             $.getJSON("<%= load_path %>", function(data) {
                 $.each(data, function(val, key) {
                     addThumbnail(key['bucket_id'], key['thumbnail']);
                 });
+                setWorking(false);
             });
         }
     }

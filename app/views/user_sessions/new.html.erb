@@ -12,7 +12,11 @@
       <%= f.password_field :password %>
     </p>
     <p>
-      <%= empty_label %>
+      <br/>
+      <%= f.check_box :remember_me %>
+      <label class="radio"><%= t(:remember_me) %></label>
+    </p>
+    <p>
       <%= f.submit t(:login) %>
     </p>
   <% end %>
