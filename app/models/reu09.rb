@@ -12,11 +12,11 @@ class Reu09
     PREGUNTAS[group][name]
   end
 
-  RELEVANCE = [:none, :some, :quite, :lot, :full]
+  RELEVANCE = [:none, :some, :lot, :full]
 
   FREQUENCY = [:never, :sometimes, :usually, :always]
 
-  IMPORTANCE = [:nimp, :few, :moderate, :important, :very]
+  IMPORTANCE = [:nimp, :few, :important, :very]
 
   QUALITY = [:very_bad, :bad, :acceptable, :good, :very_good]
 
