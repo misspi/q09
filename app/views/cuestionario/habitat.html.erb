@@ -5,6 +5,10 @@
 <% form_for @survey do |form| %>
   <%= next_step cuestionario_path(:id => 'habitat') %>
 
+  <p class="submit">
+    <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
+  </p>
+
   <p>
     <%= form.label :place, t(:place) %>
     <% Reu09.c(:habitat, :place).each do |topic| %>
@@ -116,9 +120,5 @@
     <%= form.label :income, t(:income) %>
     <%= form.radio_button :income, :yes %><label class="radio"><%= t(:income_yes) %></label>
     <%= form.radio_button :income, :no %><label class="radio"><%= t(:income_no) %></label>
-  </p>
-
-  <p>
-    <%= form.submit "Guardar" %>
   </p>
 <% end %>

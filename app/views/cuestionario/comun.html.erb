@@ -4,6 +4,10 @@
 <% form_for @survey do |form| %>
   <%= next_step cuestionario_path(:id => 'comun') %>
 
+<p class="submit">
+    <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
+  </p>
+
   <p>
     <%= form.label :institution, t(:institution) %>
     <%= form.text_area :institution %>
@@ -112,11 +116,5 @@
   <p>
     <%= form.label :future_desc, t(:future_desc) %>
     <%= form.text_area :future_desc %>
-  </p>
-
-
-
-  <p>
-    <%= form.submit "Guardar" %>
   </p>
 <% end %>

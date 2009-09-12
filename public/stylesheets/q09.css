@@ -13,18 +13,46 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
   margin: 0;
   padding: 0;
 }
+li {
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+form {
+  margin: 0;
+  padding: 0;
+}
+fieldset, img {
+  margin: 0;
+  padding: 0;
+}
+legend {
+  margin: 0;
+  padding: 0;
+}
+input, textarea, select, textarea, select {
+  margin: 0;
+  padding: 0;
+}
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-fieldset, img { border: 0; }
+fieldset { border: 0; }
 address, caption, cite, code, dfn, em, strong, th, var {
   font-style: normal;
   font-weight: normal;
 }
+caption, th {
+  font-style: normal;
+  font-weight: normal;
+}
 li { list-style: none; }
-caption, th { text-align: left; }
-h1, h2, h3, h4, h5, h6 {
+caption { text-align: left; }
+h1 {
   font-size: 100%;
   font-weight: normal;
 }
@@ -36,12 +64,12 @@ abbr, acronym {
 }
 sup { vertical-align: text-top; }
 sub { vertical-align: text-bottom; }
-input, textarea, select {
+input {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
 }
-input, textarea, select { *font-size: 100%; }
+input { *font-size: 100%; }
 legend { color: #000000; }
 del, ins { text-decoration: none; }
 .round {
@@ -67,10 +95,6 @@ h1 {
   color: #9c9e9f;
 }
 #app {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
   background-image: url(../images/headers/cuestionario_header.jpg);
   background-repeat: no-repeat;
   background-color: #cdd4dc;
@@ -93,7 +117,6 @@ h1 {
   margin-right: 80px;
 }
 #flashes {
-  margin-top: 170px;
   overflow: hidden;
   background-color: #cdd4dc;
 }
@@ -114,7 +137,7 @@ h1 {
 }
 .column-1 {
   padding-left: 1em;
-  padding-top: 3em;
+  padding-top: 1em;
   width: 900px;
 }
 #page { padding-bottom: 2em; }
@@ -307,13 +330,10 @@ h1 {
   background-position: -175px -31px;
 }
 #logout {
-  width: 49px;
+  width: 54px;
   background-position: -281px 0;
 }
-#logout:hover {
-  width: 49px;
-  background-position: -281px -31px;
-}
+#logout:hover { background-position: -281px -31px; }
 #feedback {
   width: 101px;
   background-position: -335px 0;
@@ -423,6 +443,16 @@ form .field_info {
   color: #9c9e9f;
   margin-left: 1em;
 }
+p.submit {
+  background-color: #efefef;
+  margin-bottom: 1em;
+  -moz-border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+}
+p.submit span {
+  padding-left: 1em;
+  color: #9c9e9f;
+}
 form table {
   margin-left: 1em;
   width: 81.5%;
@@ -519,7 +549,7 @@ thead {
 tr.odd { background-color: #efefef; }
 .uploader {
   padding: 1em;
-  background-color: #efefef;
+  background-color: white;
   -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
 }
@@ -550,6 +580,7 @@ tr.odd { background-color: #efefef; }
   color: #414042;
 }
 .about {
+  margin-top: 2em;
   padding: 1em 5em;
   font-size: 12px;
   line-height: 1.8em;

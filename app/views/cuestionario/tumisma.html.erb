@@ -9,6 +9,10 @@
 <% form_for @survey do |form| %>
   <%= next_step cuestionario_path(:id => 'tumisma') %>
 
+  <p class="submit">
+    <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
+  </p>
+
   <p>
     <%= form.label :birth, t(:birth) %>
     <%= form.text_field :birth %>
@@ -124,10 +128,5 @@
   <p>
     <%= form.label :gender_influence_desc, t(:gender_influence_desc) %>
     <%= form.text_area :gender_influence_desc %>
-  </p>
-
-
-  <p>
-    <%= form.submit "Guardar" %>
   </p>
 <% end %>

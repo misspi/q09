@@ -36,8 +36,6 @@ h1 {font-size: 200%; color: @medio;}
 /* BARRA SUPERIOR */
 
 #app {
-    position: fixed;
-    left: 0;  top: 0; right: 0;
     background-image: url(../images/headers/cuestionario_header.jpg);
     background-repeat: no-repeat;
     background-color: @fondo;
@@ -62,7 +60,7 @@ h1 {font-size: 200%; color: @medio;}
     margin-right: 80px;
 }
 
-#flashes {margin-top: 170px; overflow: hidden; 
+#flashes { overflow: hidden; 
     background-color: @fondo;}
 
 
@@ -78,7 +76,7 @@ h1 {font-size: 200%; color: @medio;}
 
 /* PAGINA */
 .container { width: 960px; margin: 0 auto; background-color: white; }
-.column-1 { padding-left: 1em; padding-top: 3em; width: 900px;}
+.column-1 { padding-left: 1em; padding-top: 1em; width: 900px;}
 #page {padding-bottom: 2em;}
 #navigation {text-indent: -1000px; margin-top: 3em; background-color: @fondo;  }
 #navigation ul, #navigation ol {width: 100%; overflow: hidden; }
@@ -141,8 +139,8 @@ h1 {font-size: 200%; color: @medio;}
 #login:hover { background-position: -106px -31px;}
 #edit_profile {width: 106px; background-position:  -175px 0 ;}
 #edit_profile:hover {width: 106px; background-position:  -175px -31px ;}
-#logout {width: 49px; background-position: -281px 0 ;}
-#logout:hover {width: 49px; background-position: -281px -31px ;}
+#logout {width: 54px; background-position: -281px 0; }
+#logout:hover {background-position: -281px -31px ;}
 #feedback {width: 101px; background-position:  -335px 0 ;}
 #feedback:hover {width: 101px; background-position:  -335px -31px ;}
 
@@ -185,6 +183,10 @@ form label.radio, form label.checkbox  {
     margin: 0 0 3px 35px;}
 form .field_info {font-size: 75%; color: @medio; margin-left: 1em;}
 
+/* BOTÓN DE GUARDAR */
+p.submit { background-color: #efefef; margin-bottom: 1em; .round;}
+p.submit span {padding-left: 1em; color: @medio;}
+
 /* TABLAS DENTRO DE FORMULARIOS */
 
 form table {margin-left: 1em; width: 81.5%; }
@@ -216,7 +218,7 @@ thead { color: white; font-weight: bold; text-align: center; background-color: w
 tr.odd {background-color: #efefef;}
 
 /* UPLOAD FORM */
-.uploader {padding: 1em; background-color: #efefef; .round;}
+.uploader {padding: 1em; background-color: white; .round;}
 .uploader a {padding: 0.2em 0.5em; color: white; background-color: @medio; .round;}
 .uploader .thumbnails {width: 100%; overflow: hidden;}
 .uploader .bucket {float: left; margin-right: 1em; margin-bottom: 1em;}
@@ -224,7 +226,7 @@ tr.odd {background-color: #efefef;}
 
 /* ABOUT */
 .about a {text-decoration: underline; color: @oscuro; }
-.about {padding: 1em 5em; font-size: 12px; line-height: 1.8em; }
+.about {margin-top: 2em; padding: 1em 5em; font-size: 12px; line-height: 1.8em; }
 .about h1 {margin-bottom: 2em;}
 .about p {margin: 0.5em 0;}
 .about ol li {margin-left: 2em; list-style-type:decimal; margin-bottom: 0.5em;}

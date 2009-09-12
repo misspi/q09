@@ -11,7 +11,7 @@
     </p>
     <p>
       <%= f.label :password, t(:password) %>
-      <span class="field_info">La contraseña no se modificará si se dejan vacíos los dos próximos campos</span>
+      <%= content_tag(:span, t(:change_password), :class => 'field_info') unless @user.new_record? %>
       <%= f.password_field :password %>
     </p>
     <p>

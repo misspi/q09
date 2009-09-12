@@ -4,6 +4,10 @@
 <% form_for @survey do |form| %>
   <%= next_step cuestionario_path(:id => 'dineros') %>
 
+  <p class="submit">
+    <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
+  </p>
+
   <p>
     <%= form.label :laboral, t(:laboral) %>
     <%= form.radio_button :laboral, :entrepreneur %><label class="radio"><%= t(:laboral_entrepreneur) %></label>
@@ -151,11 +155,5 @@
       <label class="radio"><%= t(topic) %></label>
     <% end %>
   </p>
-
-
-  <p>
-    <%= form.submit "Guardar" %>
-  </p>
-
 
 <% end %>

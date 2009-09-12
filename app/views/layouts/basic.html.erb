@@ -1,23 +1,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <title><%= yield(:title) || 'Bienvenida' %> - Reu08 Cuestionario Online </title>
-    <!-- link rel="icon" href="images/e3e.ico" type="image/x-icon" / -->
-    <%= stylesheet_link_tag 'q09' %>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
-    <%#= javascript_include_tag 'jquery.validator.js'  %>
-    <%#= javascript_include_tag 'jquery.bt.min.js'  %>
-    <%= javascript_include_tag 'jquery.dirty_form.js'  %>
-    <%= yield :header %>
-    <% if @image %>
-      <style type="text/css">
-      #header {background-image: <%= "url(/images/headers/#{@image}_header_txt.gif)" %> }
-      #app {background-image: <%= "url(/images/headers/#{@image}_header.jpg)" %> }
-      </style>
-    <% end %>
-    <%= render :partial => '/layouts/jsextras' %>
+      <title><%= yield(:title) || 'Bienvenida' %> - Reu08 Cuestionario Online </title>
+      <!-- link rel="icon" href="images/e3e.ico" type="image/x-icon" / -->
+      <%= stylesheet_link_tag 'q09' %>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<%#= javascript_include_tag 'jquery.validator.js'  %>
+<%#= javascript_include_tag 'jquery.bt.min.js'  %>
+      <%= javascript_include_tag 'jquery.dirty_form.js'  %>
+      <%= yield :header %>
+      <% if @image %>
+        <style type="text/css">
+          #header {background-image: <%= "url(/images/headers/#{@image}_header_txt.gif)" %> }
+          #app {background-image: <%= "url(/images/headers/#{@image}_header.jpg)" %> }
+        </style>
+      <% end %>
+      <%= render :partial => '/layouts/jsextras' %>
   </head>
   <body>
 
@@ -25,12 +25,12 @@
       <a href="/"><h1>Reu08 Cuestionario</h1></a>
       <div id="header"></div>
       <div id="account">
+        <%= link_to t(:feedback), feedback_path, :id => 'feedback' %>
         <% if current_user %>
           <%= link_to t(:logout), logout_path, :id => 'logout' %>
           <%= link_to t(:edit_profile), edit_user_path(:current), :id => 'edit_profile' %>
           <span style="display: none"><%= t(:welcome, :name => current_user.username) %></span>
         <% else %>
-          <%= link_to t(:feedback), feedback_path, :id => 'feedback' %>
           <%= link_to t(:signup), new_user_path, :id => 'signup' %>
           <%= link_to t(:login), login_path, :id => 'login' %>
         <% end %>
