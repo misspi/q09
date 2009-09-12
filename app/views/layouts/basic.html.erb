@@ -20,21 +20,21 @@
       <%= render :partial => '/layouts/jsextras' %>
   </head>
   <body>
-
-    <div id="app">
+    <div id="banner">
       <a href="/"><h1>Reu08 Cuestionario</h1></a>
-      <div id="header"></div>
-      <div id="account">
-        <%= link_to t(:feedback), feedback_path, :id => 'feedback' %>
-        <% if current_user %>
-          <%= link_to t(:logout), logout_path, :id => 'logout' %>
-          <%= link_to t(:edit_profile), edit_user_path(:current), :id => 'edit_profile' %>
-          <span style="display: none"><%= t(:welcome, :name => current_user.username) %></span>
-        <% else %>
-          <%= link_to t(:signup), new_user_path, :id => 'signup' %>
-          <%= link_to t(:login), login_path, :id => 'login' %>
-        <% end %>
-      </div>
+      <span id="header">&nbsp;</span>
+    </div>
+
+    <div id="account" class="container">
+      <%= link_to t(:feedback), feedback_path, :id => 'feedback' %>
+      <% if current_user %>
+        <span style="display: none"><%= t(:welcome, :name => current_user.username) %></span>
+        <%= link_to t(:logout), logout_path, :id => 'logout' %>
+        <%= link_to t(:edit_profile), edit_user_path(:current), :id => 'edit_profile' %>
+      <% else %>
+        <%= link_to t(:signup), new_user_path, :id => 'signup' %>
+        <%= link_to t(:login), login_path, :id => 'login' %>
+      <% end %>
     </div>
     <div id="flashes" class="container">
       <% unless flash[:notice].blank? %>

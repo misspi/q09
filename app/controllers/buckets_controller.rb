@@ -1,5 +1,4 @@
 class BucketsController < ApplicationController
-  before_filter :admin_required
 
   def index
     if params[:only]

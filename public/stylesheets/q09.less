@@ -30,19 +30,22 @@ html {
 /* ELEMENTOS HTML */
 a {text-decoration: none; color: @oscuro;}
 a:hover {text-decoration: underline;}
-
 h1 {font-size: 200%; color: @medio;}
 
-/* BARRA SUPERIOR */
+/* ELEMENTOS GENERALES */
+.container { width: 960px; margin: 0 auto; }
+.column-1 { padding-left: 1em; padding-top: 1em; width: 900px;}
 
-#app {
+/* BARRA SUPERIOR */
+#banner {
+    position: fixed; left: 0; top: 0; right: 0;
     background-image: url(../images/headers/cuestionario_header.jpg);
     background-repeat: no-repeat;
-    background-color: @fondo;
-    height: 169px;
+    background-color: @medio;
+    height: 113px;
 }
 
-#app h1 {
+#banner h1 {
     text-indent: -1000px;
     width: 113px;
     height: 113px;
@@ -60,24 +63,42 @@ h1 {font-size: 200%; color: @medio;}
     margin-right: 80px;
 }
 
-#flashes { overflow: hidden; 
-    background-color: @fondo;}
+/* GESTIÓN DE USUARIO */
+#account {
+    margin-top: 123px; 
+    height: 35px;
+    width: 90%; overflow: hidden;
+}
+#account a {height: 25px; text-indent: -1000px; display: block; float: right; padding: 0; margin: 0;
+    overflow: hidden; background-repeat: no-repeat; background-color: transparent;
+    background-image: url(../images/account.gif);}
+#signup {width: 106px; background-position:  0 0;}
+#signup:hover {width: 106px; background-position:  0 -31px;}
+#login {width: 69px; background-position: -106px 0;}
+#login:hover { background-position: -106px -31px;}
+#edit_profile {width: 106px; background-position:  -175px 0 ;}
+#edit_profile:hover {width: 106px; background-position:  -175px -31px ;}
+#logout {width: 54px; background-position: -281px 0; }
+#logout:hover {background-position: -281px -31px ;}
+#feedback {width: 101px; background-position:  -335px 0 ;}
+#feedback:hover {width: 101px; background-position:  -335px -31px ;}
 
+#account a.admin {padding: 0.2em 1em; color: white; margin-right: 1em; font-size: 75%;
+    background-color: @oscuro; .round; }
+
+/* MENSAJES FLASH */
+#flashes {
+    background-color: @fondo;
+}
 
 .flash {
-    width: 900px;
-    text-align: center;
-    background-color: @flash;
-    padding: 4px 2em;
-    color: black;
+    width: 900px; text-align: center;     padding: 4px 2em;
+    background-color: @flash; color: black;
     cursor: pointer;
     .round;
 }
 
-/* PAGINA */
-.container { width: 960px; margin: 0 auto; background-color: white; }
-.column-1 { padding-left: 1em; padding-top: 1em; width: 900px;}
-#page {padding-bottom: 2em;}
+/* NAVEGACION */
 #navigation {text-indent: -1000px; margin-top: 3em; background-color: @fondo;  }
 #navigation ul, #navigation ol {width: 100%; overflow: hidden; }
 #navigation ol {text-indent: 0; }
@@ -87,20 +108,12 @@ h1 {font-size: 200%; color: @medio;}
 
 #navigation ul li {display: block; float: left; padding: 0; }
 #navigation ul li a, #navigation li span {display: block;height: 34px;}
-#nada {display: block; float: left; padding: 0.6em 1em 0.4em 1em;
-    font-weight: bold;
-    background-color: @medio;
-    margin-right: 0.3em;
-    .tab-borders;
-    color: white;
-    height: 25px;
-}
 #navigation ul li a {
     color: @oscuro;
 }
-
+ 
 #nav_presentacion a {width: 139px; background: transparent url(../images/nav_grey.gif) 0 0 no-repeat;}
-#nav_presentacion a:hover {width: 139px; background: transparent url(../images/nav_white.gif) 0 0 no-repeat;}
+#nav_presentacion a:hover {background-image: url(../images/nav_white.gif);}
 #nav_presentacion span {width: 139px; background: transparent url(../images/nav_white.gif) 0 0 no-repeat;}
 #nav_tumisma a {width: 113px; background: transparent url(../images/nav_grey.gif) -139px 0 no-repeat;}
 #nav_tumisma a:hover {width: 113px; background: transparent url(../images/nav_white.gif) -139px 0 no-repeat;}
@@ -124,28 +137,14 @@ h1 {font-size: 200%; color: @medio;}
 #nav_comun a:hover {width: 117px; background: transparent url(../images/nav_white.gif) -755px 0 no-repeat;}
 #nav_comun span {width: 117px; background: transparent url(../images/nav_white.gif) -755px 0 no-repeat;}
 
-#account {
-    clear: both;
-    float:right;
-    margin-top: 15px;
-    padding-right: 85px;
-}
-#account a {height: 25px; text-indent: -1000px; display: block; float: right; padding: 0; margin: 0; 
-    overflow: hidden; background-repeat: no-repeat; background-color: transparent;
-    background-image: url(../images/account.gif);}
-#signup {width: 106px; background-position:  0 0;}
-#signup:hover {width: 106px; background-position:  0 -31px;}
-#login {width: 69px; background-position: -106px 0;}
-#login:hover { background-position: -106px -31px;}
-#edit_profile {width: 106px; background-position:  -175px 0 ;}
-#edit_profile:hover {width: 106px; background-position:  -175px -31px ;}
-#logout {width: 54px; background-position: -281px 0; }
-#logout:hover {background-position: -281px -31px ;}
-#feedback {width: 101px; background-position:  -335px 0 ;}
-#feedback:hover {width: 101px; background-position:  -335px -31px ;}
 
-#account a.admin {padding: 0.2em 1em; color: white; margin-right: 1em; font-size: 75%;
-    background-color: @oscuro; .round; }
+/* PAGINA */
+#page {padding-bottom: 2em; background-color: white;}
+
+
+
+
+
 #credits {
     font-size: 75%;
     background-color:@fondo; color: @medio;

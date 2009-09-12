@@ -94,13 +94,26 @@ h1 {
   font-size: 200%;
   color: #9c9e9f;
 }
-#app {
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+.column-1 {
+  padding-left: 1em;
+  padding-top: 1em;
+  width: 900px;
+}
+#banner {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
   background-image: url(../images/headers/cuestionario_header.jpg);
   background-repeat: no-repeat;
-  background-color: #cdd4dc;
-  height: 169px;
+  background-color: #9c9e9f;
+  height: 113px;
 }
-#app h1 {
+#banner h1 {
   text-indent: -1000px;
   width: 113px;
   height: 113px;
@@ -116,31 +129,78 @@ h1 {
   float: right;
   margin-right: 80px;
 }
-#flashes {
+#account {
+  margin-top: 123px;
+  height: 35px;
+  width: 90%;
   overflow: hidden;
-  background-color: #cdd4dc;
 }
+#account a {
+  height: 25px;
+  text-indent: -1000px;
+  display: block;
+  float: right;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-image: url(../images/account.gif);
+}
+#signup {
+  width: 106px;
+  background-position: 0 0;
+}
+#signup:hover {
+  width: 106px;
+  background-position: 0 -31px;
+}
+#login {
+  width: 69px;
+  background-position: -106px 0;
+}
+#login:hover { background-position: -106px -31px; }
+#edit_profile {
+  width: 106px;
+  background-position: -175px 0;
+}
+#edit_profile:hover {
+  width: 106px;
+  background-position: -175px -31px;
+}
+#logout {
+  width: 54px;
+  background-position: -281px 0;
+}
+#logout:hover { background-position: -281px -31px; }
+#feedback {
+  width: 101px;
+  background-position: -335px 0;
+}
+#feedback:hover {
+  width: 101px;
+  background-position: -335px -31px;
+}
+#account a.admin {
+  padding: 0.2em 1em;
+  color: white;
+  margin-right: 1em;
+  font-size: 75%;
+  background-color: #414042;
+  -moz-border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+}
+#flashes { background-color: #cdd4dc; }
 .flash {
   width: 900px;
   text-align: center;
-  background-color: #feff8f;
   padding: 4px 2em;
+  background-color: #feff8f;
   color: black;
   cursor: pointer;
   -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
 }
-.container {
-  width: 960px;
-  margin: 0 auto;
-  background-color: white;
-}
-.column-1 {
-  padding-left: 1em;
-  padding-top: 1em;
-  width: 900px;
-}
-#page { padding-bottom: 2em; }
 #navigation {
   text-indent: -1000px;
   margin-top: 3em;
@@ -180,28 +240,12 @@ h1 {
   display: block;
   height: 34px;
 }
-#nada {
-  display: block;
-  float: left;
-  padding: 0.6em 1em 0.4em 1em;
-  font-weight: bold;
-  background-color: #9c9e9f;
-  margin-right: 0.3em;
-  -moz-border-radius: 0.2em 0.2em 0 0;
-  -webkit-border-top-left-radius: 0.2em;
-  -webkit-border-top-right-radius: 0.2em;
-  color: white;
-  height: 25px;
-}
 #navigation ul li a { color: #414042; }
 #nav_presentacion a {
   width: 139px;
   background: transparent url(../images/nav_grey.gif) 0 0 no-repeat;
 }
-#nav_presentacion a:hover {
-  width: 139px;
-  background: transparent url(../images/nav_white.gif) 0 0 no-repeat;
-}
+#nav_presentacion a:hover { background-image: url(../images/nav_white.gif); }
 #nav_presentacion span {
   width: 139px;
   background: transparent url(../images/nav_white.gif) 0 0 no-repeat;
@@ -290,66 +334,9 @@ h1 {
   width: 117px;
   background: transparent url(../images/nav_white.gif) -755px 0 no-repeat;
 }
-#account {
-  clear: both;
-  float: right;
-  margin-top: 15px;
-  padding-right: 85px;
-}
-#account a {
-  height: 25px;
-  text-indent: -1000px;
-  display: block;
-  float: right;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-image: url(../images/account.gif);
-}
-#signup {
-  width: 106px;
-  background-position: 0 0;
-}
-#signup:hover {
-  width: 106px;
-  background-position: 0 -31px;
-}
-#login {
-  width: 69px;
-  background-position: -106px 0;
-}
-#login:hover { background-position: -106px -31px; }
-#edit_profile {
-  width: 106px;
-  background-position: -175px 0;
-}
-#edit_profile:hover {
-  width: 106px;
-  background-position: -175px -31px;
-}
-#logout {
-  width: 54px;
-  background-position: -281px 0;
-}
-#logout:hover { background-position: -281px -31px; }
-#feedback {
-  width: 101px;
-  background-position: -335px 0;
-}
-#feedback:hover {
-  width: 101px;
-  background-position: -335px -31px;
-}
-#account a.admin {
-  padding: 0.2em 1em;
-  color: white;
-  margin-right: 1em;
-  font-size: 75%;
-  background-color: #414042;
-  -moz-border-radius: 0.2em;
-  -webkit-border-radius: 0.2em;
+#page {
+  padding-bottom: 2em;
+  background-color: white;
 }
 #credits {
   font-size: 75%;
