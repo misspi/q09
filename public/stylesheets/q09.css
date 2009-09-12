@@ -130,7 +130,7 @@ h1 {
   margin-right: 80px;
 }
 #account {
-  margin-top: 123px;
+  padding-top: 123px;
   height: 35px;
   width: 90%;
   overflow: hidden;
