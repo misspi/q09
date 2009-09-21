@@ -9,6 +9,9 @@
 <%#= javascript_include_tag 'jquery.validator.js'  %>
 <%#= javascript_include_tag 'jquery.bt.min.js'  %>
       <%= javascript_include_tag 'jquery.dirty_form.js'  %>
+
+      <%= render :partial => '/layouts/jsextras' %>
+
       <%= yield :header %>
       <% if @image %>
         <style type="text/css">
@@ -16,7 +19,6 @@
           #app {background-image: <%= "url(/images/headers/#{@image}_header.jpg)" %> }
         </style>
       <% end %>
-      <%= render :partial => '/layouts/jsextras' %>
   </head>
   <body>
     <div id="banner">
