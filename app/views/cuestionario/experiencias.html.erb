@@ -4,6 +4,10 @@
 <% form_for @survey do |form| %>
   <%= next_step cuestionario_path(:id => 'experiencias') %>
 
+  <p class="submit">
+    <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
+  </p>
+
   <p>
     <%= form.label :studies, t(:studies) %>
     <%= form.radio_button :studies, :primera_etapa_secundaria %><label class="radio">Primera etapa de educación secundaria</label>
@@ -119,8 +123,4 @@
     <%= form.text_area :formation_love %>
   </p>
 
-  <p>
-    <label>&nbsp;</label>
-    <%= form.submit "Guardar" %>
-  </p>
 <% end %>

@@ -1,6 +1,8 @@
 
 es:
   cuestionario:
+    submit: "Guardar"
+    submit_info: "Por favor, guarda los datos de este cuestionario antes de pasar al siguiente"
     none: "no relevante"
     some: "poco relevante"
     lot: "relevante"

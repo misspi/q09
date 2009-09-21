@@ -4,6 +4,11 @@
 <% form_for @survey do |form| %>
   <%= next_step cuestionario_path(:id => 'autoria') %>
 
+  <p class="submit">
+    <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
+  </p>
+
+  
   <p>
     <%= form.label :author, t(:author) %>
     <% Reu09.c(:autoria, :author).each do |topic| %>
@@ -48,15 +53,4 @@
     <%= form.text_area :author_asoc_why %>
   </p>
 
-
-
-
-
-
-
-
-  <p>
-    <label>&nbsp;</label>
-    <%= form.submit "Guardar" %>
-  </p>
 <% end %>

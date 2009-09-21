@@ -8,6 +8,11 @@
 
 <% form_for @survey do |form| %>
   <%= next_step cuestionario_path(:id => 'presentacion') %>
+
+  <p class="submit">
+    <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
+  </p>
+
   <p>
     <%= form.label :name, t(:name) %>
     <%= form.text_field :name %>
@@ -39,14 +44,14 @@
 
   <p>
     <label>Actividad que desempeñas</label>
-    <table>
-      <% Reu09.c(:presentacion, :ambito).each do |actividad| %>
-        <tr>
-          <td><%= t(actividad) %></td>
-          <td><%= form.text_field actividad %></td>
-        </tr>
-      <% end %>
-    </table>
+  <table>
+    <% Reu09.c(:presentacion, :ambito).each do |actividad| %>
+      <tr>
+        <td><%= t(actividad) %></td>
+        <td><%= form.text_field actividad %></td>
+      </tr>
+    <% end %>
+  </table>
   </p>
 
   <p>
@@ -54,8 +59,4 @@
     <%= form.text_area :interest %>
   </p>
 
-
-  <p>
-    <%= form.submit "Guardar" %>
-  </p>
 <% end %>
