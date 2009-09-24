@@ -363,9 +363,15 @@ form textarea {
   font-size: 85%;
 }
 form input[type=submit] {
-  margin-bottom: 1em;
-  margin-top: 1em;
-  margin-left: 0.9em;
+  border: 2px #cccccc;
+  padding: 0.4em 0.7em 0.4em 0.7em;
+  background-color: #414042;
+  color: #cdd4dc;
+  font-size: 75%;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.08em;
+  -moz-border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
 }
 form input[type=radio] {
   display: block;
@@ -407,10 +413,29 @@ p.submit {
   margin-bottom: 1em;
   -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
+  width: 93%;
+  padding: 10px 0px 10px 10px;
 }
 p.submit span {
-  padding-left: 1em;
   color: #9c9e9f;
+  font-size: 80%;
+  padding-left: 1em;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+p.submit_bottom {
+  background-color: #efefef;
+  margin-bottom: 1em;
+  -moz-border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  width: 93%;
+  padding: 10px 0px 10px 10px;
+  margin-top: 60px;
+}
+p.submit_bottom span {
+  color: #9c9e9f;
+  font-size: 80%;
+  padding-left: 1em;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
 }
 form table {
   margin-left: 1em;
@@ -509,6 +534,7 @@ tr.odd { background-color: #efefef; }
 .uploader {
   padding: 1em;
   background-color: white;
+  font-size: 75%;
   -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
 }
@@ -530,7 +556,6 @@ tr.odd { background-color: #efefef; }
 }
 .uploader .bucket a {
   display: block;
-  font-size: 75%;
   margin: 0.3em 0;
   text-align: center;
 }

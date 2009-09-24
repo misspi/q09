@@ -2,23 +2,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-      <title><%= yield(:title) || 'Bienvenida' %> - Reu08 Cuestionario Online </title>
-      <!-- link rel="icon" href="images/e3e.ico" type="image/x-icon" / -->
-      <%= stylesheet_link_tag 'q09' %>
-      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
-<%#= javascript_include_tag 'jquery.validator.js'  %>
-<%#= javascript_include_tag 'jquery.bt.min.js'  %>
-      <%= javascript_include_tag 'jquery.dirty_form.js'  %>
-
-      <%= render :partial => '/layouts/jsextras' %>
-
-      <%= yield :header %>
-      <% if @image %>
-        <style type="text/css">
-          #header {background-image: <%= "url(/images/headers/#{@image}_header_txt.gif)" %> }
-          #app {background-image: <%= "url(/images/headers/#{@image}_header.jpg)" %> }
-        </style>
-      <% end %>
+    <title><%= yield(:title) || 'Bienvenida' %> - Reu08 Cuestionario Online </title>
+    <!-- link rel="icon" href="images/e3e.ico" type="image/x-icon" / -->
+    <%= stylesheet_link_tag 'q09' %>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <%#= javascript_include_tag 'jquery.validator.js'  %>
+    <%#= javascript_include_tag 'jquery.bt.min.js'  %>
+    <%= javascript_include_tag 'jquery.dirty_form.js'  %>
+    <%= yield :header %>
+    <% if @image %>
+      <style type="text/css">
+      #header {background-image: <%= "url(/images/headers/#{@image}_header_txt.gif)" %> }
+      #banner {background-image: <%= "url(/images/headers/#{@image}_header.jpg)" %> }
+      </style>
+    <% end %>
+    <%= render :partial => '/layouts/jsextras' %>
+>>>>>>> a021c37c95ad1103ab2e1baa60d6de5c74465d21:app/views/layouts/basic.html.erb
   </head>
   <body>
     <div id="banner">
