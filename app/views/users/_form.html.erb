@@ -25,7 +25,7 @@
       <%= f.check_box :allow_publish %>
       <label class="radio"><%= t(:allow_publish) %></label>
     </p>
-    <p>
+    <p class="bottom">
       <%= f.submit @user.new_record? ? t(:signup) : t(:update) %>
     </p>
   <% end %>

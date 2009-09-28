@@ -167,8 +167,8 @@ h1 {
   width: 900px;
   text-align: center;
   padding: 4px 2em;
-  background-color: #feff8f;
-  color: black;
+  background-color: #80caf7;
+  color: #414042;
   cursor: pointer;
   -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
@@ -373,6 +373,7 @@ form input[type=submit] {
   -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
 }
+form input[type=submit]:hover { color: white; }
 form input[type=radio] {
   display: block;
   float: left;
@@ -422,21 +423,7 @@ p.submit span {
   padding-left: 1em;
   font-family: Verdana, Helvetica, Arial, sans-serif;
 }
-p.submit_bottom {
-  background-color: #efefef;
-  margin-bottom: 1em;
-  -moz-border-radius: 0.2em;
-  -webkit-border-radius: 0.2em;
-  width: 93%;
-  padding: 10px 0px 10px 10px;
-  margin-top: 60px;
-}
-p.submit_bottom span {
-  color: #9c9e9f;
-  font-size: 80%;
-  padding-left: 1em;
-  font-family: Verdana, Helvetica, Arial, sans-serif;
-}
+p.submit.bottom { margin-top: 60px; }
 form table {
   margin-left: 1em;
   width: 81.5%;
@@ -537,6 +524,7 @@ tr.odd { background-color: #efefef; }
   font-size: 75%;
   -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
+  margin-top: 1em;
 }
 .uploader a {
   padding: 0.2em 0.5em;
@@ -587,3 +575,4 @@ tr.odd { background-color: #efefef; }
   width: 80%;
 }
 .feedback h1 { font-size: 100%; }
+p.bottom { margin-top: 60px; }

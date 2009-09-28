@@ -10,7 +10,7 @@ html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pr
 @fondo: #CDD4DC;
 @medio: #9C9E9F;
 @oscuro: #414042;
-@flash: #FEFF8F;
+@flash: #80caf7;
 
 .round {
     -moz-border-radius: 0.2em;
@@ -94,7 +94,7 @@ h1 {font-size: 200%; color: @medio;}
 
 .flash {
     width: 900px; text-align: center;     padding: 4px 2em;
-    background-color: @flash; color: black;
+    background-color: @flash; color: @oscuro;
     cursor: pointer;
     .round;
 }
@@ -154,6 +154,7 @@ h1 {font-size: 200%; color: @medio;}
     padding: 1em 0;
     margin-bottom: 1em;
     width: 70%;
+
 }
 
 /* FORMULARIOS */
@@ -178,6 +179,13 @@ letter-spacing: 0.08em;
 .round;
 }
 
+form input[type=submit]:hover {
+color: white;
+}
+
+
+
+
 form input[type=radio], form input[type=checkbox]  {
     display: block; float: left; clear: left; vertical-align: middle; padding: 0;
     margin-left: 15px;  height: 12px;
@@ -194,9 +202,8 @@ form .field_info {font-size: 75%; color: @medio; margin-left: 1em;}
 p.submit { background-color: #efefef; margin-bottom: 1em; .round; width: 93%; padding: 10px 0px 10px 10px;}
 p.submit span {color: @medio; font-size: 80%; padding-left: 1em;
 font-family: Verdana, Helvetica, Arial, sans-serif;}
-p.submit_bottom{ background-color: #efefef; margin-bottom: 1em; .round; width: 93%; padding: 10px 0px 10px 10px; margin-top: 60px;}
-p.submit_bottom span {color: @medio; font-size: 80%; padding-left: 1em;
-font-family: Verdana, Helvetica, Arial, sans-serif;}
+p.submit.bottom{margin-top: 60px;}
+
 
 
 /* TABLAS DENTRO DE FORMULARIOS */
@@ -230,7 +237,7 @@ thead { color: white; font-weight: bold; text-align: center; background-color: w
 tr.odd {background-color: #efefef;}
 
 /* UPLOAD FORM */
-.uploader {padding: 1em; background-color: white; font-size: 75%; .round;}
+.uploader {padding: 1em; background-color: white; font-size: 75%; .round; margin-top: 1em;}
 .uploader a {padding: 0.2em 0.5em; color: white; background-color: @medio; .round;}
 .uploader .thumbnails {width: 100%; overflow: hidden;}
 .uploader .bucket {float: left; margin-right: 1em; margin-bottom: 1em;}
@@ -248,4 +255,5 @@ tr.odd {background-color: #efefef;}
 #feedback_body {height: 15em;}
 .feedback {border-top: 1px solid @medio; margin: 1em auto; width: 80%;}
 .feedback h1 {font-size: 100%;}
+p.bottom {margin-top: 60px;}
 

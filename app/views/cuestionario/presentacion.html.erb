@@ -25,9 +25,12 @@
 
   <p>
     <%= form.label :icon, t(:icon) %>
-    <%= form.text_field :icon, :id => 'upload_field' %>
-  </p>
+    <%= form.text_field :icon, :id => 'upload_field' %>  
+</p>
+
+<p>
   <%= js_upload_file(@survey.icon, :id => 'upload_field', :label => t('upload')) %>
+</p>
 
   <p>
     <%= form.label :location, t(:location) %>
@@ -59,7 +62,7 @@
     <%= form.text_area :interest %>
   </p>
 
-  <p class="submit_bottom">
+  <p class="submit bottom">
     <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
   </p>
 
