@@ -13,46 +13,18 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
   margin: 0;
   padding: 0;
 }
-li {
-  margin: 0;
-  padding: 0;
-}
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-}
-form {
-  margin: 0;
-  padding: 0;
-}
-fieldset, img {
-  margin: 0;
-  padding: 0;
-}
-legend {
-  margin: 0;
-  padding: 0;
-}
-input, textarea, select, textarea, select {
-  margin: 0;
-  padding: 0;
-}
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-fieldset { border: 0; }
+fieldset, img { border: 0; }
 address, caption, cite, code, dfn, em, strong, th, var {
   font-style: normal;
   font-weight: normal;
 }
-caption, th {
-  font-style: normal;
-  font-weight: normal;
-}
 li { list-style: none; }
-caption { text-align: left; }
-h1 {
+caption, th { text-align: left; }
+h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
   font-weight: normal;
 }
@@ -64,12 +36,12 @@ abbr, acronym {
 }
 sup { vertical-align: text-top; }
 sub { vertical-align: text-bottom; }
-input {
+input, textarea, select {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
 }
-input { *font-size: 100%; }
+input, textarea, select { *font-size: 100%; }
 legend { color: #000000; }
 del, ins { text-decoration: none; }
 .round {
@@ -391,9 +363,15 @@ form textarea {
   font-size: 85%;
 }
 form input[type=submit] {
-  margin-bottom: 1em;
-  margin-top: 1em;
-  margin-left: 0.9em;
+  border: 2px #cccccc;
+  padding: 0.4em 0.7em 0.4em 0.7em;
+  background-color: #414042;
+  color: #cdd4dc;
+  font-size: 75%;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.08em;
+  -moz-border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
 }
 form input[type=radio] {
   display: block;
@@ -435,10 +413,29 @@ p.submit {
   margin-bottom: 1em;
   -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
+  width: 93%;
+  padding: 10px 0px 10px 10px;
 }
 p.submit span {
-  padding-left: 1em;
   color: #9c9e9f;
+  font-size: 80%;
+  padding-left: 1em;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+p.submit_bottom {
+  background-color: #efefef;
+  margin-bottom: 1em;
+  -moz-border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  width: 93%;
+  padding: 10px 0px 10px 10px;
+  margin-top: 60px;
+}
+p.submit_bottom span {
+  color: #9c9e9f;
+  font-size: 80%;
+  padding-left: 1em;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
 }
 form table {
   margin-left: 1em;
@@ -537,6 +534,7 @@ tr.odd { background-color: #efefef; }
 .uploader {
   padding: 1em;
   background-color: white;
+  font-size: 75%;
   -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
 }
@@ -558,7 +556,6 @@ tr.odd { background-color: #efefef; }
 }
 .uploader .bucket a {
   display: block;
-  font-size: 75%;
   margin: 0.3em 0;
   text-align: center;
 }

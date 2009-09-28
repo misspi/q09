@@ -45,6 +45,7 @@ h1 {font-size: 200%; color: @medio;}
     height: 113px;
 }
 
+
 #banner a {
     text-indent: -1000px;
     width: 113px;
@@ -111,7 +112,7 @@ h1 {font-size: 200%; color: @medio;}
 #navigation ul li a {
     color: @oscuro;
 }
- 
+
 #nav_presentacion a {width: 139px; background: transparent url(../images/nav_grey.gif) 0 0 no-repeat;}
 #nav_presentacion a:hover {background-image: url(../images/nav_white.gif);}
 #nav_presentacion span {width: 139px; background: transparent url(../images/nav_white.gif) 0 0 no-repeat;}
@@ -142,9 +143,6 @@ h1 {font-size: 200%; color: @medio;}
 #page {padding-bottom: 2em; background-color: white;}
 
 
-
-
-
 #credits {
     font-size: 75%;
     background-color:@fondo; color: @medio;
@@ -168,23 +166,38 @@ form input[type=text], form p input[type=password], form textarea {
     padding: 1px 2px; margin-left: 1em;
     width: 80%;}
 form textarea {height: 4em; font-size: 85%;}
-form input[type=submit] {margin-bottom: 1em; margin-top: 1em; margin-left: 0.9em;}
 
+form input[type=submit] {
+border: 2px  #cccccc;
+padding: 0.4em 0.7em 0.4em 0.7em;
+background-color: @oscuro;
+color: #cdd4dc;
+font-size: 75%;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+letter-spacing: 0.08em;
+.round;
+}
 
 form input[type=radio], form input[type=checkbox]  {
     display: block; float: left; clear: left; vertical-align: middle; padding: 0;
     margin-left: 15px;  height: 12px;
-
 }
+
 form label.radio, form label.checkbox  {
     font-size: 12px;
     vertical-align: middle; color: @oscuro;
     margin: 0 0 3px 35px;}
+
 form .field_info {font-size: 75%; color: @medio; margin-left: 1em;}
 
 /* BOTÓN DE GUARDAR */
-p.submit { background-color: #efefef; margin-bottom: 1em; .round;}
-p.submit span {padding-left: 1em; color: @medio;}
+p.submit { background-color: #efefef; margin-bottom: 1em; .round; width: 93%; padding: 10px 0px 10px 10px;}
+p.submit span {color: @medio; font-size: 80%; padding-left: 1em;
+font-family: Verdana, Helvetica, Arial, sans-serif;}
+p.submit_bottom{ background-color: #efefef; margin-bottom: 1em; .round; width: 93%; padding: 10px 0px 10px 10px; margin-top: 60px;}
+p.submit_bottom span {color: @medio; font-size: 80%; padding-left: 1em;
+font-family: Verdana, Helvetica, Arial, sans-serif;}
+
 
 /* TABLAS DENTRO DE FORMULARIOS */
 
@@ -217,11 +230,11 @@ thead { color: white; font-weight: bold; text-align: center; background-color: w
 tr.odd {background-color: #efefef;}
 
 /* UPLOAD FORM */
-.uploader {padding: 1em; background-color: white; .round;}
+.uploader {padding: 1em; background-color: white; font-size: 75%; .round;}
 .uploader a {padding: 0.2em 0.5em; color: white; background-color: @medio; .round;}
 .uploader .thumbnails {width: 100%; overflow: hidden;}
 .uploader .bucket {float: left; margin-right: 1em; margin-bottom: 1em;}
-.uploader .bucket a {display: block; font-size: 75%; margin: 0.3em 0; text-align: center;}
+.uploader .bucket a {display: block;  margin: 0.3em 0; text-align: center;}
 
 /* ABOUT */
 .about a {text-decoration: underline; color: @oscuro; }
