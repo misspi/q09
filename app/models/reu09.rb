@@ -49,10 +49,10 @@ class Reu09
     :habitat => {
       :place => [:suburb, :center, :city, :village],
       :culture_infra => [:cinema, :concert, :theater, :biblio, :exhibition, :space, :museum, :internet, :social],
-      :home => [:property, :rent, :cession],
+      :homes => [:property, :rent, :cession],
       :living => [:alone, :family, :share],
       :home_cost => [:less100, :from100to200, :from200to300, :from300to400, :from400to500, :from500to600,  :from600to700, :more700],
-      :studio => [:home, :rent, :cession, :company],
+      :studio => [:studio_home, :studio_rent, :studio_cession, :studio_company],
       :expenses => [:promotion, :telecom, :formation, :mobility, :material],
       :travel  => [:never, :sometimes, :usually, :must]
     },
@@ -65,10 +65,10 @@ class Reu09
       :access=> [:access_yes, :without, :access_no]
     },
     :comun => {
-      :policy => [:access, :extend, :future, :work, :patrimony],
+      :policy => [:access, :extend, :policy_future, :work, :patrimony],
       :culture_steps => [:budget, :sponsors, :space, :participate, :industry, :free_net, :pirate, :events, :law],
       :culture_action => [:sindicate, :asociation, :movement, :group],
-      :polis_action => [:manifestation, :act, :campaign],
+      :polis_action => [:polis_manifestation, :polis_act, :polis_campaign],
       :conditions => [:excelent, :dignified, :normal, :precarious, :miserable],
       :administration => [:culture, :home, :inmigration, :work, :health, :gender],
       :future => [:platform, :asociation, :syndicate, :campaign, :festival, :ofices, :online, :ocupy]

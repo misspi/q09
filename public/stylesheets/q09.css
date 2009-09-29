@@ -168,7 +168,9 @@ h1 {
   text-align: center;
   padding: 4px 2em;
   background-color: #80caf7;
-  color: #414042;
+  color: white;
+  font-size: 85%;
+  font-weight: bold;
   cursor: pointer;
   -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
@@ -576,3 +578,8 @@ tr.odd { background-color: #efefef; }
 }
 .feedback h1 { font-size: 100%; }
 p.bottom { margin-top: 60px; }
+.crear {
+  font-size: 75%;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}

@@ -23,6 +23,12 @@
   </p>
 
   <p>
+    <%= form.label :city_work, t(:city_work) %>
+    <%= form.text_area :city_work %>
+  </p>
+
+
+  <p>
     <%= form.label :culture_infra, t(:culture_infra) %>
     <% Reu09.c(:habitat, :culture_infra).each do |topic| %>
       <%= form.check_box "culture_infra_#{topic}_#" %>
@@ -36,9 +42,9 @@
   </p>
 
   <p>
-    <%= form.label :home, t(:home) %>
-    <% Reu09.c(:habitat, :home).each do |topic| %>
-      <%= form.radio_button "home", topic %>
+    <%= form.label :homes, t(:homes) %>
+    <% Reu09.c(:habitat, :homes).each do |topic| %>
+      <%= form.radio_button "homes", topic %>
       <label class="radio"><%= t(topic) %></label>
     <% end %>
   </p>
