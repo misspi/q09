@@ -43,6 +43,11 @@
   </p>
 
   <p>
+    <%= form.label :studies_eval_desc, t(:studies_eval_desc) %>
+    <%= form.text_area :studies_eval_desc %>
+  </p>
+
+  <p>
     <%= form.label :formation, t(:formation) %>
     <%= form.radio_button :formation, :yes %><label class="radio"><%= t(:formation_yes) %></label>
     <%= form.radio_button :formation, :no %><label class="radio"><%= t(:formation_no) %></label>
@@ -59,7 +64,11 @@
     <%= form.check_box :formation_kind_exchange %><label class="checkbox"><%= t(:formation_kind_exchange) %></label>
     <%= form.check_box :formation_kind_auto %><label class="checkbox"><%= t(:formation_kind_auto) %></label>
     <%= form.check_box :formation_kind_net %><label class="checkbox"><%= t(:formation_kind_net) %></label>
-    <%= form.check_box :formation_kind_other %><label class="checkbox"><%= t(:formation_kind_other) %></label>
+  </p>
+
+  <p>
+    <%= form.label :formation_kind_desc, t(:formation_kind_desc) %>
+    <%= form.text_area :formation_kind_desc %>
   </p>
 
   <p>
@@ -116,6 +125,11 @@
       <%= form.check_box "form_access_#{topic}_#" %>
       <label class="checkbox"><%= t(topic) %></label>
     <% end %>
+  </p>
+
+  <p>
+    <%= form.label :form_access_desc, t(:form_access_desc) %>
+    <%= form.text_area :form_access_desc %>
   </p>
 
   <p>

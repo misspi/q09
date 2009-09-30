@@ -29,12 +29,12 @@ class Reu09
       ]
     },
     :experiencias => {
-      :studies_eval => [:academica, :transmision, :talleres, :empleo, :aprendizaje, :internet, :biblioteca, :other],
+      :studies_eval => [:academica, :transmision, :talleres, :empleo, :aprendizaje, :internet, :biblioteca],
       :formation_done => [:name, :duration, :entity, :amount, :evaluation],
-      :form_access => [:money, :offer, :info, :time, :geo, :other]
+      :form_access => [:money, :offer, :info, :time, :geo]
     },
     :tumisma => {
-      :traject_eval => [:talent, :knowledge, :relations, :fame, :money, :marketing, :gender, :other],
+      :traject_eval => [:talent, :knowledge, :relations, :fame, :money, :marketing, :gender],
     },
     :dineros => {
       :ajob_xtra => [:night, :holiday, :overtime],

@@ -120,6 +120,11 @@
   </p>
 
   <p>
+    <%= form.label :traject_eval_desc, t(:traject_eval_desc) %>
+    <%= form.text_area :traject_eval_desc %>
+  </p>
+
+  <p>
     <%= form.label :gender_influence, t(:gender_influence) %>
     <%= form.radio_button :gender_influence, :yes %><label class="radio"><%= t(:gender_influence_yes) %></label>
     <%= form.radio_button :gender_influence, :no %><label class="radio"><%= t(:gender_influence_no) %></label>

@@ -118,8 +118,16 @@
     <%= form.text_area :future_desc %>
   </p>
 
+  <p>
+    <%= form.label :proposal, t(:proposal) %>
+    <%= form.text_area :proposal %>
+  </p>
+
+
    <p class="submit bottom">
     <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
   </p>
+
+
 
 <% end %>
