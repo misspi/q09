@@ -372,6 +372,7 @@ form input[type=submit] {
   font-size: 75%;
   font-family: Verdana, Helvetica, Arial, sans-serif;
   letter-spacing: 0.08em;
+  margin-top: 10px;
   -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
 }
@@ -417,7 +418,8 @@ p.submit {
   -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
   width: 93%;
-  padding: 10px 0px 10px 10px;
+  padding: 0 0px 10px 10px;
+  margin-top: 40px;
 }
 p.submit span {
   color: #9c9e9f;
