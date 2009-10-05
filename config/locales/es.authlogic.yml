@@ -1,5 +1,8 @@
 
 es:
+  activerecord:
+    models:
+      user_session: "sesión"
   authlogic:
     error_messages:
       login_blank: "no puede estar vacío."
@@ -13,17 +16,16 @@ es:
       not_confirmed: "Su cuenta necesita una confirmación"
       not_approved: "Su cuenta no está aprovada"
       no_authentication_details: "El nombre y la contraseña son obligatorias."
-    activerecord:
-      models:
-        user_session: "Sesión de usuario"
-      attributes:
-        user_session:
-          username: "El nombre"
-          email: "Email"
-          password: "La contraseña"
-          remember_me: "Recuérdame en este ordenador"
-        user:
-          username: "El nombre"
-          password: "La contraseña"
-          question: "La pregunta"
-          answer: "La respuesta"
+    models:
+      user_session: "Sesión de usuario"
+    attributes:
+      user_session:
+        username: "El nombre"
+        email: "Email"
+        password: "La contraseña"
+        remember_me: "Recuérdame en este ordenador"
+      user:
+        username: "El nombre"
+        password: "La contraseña"
+        question: "La pregunta"
+        answer: "La respuesta"
