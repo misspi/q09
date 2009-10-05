@@ -1,5 +1,6 @@
 class BucketsController < ApplicationController
-
+  before_filter :admin_required
+  
   def index
     if params[:only]
       @buckets = Bucket.find(:all, :conditions => {:id => params[:only].split(',')})

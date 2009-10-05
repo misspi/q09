@@ -18,3 +18,6 @@ Rails::Initializer.run do |config|
   config.action_controller.page_cache_directory = RAILS_ROOT + "/public/cache/"
 end
 
+ActionView::Base.field_error_proc = Proc.new { |html_tag, instance| "<span class='fieldWithErrors'>#{html_tag}</span>" }
+
+
