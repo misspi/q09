@@ -17,7 +17,6 @@
       </style>
     <% end %>
     <%= render :partial => '/layouts/jsextras' %>
->>>>>>> a021c37c95ad1103ab2e1baa60d6de5c74465d21:app/views/layouts/basic.html.erb
   </head>
   <body>
     <div id="banner">
@@ -26,6 +25,9 @@
     </div>
 
     <div id="account" class="container">
+      <% unless flash[:notice].blank? %>
+        <div class="flash"><%= flash[:notice] %></div>
+      <% end %>
       <%= link_to t(:feedback), feedback_path, :id => 'feedback' %>
       <% if current_user %>
         <span style="display: none"><%= t(:welcome, :name => current_user.username) %></span>
@@ -36,11 +38,7 @@
         <%= link_to t(:login), login_path, :id => 'login' %>
       <% end %>
     </div>
-    <div id="flashes" class="container">
-      <% unless flash[:notice].blank? %>
-        <div class="flash"><%= flash[:notice] %></div>
-      <% end %>
-    </div>
+
 
 
     <div id="navigation" class="container">

@@ -102,10 +102,10 @@ h1 {
   margin-right: 80px;
 }
 #account {
-  padding-top: 123px;
+  padding-top: 110px;
   height: 35px;
-  width: 90%;
-  overflow: hidden;
+  width: 76%;
+  overflow: hidden5;
 }
 #account a {
   height: 25px;
@@ -164,7 +164,7 @@ h1 {
 }
 #flashes { background-color: #cdd4dc; }
 .flash {
-  width: 900px;
+  width: 905px;
   text-align: center;
   padding: 4px 2em;
   background-color: #80caf7;
