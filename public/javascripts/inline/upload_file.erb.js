@@ -15,7 +15,6 @@
         $("#destroy_" + bucket_id).click(function() {
             if (confirm("¿Estás segura segura?")) {
                 var url = "/buckets/"+ bucket_id + ".js";
-                console.log(url);
                 $.post(url, {
                     _method: "delete",
                     authenticity_token : '<%= token %>'
