@@ -102,7 +102,7 @@ h1 {
   margin-right: 80px;
 }
 #account {
-  padding-top: 110px;
+  padding-top: 120px;
   height: 35px;
   width: 76%;
   overflow: hidden5;
@@ -162,9 +162,10 @@ h1 {
   -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
 }
-#flashes { background-color: #cdd4dc; }
 .flash {
-  width: 905px;
+  float: left;
+  display: block;
+  width: 626px;
   text-align: center;
   padding: 4px 2em;
   background-color: #80caf7;
