@@ -327,6 +327,12 @@ h1 {
 }
 .fieldWithErrors input[type=text] { border: 1px solid #cc0000; }
 .fieldWithErrors input[type=password] { border: 1px solid #cc0000; }
+.errorExplanation { color: #cc0000; }
+.errorExplanation h2 {
+  font-size: 1px;
+  display: none;
+  width: 0;
+}
 form p {
   width: 100%;
   overflow: hidden;
@@ -587,4 +593,10 @@ p.bottom { margin-top: 60px; }
   font-size: 75%;
   font-family: Verdana, Helvetica, Arial, sans-serif;
   font-weight: bold;
+}
+#credits { margin-top: 0.2em; }
+.calc {
+  font-family: monospace;
+  letter-spacing: 0.8em;
+  font-size: 120%;
 }
