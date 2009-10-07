@@ -9,10 +9,16 @@ class JsonDump
   def call(env)
     status, headers, response = @app.call(env)
     path = env['PATH_INFO']
+    puts "JSON LOG - path #{path}"
     begin
-      puts "JSON REQUEST #{path}: #{response.body}" if path =~ /.js/
-    rescue
-      puts "ERROR IN JSON DUMP: #{response.join('|')}" if response.respond_to?(:join)
+      if path =~ /.js/
+        body = response.respond_to?(:body) ? response.body : response.to_s
+        puts "JSON REQUEST #{path}: #{body}"
+      end
+    rescue Exception => e
+      error  = " - #{e.message}"
+      error << response.join('|') if response.respond_to?(:join)
+      puts "ERROR IN JSON DUMP: #{error}"
     end
     [status, headers, response]
   end

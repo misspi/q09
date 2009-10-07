@@ -27,7 +27,7 @@
       <td><%=h bucket.extra %></td>
       <td><%= bucket.owner_id %></td>
       <td><%= bucket.owner_type %></td>
-      <td><%= bucket.media_file_name %></td>
+      <td><%= link_to bucket.media_file_name, bucket.media.url %></td>
       <td><%= bucket.media_content_type %></td>
       <td><%= bucket.media_file_size %></td>
       <td><%= bucket.media_updated_at %></td>

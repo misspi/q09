@@ -7,9 +7,13 @@
 
     var id = "#<%= id %>";
 
-    var addThumbnail = function(bucket_id, src) {
+    var addThumbnail = function(key) {
+        var bucket_id = key['bucket_id'];
+        var src = key['thumbnail'];
+        var url = key['url'];
+
         $(id +"_ajax .thumbnails").append(tag("div", ['class', 'bucket', 'id', 'bucket_' + bucket_id],
-            tag("img", ['src', src], "") +
+            tag("a", ['href', url], tag("img", ['src', src], "")) +
             tag("a", ['href', '#', 'id',"destroy_" +bucket_id, 'class', 'destroy_bucket']  , "borrar")));
                 
         $("#destroy_" + bucket_id).click(function() {
@@ -80,7 +84,7 @@
             setWorking(true);
             $.getJSON("<%= load_path %>", function(data) {
                 $.each(data, function(val, key) {
-                    addThumbnail(key['bucket_id'], key['thumbnail']);
+                    addThumbnail(key);
                 });
                 setWorking(false);
             });
@@ -110,7 +114,7 @@
             },
             onComplete: function(file, response) {
                 var data = parseJSON(response);
-                addThumbnail(data['bucket_id'], data['thumbnail']);
+                addThumbnail(data);
                 addBucketID(data['bucket_id']);
                 setWorking(false);
             }

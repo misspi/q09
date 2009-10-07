@@ -10,14 +10,14 @@ class Bucket < ActiveRecord::Base
     if media_content_type =~ /image/
       self.media.url(:small)
     elsif media_content_type == 'application/pdf'
-      '/images/archivo.gif'
+      '/images/pdf.gif'
     else
       '/images/archivo.gif'
     end
   end
 
   def to_json
-    { :bucket_id => self.id, :thumbnail => self.thumbnail}.to_json
+    { :bucket_id => self.id, :thumbnail => self.thumbnail, :url => self.media.url}.to_json
   end
 
 end

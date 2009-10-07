@@ -10,6 +10,7 @@ Rails::Initializer.run do |config|
   config.gem "authlogic"
   config.gem "newrelic_rpm"
   config.gem 'flyerhzm-bullet', :lib => 'bullet', :source => 'http://gems.github.com'
+  config.gem 'paperclip', :lib => 'paperclip', :source => 'http://gems.github.com'
 
   config.time_zone = 'UTC'
   config.i18n.default_locale = :es
