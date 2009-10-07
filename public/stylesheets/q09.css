@@ -165,9 +165,8 @@ h1 {
 .flash {
   float: left;
   display: block;
-  width: 626px;
   text-align: center;
-  padding: 4px 2em;
+  padding: 5px 150px;
   background-color: #80caf7;
   color: white;
   font-size: 85%;
