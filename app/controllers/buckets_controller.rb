@@ -10,7 +10,10 @@ class BucketsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @buckets }
-      format.js { render :json => "[#{@buckets.map {|b| b.to_json}.join(',')}]"}
+      format.js do
+        response.headers["Content-Type"] = 'text/javascript'
+        render :js => "[#{@buckets.map {|b| b.to_json}.join(',')}]"
+      end
     end
   end
 
@@ -20,7 +23,7 @@ class BucketsController < ApplicationController
     respond_to do |format|
       format.html
       format.xml  { render :xml => @bucket }
-      format.js { render :json => @bucket.to_json}
+      format.js { render :js => @bucket.to_json}
     end
   end
 
@@ -45,7 +48,11 @@ class BucketsController < ApplicationController
         flash[:notice] = t('bucket.flash.created')
         format.html { redirect_to buckets_path }
         format.xml  { render :xml => @bucket, :status => :created, :location => @bucket }
-        format.js { render :json => @bucket.to_json}
+        format.js do
+          # fuck IE!!
+          response.headers["Content-Type"] = 'text/html'
+          render :js => @bucket.to_json
+        end
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @bucket.errors, :status => :unprocessable_entity }
@@ -75,7 +82,7 @@ class BucketsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(buckets_url) }
       format.xml  { head :ok }
-      format.js { render :json => "true"}
+      format.js { render :js => "true"}
     end
   end
 end

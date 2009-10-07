@@ -109,11 +109,13 @@
                 authenticity_token : '<%= token %>',
                 response: 'all'
             },
+            responseType: 'json',
             onSubmit: function() {
                 setWorking(true);
             },
             onComplete: function(file, response) {
-                var data = parseJSON(response);
+                //var data = parseJSON(response);
+                var data = response;
                 addThumbnail(data);
                 addBucketID(data['bucket_id']);
                 setWorking(false);
