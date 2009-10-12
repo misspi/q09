@@ -105,7 +105,7 @@ h1 {
   padding-top: 120px;
   height: 35px;
   width: 76%;
-  overflow: hidden5;
+  overflow: hidden;
 }
 #account a {
   height: 25px;
@@ -165,8 +165,9 @@ h1 {
 .flash {
   float: left;
   display: block;
+  width: 65%;
   text-align: center;
-  padding: 5px 150px;
+  padding: 5px 5px;
   background-color: #80caf7;
   color: white;
   font-size: 85%;
@@ -587,9 +588,9 @@ tr.odd { background-color: #efefef; }
   width: 80%;
 }
 .feedback h1 { font-size: 100%; }
-p.bottom { margin-top: 60px; }
+p.bottom { margin-top: 40px; }
 .crear {
-  font-size: 75%;
+  font-size: 80%;
   font-family: Verdana, Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
