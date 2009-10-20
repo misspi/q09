@@ -31,8 +31,8 @@
   <p>
     <%= form.label :internet, t(:internet) %>
     <% Reu09.c(:redes, :internet).each do |topic| %>
-      <%= form.radio_button "internet", topic %>
-      <label class="radio"><%= t(topic) %></label>
+      <%= form.check_box  "internet_#{topic}_#" %>
+      <label class="checkbox"><%= t(topic) %></label>
     <% end %>
   </p>
 
