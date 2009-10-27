@@ -2,50 +2,75 @@
 <div class="about">
   <%= title t(:title) %>
 
-  <p><b>Bienvenidxs al cuestionario de Reu08. Aquí tienes algunas indicaciones:</b></p>
-  <ol>
+  <p>
+    <b>El despliegue del Cuestionario es el arranque del proyecto de coinvestigación <i>¿Quién está detrás de la cultura?</i>
+      que REU08 va a poner a funcionar a partir de 2010 y que está pensado para ser desarrollado con la colaboración
+  de todxs aquellxs cuyo trabajo se desenvuelve en el territorio andaluz.</b></p>
+  <p>
+    Se formula como primer paso en un intento de devolvernos a los actores culturales una representación
+    renovada del lugar que ocupamos en el sistema global, proporcionándonos una información lo más clara y
+    precisa posible sobre las condiciones de vida/trabajo de lxs trabajadorxs del sector cultural, que nos
+    permita acercarnos a un estado de la cuestión, sostenido en datos concretos y no simplemente en hipótesis
+  e intuiciones.</p>
+  <p>
+    El Cuestionario no se plantea, pues, como una herramienta exclusivamente científica, ni rigurosa,
+    ni es nuestra mayor preocupación aplicar las técnicas del muestreo. Está redactado y formulado con la
+    idea de reconocer ámbitos de relación y condiciones materiales, sin menoscabo de otras miradas que
+    pudieran aparecer en su trasiego.
+  </p>
+
+  <p>
+    Para facilitar el uso del cuestionario hemos subdividido las preguntas en los siguientes
+    bloques: <br>
+    Presentación – Tu mismx – Experiencias – Dineros – Autoría – Hábitat – Redes – Lo Común
+  </p>
+
+  <p>
+    Es probable que algunas de estas categorías te parezcan incompletas, o que estimes que existen
+    otras que se han de tomar en cuenta para responder al cuestionario. En este caso,
+    no dudes en hacérnoslo saber ya que además del cuestionario
+    pretendemos hacer entrevistas abiertas y grupos de discusión, de modo que si te apetece profundizar
+  o entrarle a los temas con mayor complejidad <%= link_to 'contáctanos', feedback_path %>.</p>
+
+  <b>Los datos que se extraigan de este cuestionario serán utilizados de dos formas:</b>
+  <ul>
     <li>
-      Siéntete absolutamente libre para responder el cuestionario, si hay preguntas que no te gustan o no te apetece
-      responder, no lo hagas. Si quieres agregar, comentar, criticar o sugerir posibles correcciones o ideas, hazlo.
+      La primera es anónima, a través de estadísticas, gráficos y análisis de la información que acabarán
+      reflejando los datos agregados y cuyos resultados nos comprometemos a publicar en los soportes que
+      estén a nuestro alcance y que esperamos nos ayuden a visualizar contenidos y orientar respuestas al
+    <i>¿Quién está detrás de la cultura?</i>.</li>
+    <li>
+      La segunda, <%= link_to 'si decides aparecer', edit_user_path(:current) %> , es tratar de poner al servicio del común la información recabada en el bloque de
+      <i>Presentación</i>, con la idea de generar una cartografía progresiva del territorio andaluz que
+      permita visibilizar los nodos de esta coinvestigación y posibilite trazar alianzas, complicidades,
+      redes y encuentros de todo tipo con otrxs que están en situación similar y de esa manera dar pasos
+      que permitan pensar nuestra situación de forma conjunta.
     </li>
-    <li>
-      Para acceder al cuestionario es condición indispensable registrarse, esto garantiza y protege el acceso a tu
-      información, y si así lo deseas mantenerte informadx del proceso de la coinvestigación y de eventos, talleres
-      y propuestas relacionadas con la misma. Tus datos no irán a parar a ninguna empresa o institución ajena al
-      proyecto fuera del contexto de esta coinvestigación.
-    </li>
-    <li>
-    Los datos que se extraigan de este cuestionario serán utilizados de dos formas:
-    <ul>
+  </ul>
+  <br>
+  <p>
+    <b>Consideraciones para el uso del cuestionario:</b>
+    <ol>
       <li>
-        La primera es anónima, a través de estadísticas, gráficos y análisis de la información que acabarán
-        reflejando los datos agregados y cuyos resultados nos comprometemos a publicar en los soportes que estén
-        a nuestro alcance y que esperamos nos ayuden a esclarecer quién está detrás de la cultura.
+        Siéntete absolutamente libre para responder el cuestionario, si hay preguntas que no te gustan o no te apetece
+        responder, no lo hagas. Si quieres agregar, comentar, criticar o sugerir posibles correcciones o ideas, hazlo.
       </li>
       <li>
-        La segunda posibilidad, <%= link_to 'si decides aparecer', edit_user_path(:current) %> , es tratar de poner al servicio del común la información
-        recabada en el bloque de Presentación, con la idea de generar una cartografía progresiva del territorio andaluz
-        que permita visibilizar los nodos de esta coinvestigación  y posibilite trazar alianzas, complicidades, redes
-        y encuentros de todo tipo con otrxs que están en situación similar para poder pensar nuestra situación de forma
-        conjunta.
+        Para acceder al cuestionario es condición indispensable registrarse, esto garantiza y protege el acceso a tu
+        información, y si así lo deseas mantenerte informadx del proceso de la coinvestigación y de eventos, talleres
+        y propuestas relacionadas con la misma. Tus datos no irán a parar a ninguna empresa o institución ajena al
+        proyecto fuera del contexto de esta coinvestigación.
       </li>
-    </ul>
-    </li>
 
-    <li>
-      Ten presente que además del cuestionario pretendemos hacer entrevistas abiertas y grupos de discusión,
-      de modo que si te apetece profundizar o entrarle a los temas planteados con mayor complejidad o intimidad
-      <%= link_to 'no dudes en hacérnoslo saber', feedback_path %> .
-    </li>
-    <li>La marca x que aparece en lugar de la tradicional distinción genérica a/o, alude a lo que
-      consideramos una perentoria necesidad: evidenciar cuestiones abiertas en relación a la identidad sexual
-      y las consecuencias derivadas con respecto a las limitaciones vitales de lxs sujetxs, o bien, a las
-      posibilidades existenciales que se puedan generar, al proponer la cuestión como incógnita a desplegar,
-      o como ámbito de trabajo y reflexión conjunta que delibere sobre la legitimidad de lo neutro-masculino,
-      como mediador simbólico de la semántica cultural.
-    </li>
-  </ol>
-
+      <li>La marca x que aparece en lugar de la tradicional distinción genérica a/o, alude a lo que
+        consideramos una perentoria necesidad: evidenciar cuestiones abiertas en relación a la identidad sexual
+        y las consecuencias derivadas con respecto a las limitaciones vitales de lxs sujetxs, o bien, a las
+        posibilidades existenciales que se puedan generar, al proponer la cuestión como incógnita a desplegar,
+        o como ámbito de trabajo y reflexión conjunta que delibere sobre la legitimidad de lo neutro-masculino,
+        como mediador simbólico de la semántica cultural.
+      </li>
+    </ol>
+  </p>
 
   <p>Os invitamos a colaborar en <b> <i>Quién está detrás de la cultura</i> </b> para hacer más complejo y profundo
   el proceso de reconocimiento y puesta en común de las situaciones en las que nos encontramos.</p>
