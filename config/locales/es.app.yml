@@ -31,7 +31,10 @@ es:
   user: "Usuario"
   value: "Valor"
 
-
+  survey:
+    saved: "Se ha guardado esta página del formulario. Gracias"
+    notsaved: "Se ha producido un problema intentando guardar. Inténtalo de nuevo, por favor"
+    
   about:
     index:
       title: "¿Quien está detrás de la cultura? - Cuestionario"

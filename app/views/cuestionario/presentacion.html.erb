@@ -9,9 +9,14 @@
 <% form_for @survey do |form| %>
   <%= next_step cuestionario_path(:id => 'presentacion') %>
 
-  <p class="submit">
-    <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
-  </p>
+
+  <% if current_user %>
+    <p class="submit">
+      <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
+    </p>
+  <% else %>
+    <%= render 'preview' %>
+  <% end %>
 
   <p>
     <%= form.label :name, t(:name) %>
@@ -62,8 +67,10 @@
     <%= form.text_area :interest %>
   </p>
 
-  <p class="submit">
+  <% if current_user %>
+    <p class="submit bottom">
     <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
   </p>
+  <% end %>
 
 <% end %>

@@ -4,9 +4,13 @@
 <% form_for @survey do |form| %>
   <%= next_step cuestionario_path(:id => 'dineros') %>
 
-  <p class="submit">
-    <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
-  </p>
+  <% if current_user %>
+    <p class="submit">
+      <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
+    </p>
+  <% else %>
+    <%= render 'preview' %>
+  <% end %>
 
   <p>
     <%= form.label :laboral, t(:laboral) %>
@@ -156,9 +160,11 @@
     <% end %>
   </p>
 
+  <% if current_user %>
     <p class="submit bottom">
     <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
   </p>
+  <% end %>
 
 
 <% end %>

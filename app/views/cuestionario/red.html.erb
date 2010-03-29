@@ -5,9 +5,13 @@
 <% form_for @survey do |form| %>
   <%= next_step cuestionario_path(:id => 'red') %>
 
-  <p class="submit">
-    <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
-  </p>
+  <% if current_user %>
+    <p class="submit">
+      <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
+    </p>
+  <% else %>
+    <%= render 'preview' %>
+  <% end %>
 
   <p>
     <%= form.label :computer, t(:computer) %>
@@ -76,8 +80,11 @@
     <%= form.radio_button :web_find, :no %><label class="radio"><%= t(:web_find_no) %></label>
   </p>
 
+  <% if current_user %>
     <p class="submit bottom">
     <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
   </p>
+  <% end %>
+
 
 <% end %>

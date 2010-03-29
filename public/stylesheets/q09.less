@@ -1,4 +1,4 @@
- /*
+/*
 Copyright (c) 2008, Yahoo! Inc. All rights reserved.
 Code licensed under the BSD License:
 http://developer.yahoo.net/yui/license.txt
@@ -19,6 +19,11 @@ html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pr
 .tab-borders {
     -moz-border-radius:  0.2em 0.2em 0 0;
     -webkit-border-top-left-radius: 0.2em; -webkit-border-top-right-radius: 0.2em;
+}
+
+.preview {
+    background-color: @flash; color: white; padding: 1em; font-weight: bold;
+    .round;
 }
 
 
@@ -71,8 +76,8 @@ h1 {font-size: 200%; color: @medio;}
     width: 76%; overflow: hidden;
 }
 #account a {height: 25px; text-indent: -1000px; display: block; float: right; padding: 0; margin: 0;
-    overflow: hidden; background-repeat: no-repeat; background-color: transparent;
-    background-image: url(../images/account.gif);}
+            overflow: hidden; background-repeat: no-repeat; background-color: transparent;
+            background-image: url(../images/account.gif);}
 #signup {width: 106px; background-position:  0 0;}
 #signup:hover {width: 106px; background-position:  0 -31px;}
 #login {width: 69px; background-position: -106px 0;}
@@ -85,7 +90,7 @@ h1 {font-size: 200%; color: @medio;}
 #feedback:hover {width: 101px; background-position:  -335px -31px ;}
 
 #account a.admin {padding: 0.2em 1em; color: white; margin-right: 1em; font-size: 75%;
-    background-color: @oscuro; .round; }
+                  background-color: @oscuro; .round; }
 
 /* MENSAJES FLASH */
 
@@ -102,7 +107,7 @@ h1 {font-size: 200%; color: @medio;}
 #navigation ul, #navigation ol {width: 100%; overflow: hidden; }
 #navigation ol {text-indent: 0; }
 #navigation ol li { display: block; float:left; margin-right: 0.5em;
-    padding: 0.2em 1em; color: white; background-color: @oscuro; .tab-borders;}
+                    padding: 0.2em 1em; color: white; background-color: @oscuro; .tab-borders;}
 #navigation ol li a {color: @fondo;}
 
 #navigation ul li {display: block; float: left; padding: 0; }
@@ -164,7 +169,7 @@ h1 {font-size: 200%; color: @medio;}
 
 form p {width: 100%; overflow: hidden;}
 form p label {display: block; margin-top: 1.5em; margin-bottom: 0.3em;
-    color: @medio; font-weight: bold; font-size: 90%;}
+              color: @medio; font-weight: bold; font-size: 90%;}
 form input[type=text], form p input[type=password], form textarea {
     font-size: 85%;
     border: 1px solid @medio; color: @oscuro;
@@ -173,19 +178,19 @@ form input[type=text], form p input[type=password], form textarea {
 form textarea {height: 4em; font-size: 85%;}
 
 form input[type=submit] {
-border: 2px  #cccccc;
-padding: 0.4em 0.7em 0.4em 0.7em;
-background-color: @oscuro;
-color: #cdd4dc;
-font-size: 75%;
-font-family: Verdana, Helvetica, Arial, sans-serif;
-letter-spacing: 0.08em;
-margin-top: 10px;
-.round;
+    border: 2px  #cccccc;
+    padding: 0.4em 0.7em 0.4em 0.7em;
+    background-color: @oscuro;
+    color: #cdd4dc;
+    font-size: 75%;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    letter-spacing: 0.08em;
+    margin-top: 10px;
+    .round;
 }
 
 form input[type=submit]:hover {
-color: white;
+    color: white;
 }
 
 
@@ -203,9 +208,9 @@ form .field_info {font-size: 75%; color: @medio; margin-left: 1em;}
 
 /* BOTÓN DE GUARDAR */
 p.submit { background-color: #efefef; margin-bottom: 1em; .round; width: 93%; padding: 0 0px 10px 10px;
-    margin-top: 40px;}
+           margin-top: 40px;}
 p.submit span {color: @medio; font-size: 80%; padding-left: 1em;
-font-family: Verdana, Helvetica, Arial, sans-serif;}
+               font-family: Verdana, Helvetica, Arial, sans-serif;}
 p.submit.bottom{margin-top: 60px;}
 
 
@@ -263,9 +268,9 @@ p.bottom {margin-top: 40px;}
 
 /* CREAR CUENTA */
 .crear {
-font-size: 80%;
-font-family: Verdana, Helvetica, Arial, sans-serif;
-font-weight: bold;
+    font-size: 80%;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-weight: bold;
 }
 
 #credits {margin-top: 0.2em;}

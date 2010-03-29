@@ -53,6 +53,14 @@ del, ins { text-decoration: none; }
   -webkit-border-top-left-radius: 0.2em;
   -webkit-border-top-right-radius: 0.2em;
 }
+.preview {
+  background-color: #80caf7;
+  color: white;
+  padding: 1em;
+  font-weight: bold;
+  -moz-border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+}
 html {
   background-color: #cdd4dc;
   font-family: "Lucida Grande", Verdana, sans-serif;

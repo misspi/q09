@@ -29,7 +29,7 @@ class UserSurvey
       params.each_key do |name|
         answer = answer(name)
         answer.value = params[name]
-        answer.save
+        answer.save!
       end
     end
   end
