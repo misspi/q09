@@ -186,4 +186,4 @@ production:
 staging:
   <<: *default_settings
   enabled: true
-  app_name: crestasylechugas.org (Staging)
+  app_name: q09 (Staging)

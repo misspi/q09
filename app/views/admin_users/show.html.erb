@@ -1,0 +1,22 @@
+<% title t('.title', :user => @user.username) %>
+
+<div class="actions">
+  <%= link_to 'Volver', users_path %>
+</div>
+
+<table>
+  <thead><tr>
+      <td>Pregunta</td>
+      <td>Grupo</td>
+      <td>Respuesta</td>
+      <td></td>
+    </tr></thead>
+  <% @user.answers.each do |a| %>
+    <tr>
+      <td><%= t( "cuestionario.#{a.question.group}.#{a.question.name}" ) %></td>
+      <td><%= a.question.group %></td>
+      <td><%= a.value %></td>
+      <td><%= link_to 'Ver', a %></td>
+    </tr>
+  <% end %>
+</table>

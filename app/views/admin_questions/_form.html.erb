@@ -1,0 +1,11 @@
+<% semantic_form_for(@question) do |form|  %>
+  <% form.inputs do %>
+    <%= form.input :title %>
+    <%= form.input :name %>
+    <%= form.input :group %>
+  <% end %>
+  <% form.buttons do %>
+    <%= form.commit_button %>
+    <%= link_to 'Cancelar', questions_path %>
+  <% end %>
+<% end %>

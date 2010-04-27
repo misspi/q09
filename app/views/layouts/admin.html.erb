@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>FLO8x6 Admin - <%= yield :title %></title>
+    <% if RAILS_ENV == 'production' %>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+    <% else %>
+      <%= javascript_include_tag 'jquery.min.js' %>
+    <% end %>
+    <%=  stylesheet_link_tag 'admin' %>
+    <%= yield :head %>
+  </head>
+  <body>
+    <div id="user">
+      
+    </div>
+    <div id="page">
+      <div id="top">
+        <div id="logo"><%= link_to image_tag( 'logo_r08.gif' ), root_path %></div>
+        <% if flash[:notice] %>
+          <div class="flash"><%= flash[:notice] %></div>
+        <% end %>
+        <h1><%= yield :title %></h1>
+      </div>
+      <div class="container">
+        <div id="sitebar">
+          <ul>
+            <li class="top">Usuarixs</li>
+            <li><%= link_to 'Listado', users_path %></li>
+            <li class="top">Cuestionario</li>
+            <li><%= link_to 'Preguntas', questions_path %></li>
+            <li><%= link_to 'Respuestas', answers_path %></li>
+            <li class="top">Mensajes</li>
+            <li><%= link_to 'Listado', feedbacks_path %></li>
+
+          </ul>
+        </div>
+        <div id="content">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+    <div id="legal">
+      q09 &#9733 software hecho a mano por <%= link_to 'calc', 'http://calclab.com', :class => 'calc' %>
+    </div>
+<%#= render '/layouts/ga' %>
+  </body>
+</html>

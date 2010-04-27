@@ -11,6 +11,10 @@ Rails::Initializer.run do |config|
   config.gem "newrelic_rpm"
   config.gem 'flyerhzm-bullet', :lib => 'bullet', :source => 'http://gems.github.com'
   config.gem 'paperclip', :lib => 'paperclip', :source => 'http://gems.github.com'
+  config.gem 'inherited_resources', :source => 'http://gemcutter.org', :version => '1.0.3'
+  config.gem 'cancan'
+  config.gem 'searchlogic'
+  config.gem 'formtastic'
 
   config.time_zone = 'UTC'
   config.i18n.default_locale = :es

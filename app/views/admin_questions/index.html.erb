@@ -1,0 +1,30 @@
+<% title t('.title') %>
+
+<% if @group %>
+  <h2>Mostrando sólo las del grupo '<%= @group %>'</h2>
+  <%= link_to 'Mostrar todas', questions_path %>
+<% end %>
+
+<br/><br/>
+
+<table>
+  <thead> <tr>
+      <td>Grupo</td>
+      <td>Id</td>
+      <td>Nombre</td>
+      <td></td>
+    </tr></thead>
+  <% @questions.each do |question| %>
+    <tr class="<%= cycle('even', 'odd')  %>">
+      <td><%=link_to h(question.group), questions_path(:group => question.group) %></td>
+      <td><%= h(question.name) %></td>
+      <td><%= h question.title %></td>
+      <td>
+        <%= link_to 'Edit', edit_question_path(question) %>
+        <%= link_to 'Destroy', question, :confirm => 'Are you sure?', :method => :delete %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<br />

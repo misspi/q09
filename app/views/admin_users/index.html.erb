@@ -1,0 +1,20 @@
+<% title t('.title') %>
+
+<table>
+  <thead><tr>
+      <td>Nombre</td>
+      <td>Email</td>
+      <td>Fecha de alta</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.username %></td>
+        <td><%= user.email %></td>
+        <td><%= user.created_at.fecha %></td>
+        <td><%= link_to t('app.view'), user_path(user) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

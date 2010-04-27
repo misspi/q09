@@ -1,5 +1,8 @@
 
 es:
+  app:
+    view: "Ver"
+
   layouts:
     login: "Entrar"
     signup: "Registrarse"
@@ -59,11 +62,6 @@ es:
       title: "Usuario "
     edit:
       title: "Editando perfil de '{{name}}'"
-  questions:
-    edit: "Editar"
-    index:
-      title: "Listado de preguntas"
-      actions: ""
   user_sessions:
     created: "Bienvenidx al cuestionario de Reu08"
     destroyed: "Adiós. Vuelve pronto!"
@@ -84,4 +82,20 @@ es:
     index:
       title: "Opiniones"
 
+  admin_users:
+    index:
+      title: "Personas o colectivos dadas de alta"
+      username: "Nombre"
+    show:
+      title: "Resúmen de las respuestas de '{{user}}'"
+
+  admin_questions:
+    edit: "Editar"
+    index:
+      title: "Listado de preguntas"
+      actions: ""
+
+  admin_feedbacks:
+    index:
+      title: "Mensajes recibidos a través de la web"
 

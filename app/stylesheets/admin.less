@@ -1,0 +1,104 @@
+
+@import "reset-min.css";
+
+@page_width: 1000px;
+@site_width: 140px;
+
+@grisclaro: #F0F0F0;
+@gris: #E1E4E4;
+@grisoscuro: gray;
+@rojo: #990000;
+@verde: #008800;
+
+@serif: Georgia, Cambria, Times, serif;
+@sans: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, Tahoma, sans-serif;
+@font-small: 80%;
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline;}
+
+.debug {font-family: @sans; font-size: 65%; color: gray;}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.rounded {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+/** HTML **/
+html {
+    font-size: 90%;
+    font-family: @serif;
+    background-color: @grisclaro;
+}
+
+html, body {height: 100%; width: 100%;}
+a {color: black; text-decoration: none;}
+a:hover {text-decoration: underline;}
+
+h1, h2, h3, h4 {font-family: @serif;}
+h2 {font-size: 150%; margin-bottom: 20px;}
+#user {text-align: right; width: @page_width; margin: 30px auto 3px auto; }
+#user a {color: @grisoscuro;}
+#legal {clear: both; margin-top: 3px; height: 7em; font-size: 80%; letter-spacing: 0.2em; text-align: center; font-family: @sans; color: @grisoscuro;}
+#legal a {letter-spacing: 0.5em; color: @grisoscuro;}
+#page {
+    padding: 20px;
+    width: @page_width; margin: 0px auto;
+    background-color: white;
+    border: 1px solid @gris;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+}
+#sitebar { float: left; width: @site_width; }
+#sitebar ul {margin-top: -14px;}
+#sitebar li {font-family: @sans; border-bottom: 1px solid @gris;}
+#sitebar li.top {font-size: 130%; margin-top: 15px; }
+#sitebar li a {display: block; padding: 5px 15px; }
+#sitebar li.top a {padding: 5px 5px;}
+#sitebar li a:hover {text-decoration: none; background-color: @grisclaro;}
+
+#content {margin-left: @site_width + 20;}
+#top {font-family: @serif;  padding-bottom: 20px;}
+#top #logo {width: @site_width + 20; float: left; margin-bottom: 1em;}
+#top h1 {font-size: 200%; margin-bottom: 10px;}
+#top h2 {font-size: 130%;margin-bottom: 5px;}
+
+div.actions {width: 100%; overflow: hidden; margin-bottom: 2em;font-family: @sans; }
+div.actions a {color: @grisoscuro; margin-right: 1em;}
+div.actions a:hover {color: black;}
+
+ul.properties {border: 1px solid @grisclaro; padding: 10px; .rounded;}
+ul.properties li {padding: 3px 0;}
+ul.properties label {font-weight: bold;}
+ul.properties .actions a {color: @grisoscuro;}
+
+textarea {font-size: @font-small; padding: 2px; border: 1px solid @gris; font-family: @sans;}
+form.import textarea {display: block; width: 90%; height: 20em; margin-bottom: 10px;}
+
+
+fieldset li {width: 100%; overflow: hidden; margin: 10px 0;}
+fieldset li label {width: 10em; float: left; text-align: right; margin-right: 1em;}
+input[type=text], input[type=password] {padding: 2px; border: 1px solid @gris;}
+fieldset li.check_boxes ol {display: block; clear: both; width: 100%; overflow: hidden;}
+fieldset li.check_boxes li {display: block;}
+
+fieldset.buttons ol li.commit {float: left; margin-top: 10px;margin-left: 11em; width: auto;}
+fieldset.buttons ol a {display: block; float: left; margin-left: 0.5em; margin-top: 0.8em; color: @grisoscuro;}
+
+
+table {font-family: @sans; width: 100%; border-bottom: 1px solid @gris; }
+td {padding: 3px 3px;}
+thead tr {font-weight: bold;}
+tbody tr {border-top: 1px solid @gris;}
+td a {color: @grisoscuro;font-family: @sans; font-size: @font-small;}
+td a:hover {color: black;}
+
+.info p {font-size: 120%; margin: 0.5em 0; }
+
+form .attachment {margin: 0.5em 0 0.5em 11em; font-style: italic;}
+form .attachment p {margin: 5px 0;}

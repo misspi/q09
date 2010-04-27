@@ -1,0 +1,22 @@
+<% title t('.title') %>
+
+<table>
+  <thead>
+    <tr>
+      <td>Fecha</td>
+      <td>Quién</td>
+      <td>Dijo...</td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @feedbacks.each do |feedback| %>
+      <tr>
+        <td><%= time_ago_in_words feedback.created_at %></td>
+        <td><%= author_of feedback %></td>
+        <td><%= h feedback.body %></td>
+        <td></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
