@@ -98,8 +98,8 @@
   <p>
     <%= form.label :ajob_vocation_money, t(:ajob_vocation_money) %>
     <% Reu09.c(:dineros, :ajob_vocation_money).each do |topic| %>
-      <%= form.check_box "ajob_vocation_money_#{topic}_#" %>
-      <label class="checkbox"><%= t(topic) %></label>
+      <%= form.check_box "ajob_vocation_money_#{topic}" %>
+      <label class="checkbox"><%= t("ajob_vocation_money_#{topic}") %></label>
     <% end %>
   </p>
 
@@ -122,8 +122,8 @@
   <p>
     <%= form.label :grants_bad, t(:grants_bad) %>
     <% Reu09.c(:dineros, :grants_bad).each do |topic| %>
-      <%= form.check_box "grants_bad_#{topic}_#" %>
-      <label class="checkbox"><%= t(topic) %></label>
+      <%= form.check_box "grants_bad_#{topic}" %>
+      <label class="checkbox"><%= t("grants_bad_#{topic}") %></label>
     <% end %>
   </p>
 

@@ -36,8 +36,8 @@
   <p>
     <%= form.label :culture_infra, t(:culture_infra) %>
     <% Reu09.c(:habitat, :culture_infra).each do |topic| %>
-      <%= form.check_box "culture_infra_#{topic}_#" %>
-      <label class="checkbox"><%= t(topic) %></label>
+      <%= form.check_box "culture_infra_#{topic}" %>
+      <label class="checkbox"><%= t("culture_infra_#{topic}") %></label>
     <% end %>
   </p>
 

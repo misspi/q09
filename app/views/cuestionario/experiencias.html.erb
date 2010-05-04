@@ -127,8 +127,8 @@
   <p>
     <%= form.label :form_access, t(:form_access) %>
     <% Reu09.c(:experiencias, :form_access).each do |topic| %>
-      <%= form.check_box "form_access_#{topic}_#" %>
-      <label class="checkbox"><%= t(topic) %></label>
+      <%= form.check_box "form_access_#{topic}" %>
+      <label class="checkbox"><%= t("form_access_#{topic}") %></label>
     <% end %>
   </p>
 

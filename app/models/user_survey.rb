@@ -56,10 +56,12 @@ class UserSurvey
 
   def answer(name)
     @answers[name]  ||= Answer.find_or_create_by_question_id_and_user_id(question(name).id, @user_id)
+    #@answers[name]  ||= Answer.find_by_question_id_and_user_id(question(name).id, @user_id)
   end
 
   def question(name)
     @questions[name] ||= Question.find_or_create_by_group_and_name(@group, name.to_s)
+    #@questions[name] ||= Question.find_by_group_and_name(@group, name.to_s)
   end
 
   def qt(name)
