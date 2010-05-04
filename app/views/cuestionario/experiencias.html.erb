@@ -15,36 +15,32 @@
 
   <p>
     <%= form.label :studies, t(:studies) %>
-    <%= form.check_box :studies_eso %><label class="radio">Primera etapa de educación secundaria</label>
-    <%= form.check_box :studies_bachiller %><label class="radio">Bachillerato</label>
-    <%= form.check_box :studies_fp_medio  %><label class="radio">FP de grado medio</label>
-    <%= form.check_box :studies_fp_superior %><label class="radio">FP de grado superior</label>
-    <%= form.check_box :studies_uni_completa %><label class="radio">Estudios universitarios completos</label>
-    <%= form.check_box :studies_uni_incompleta %><label class="radio">Estudios universitarios incompletos</label>
-    <%= form.check_box :studies_postrago %><label class="radio">Cursos de postgrado</label>
-    <%= form.check_box :studies_doctorado %><label class="radio">Doctorado</label>
+    <% [:studies_eso, :studies_bachiller, :studies_fp_medio, :studies_fp_medio, :studies_fp_superior,
+      :studies_uni_completa, :studies_uni_incompleta, :studies_postgrado, :studies_doctorado].each do |name| %>
+      <%= form.check_box name %><label class="radio"><%= t(name) %></label>
+    <% end %>
   </p>
 
 
   <p>
     <%= form.label :studies_eval, t(:studies_eval) %>
-    <table>
-      <thead>
-        <tr>
-        </tr>
-      </thead>
-      <% Reu09.c(:experiencias, :studies_eval).each do |topic| %>
-        <tr>
-          <td><%= t(topic) %></td>
-          <% Reu09::RELEVANCE.each do |relevance| %>
-            <td class="<%= relevance %>">
-              <%= form.radio_button "studies_eval_#{topic}", relevance %>
-              <span class="tooltip"><%= t(relevance) %> </span>
-            </td>
-          <% end %>
-        </tr>
-      <% end %>
-    </table>
+  <table>
+    <thead>
+      <tr>
+      </tr>
+    </thead>
+    <% Reu09.c(:experiencias, :studies_eval).each do |topic| %>
+      <tr>
+        <td><%= t(topic) %></td>
+        <% Reu09::RELEVANCE.each do |relevance| %>
+          <td class="<%= relevance %>">
+            <%= form.radio_button "studies_eval_#{topic}", relevance %>
+            <span class="tooltip"><%= t(relevance) %> </span>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
   </p>
 
   <p>
@@ -78,22 +74,22 @@
 
   <p>
     <%= form.label :formation_done, t(:formation_done) %>
-    <table>
-      <thead>
-        <tr>
-          <% Reu09.c(:experiencias, :formation_done).each do |topic| %>
-            <td><%= t(topic) %></td>
-          <% end %>
-        </tr>
-      </thead>
-      <% (1..5).each do |number| %>
-        <tr>
-          <% Reu09.c(:experiencias, :formation_done).each do |topic| %>
-            <td><%= form.text_field "formation_done_#{topic}_#{number}" %></td>
-          <% end %>
-        </tr>
-      <% end %>
-    </table>
+  <table>
+    <thead>
+      <tr>
+        <% Reu09.c(:experiencias, :formation_done).each do |topic| %>
+          <td><%= t(topic) %></td>
+        <% end %>
+      </tr>
+    </thead>
+    <% (1..5).each do |number| %>
+      <tr>
+        <% Reu09.c(:experiencias, :formation_done).each do |topic| %>
+          <td><%= form.text_field "formation_done_#{topic}_#{number}" %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
   </p>
 
   <p>
@@ -144,8 +140,8 @@
 
   <% if current_user %>
     <p class="submit bottom">
-    <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
-  </p>
+      <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
+    </p>
   <% end %>
 
 

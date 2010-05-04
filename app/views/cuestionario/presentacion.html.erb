@@ -56,7 +56,7 @@
     <% Reu09.c(:presentacion, :ambito).each do |actividad| %>
       <tr>
         <td><%= form.check_box "#{actividad}_select" %>&nbsp;
-          <%= @survey.qt actividad %></td>
+          <%= t actividad %></td> 
         <td><%= form.text_field actividad %></td>
       </tr>
     <% end %>

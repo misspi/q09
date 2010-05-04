@@ -44,7 +44,7 @@
     </thead>
     <% Reu09.c(:comun, :culture_steps).each do |topic| %>
       <tr>
-        <td><%= t(topic) %></td>
+        <td><%= t("culture_steps_#{topic}") %></td>
         <% Reu09::IMPORTANCE.each do |importance| %>
           <td class="<%= importance %> radio"><%= form.radio_button "culture_steps_#{topic}", importance %>
             <span class="tooltip"><%= t(importance) %> </span></td>
