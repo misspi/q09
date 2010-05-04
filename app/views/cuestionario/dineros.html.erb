@@ -14,11 +14,11 @@
 
   <p>
     <%= form.label :laboral, t(:laboral) %>
-    <%= form.radio_button :laboral, :entrepreneur %><label class="radio"><%= t(:laboral_entrepreneur) %></label>
-    <%= form.radio_button :laboral, :employe %><label class="radio"><%= t(:laboral_employe) %></label>
-    <%= form.radio_button :laboral, :various %><label class="radio"><%= t(:laboral_various) %></label>
-    <%= form.radio_button :laboral, :one %><label class="radio"><%= t(:laboral_one) %></label>
-    <%= form.radio_button :laboral, :black %><label class="radio"><%= t(:laboral_black) %></label>
+    <%= form.check_box :laboral_entrepreneur %><label class="radio"><%= t(:laboral_entrepreneur) %></label>
+    <%= form.check_box :laboral_employe %><label class="radio"><%= t(:laboral_employe) %></label>
+    <%= form.check_box :laboral_various %><label class="radio"><%= t(:laboral_various) %></label>
+    <%= form.check_box :laboral_one %><label class="radio"><%= t(:laboral_one) %></label>
+    <%= form.check_box :laboral_black %><label class="radio"><%= t(:laboral_black) %></label>
   </p>
 
   <p>

@@ -9,15 +9,17 @@
 
 <table>
   <thead> <tr>
-      <td>Grupo</td>
+      <td></td>
       <td>Id</td>
+      <td>Grupo</td>
       <td>Nombre</td>
       <td></td>
     </tr></thead>
   <% @questions.each do |question| %>
     <tr class="<%= cycle('even', 'odd')  %>">
-      <td><%=link_to h(question.group), questions_path(:group => question.group) %></td>
+      <td><%= question.created_at.fecha %></td>
       <td><%= h(question.name) %></td>
+      <td><%=link_to h(question.group), questions_path(:group => question.group) %></td>
       <td><%= h question.title %></td>
       <td>
         <%= link_to 'Edit', edit_question_path(question) %>

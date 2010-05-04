@@ -11,4 +11,8 @@ class AdminQuestionsController < AdminController
     end
     index!
   end
+
+  def update
+    update! { questions_path}
+  end
 end

@@ -16,7 +16,7 @@
   <p>
     <%= form.label :author, t(:author) %>
     <% Reu09.c(:autoria, :author).each do |topic| %>
-      <%= form.radio_button "author", topic %>
+      <%= form.check_box "author_#{topic}" %>
       <label class="radio"><%= t(topic) %></label>
     <% end %>
   </p>

@@ -62,8 +62,11 @@ class UserSurvey
     @questions[name] ||= Question.find_or_create_by_group_and_name(@group, name.to_s)
   end
 
+  def qt(name)
+    question(name.to_s).title
+  end
+
   def method_missing(name, *args)
-    puts "METHOD MISSING!! #{name}"
     answer(name.to_s).value
   end
 

@@ -15,14 +15,14 @@
 
   <p>
     <%= form.label :studies, t(:studies) %>
-    <%= form.radio_button :studies, :primera_etapa_secundaria %><label class="radio">Primera etapa de educación secundaria</label>
-    <%= form.radio_button :studies, :bachillerato %><label class="radio">Bachillerato</label>
-    <%= form.radio_button :studies, :fp_medio %><label class="radio">FP de grado medio</label>
-    <%= form.radio_button :studies, :fp_superior %><label class="radio">FP de grado superior</label>
-    <%= form.radio_button :studies, :uni_completa %><label class="radio">Estudios universitarios completos</label>
-    <%= form.radio_button :studies, :uni_incompleta %><label class="radio">Estudios universitarios incompletos</label>
-    <%= form.radio_button :studies, :postgrado %><label class="radio">Cursos de postgrado</label>
-    <%= form.radio_button :studies, :doctorado %><label class="radio">Doctorado</label>
+    <%= form.check_box :studies_eso %><label class="radio">Primera etapa de educación secundaria</label>
+    <%= form.check_box :studies_bachiller %><label class="radio">Bachillerato</label>
+    <%= form.check_box :studies_fp_medio  %><label class="radio">FP de grado medio</label>
+    <%= form.check_box :studies_fp_superior %><label class="radio">FP de grado superior</label>
+    <%= form.check_box :studies_uni_completa %><label class="radio">Estudios universitarios completos</label>
+    <%= form.check_box :studies_uni_incompleta %><label class="radio">Estudios universitarios incompletos</label>
+    <%= form.check_box :studies_postrago %><label class="radio">Cursos de postgrado</label>
+    <%= form.check_box :studies_doctorado %><label class="radio">Doctorado</label>
   </p>
 
 

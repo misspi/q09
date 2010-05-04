@@ -19,17 +19,17 @@
   <% end %>
 
   <p>
-    <%= form.label :name, t(:name) %>
+    <%= form.label :name, @survey.qt(:name) %>
     <%= form.text_field :name %>
   </p>
 
   <p>
-    <%= form.label :page_url, t(:page_url) %>
+    <%= form.label :page_url, @survey.qt(:page_url) %>
     <%= form.text_field :page_url %>
   </p>
 
   <p>
-    <%= form.label :icon, t(:icon) %>
+    <%= form.label :icon, @survey.qt(:icon) %>
     <%= form.text_field :icon, :id => 'upload_field' %>
   </p>
 
@@ -38,13 +38,13 @@
   </p>
 
   <p>
-    <%= form.label :location, t(:location) %>
+    <%= form.label :location, @survey.qt(:location) %>
     <%= form.text_field :location %>
   </p>
 
 
   <p>
-    <%= form.label :indi_colective, t(:indi_colective) %>
+    <%= form.label :indi_colective, @survey.qt(:indi_colective) %>
     <%= form.radio_button :indi_colective, :individual %><label class="radio">Proyecto individual</label>
     <%= form.radio_button :indi_colective, :proyecto %><label class="radio">Proyecto colectivo</label>
     <%= form.radio_button :indi_colective, :ambos %><label class="radio">Ambos</label>
@@ -56,7 +56,7 @@
     <% Reu09.c(:presentacion, :ambito).each do |actividad| %>
       <tr>
         <td><%= form.check_box "#{actividad}_select" %>&nbsp;
-          <%= t(actividad) %></td>
+          <%= @survey.qt actividad %></td>
         <td><%= form.text_field actividad %></td>
       </tr>
     <% end %>
@@ -64,7 +64,7 @@
   </p>
 
   <p>
-    <%= form.label :interest, t(:interest) %>
+    <%= form.label :interest, @survey.qt(:interest) %>
     <%= form.text_area :interest %>
   </p>
 

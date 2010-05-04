@@ -66,6 +66,20 @@ namespace :mysql do
   end
 end
 
+namespace :log do
+  desc "Download production log file"
+  task :download, :only => {:primary => true } do
+    filename = "#{application}.#{Time.now.to_i}.log"
+    file = "tmp/#{filename}"
+    on_rollback { delete file }
+    
+    log_filename = "#{shared_path}/log/production.log"
+    run "bzip2 #{log_filename}"
+    get "#{log_filename}.bz2", file
+    run "rm #{log_filename}.bz2"
+  end
+end
+
 desc "Backup the database before running migrations"
 task :before_migrate do
   backup
