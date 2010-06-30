@@ -7,7 +7,7 @@ ActionController::Routing::Routes.draw do |map|
 #    questions.resources :answers, :as => 'respuestas'
 #  end
   map.resources :user_surveys
-
+  map.resources :respuestas
   map.resources :cuestionario
 
   map.login "entrar", :controller => "user_sessions", :action => "new"

@@ -19,7 +19,7 @@
   <% end %>
 
   <p>
-    <%= form.label :name, @survey.qt(:name) %>
+    <%= form.label :name, @survey.qt(:name) %><%= link_to_answer(:name) %>
     <%= form.text_field :name %>
   </p>
 

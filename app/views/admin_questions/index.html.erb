@@ -11,6 +11,7 @@
   <thead> <tr>
       <td></td>
       <td>Id</td>
+      <td>Pregunta</td>
       <td>Grupo</td>
       <td>Nombre</td>
       <td></td>
@@ -19,6 +20,7 @@
     <tr class="<%= cycle('even', 'odd')  %>">
       <td><%= question.created_at.fecha %></td>
       <td><%= h(question.name) %></td>
+      <td><%= h(question.subgroup) %></td>
       <td><%=link_to h(question.group), questions_path(:group => question.group) %></td>
       <td><%= h question.title %></td>
       <td>

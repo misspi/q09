@@ -1,0 +1,9 @@
+<%= title "Respuestas a '#{@question.title}'" %>
+
+<table class="answers">
+  <tbody>
+    <% @question.answers.each do |answer| %>
+      <tr><td><%= respuesta answer.value %></td></tr>
+    <% end %>
+  </tbody>
+</table>
