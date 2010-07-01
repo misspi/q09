@@ -239,3 +239,25 @@ form .attachment {
   font-style: italic;
 }
 form .attachment p { margin: 5px 0; }
+.survey h1 {
+  font-size: 200%;
+  line-height: 0.9em;
+  border-bottom: 1px solid #9c9e9f;
+  color: #9c9e9f;
+  font-family: "Lucida Grande", Verdana, sans-serif;
+  margin: 30px 0 0 0;
+}
+.survey { font-family: "Lucida Grande", Verdana, sans-serif; }
+.survey p {
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+.survey p label {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  color: #9c9e9f;
+  font-weight: bold;
+  font-size: 90%;
+}

@@ -1,0 +1,90 @@
+<%= render :partial => 'prevent.html' %>
+<%= render :partial => 'prevent.html' %>
+<%= title t(:title), :show => false %>
+
+<% form_for @survey do |form| %>
+  <%= next_step cuestionario_path(:id => 'red') %>
+
+  <% if current_user %>
+    <p class="submit">
+      <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
+    </p>
+  <% else %>
+    <%= render 'preview' %>
+  <% end %>
+
+  <p>
+    <%= form.label :computer, t(:computer) %>
+    <%= form.radio_button :computer, :yes %><label class="radio"><%= t(:computer_yes) %></label>
+    <%= form.radio_button :computer, :no %><label class="radio"><%= t(:computer_no) %></label>
+  </p>
+
+  <p>
+    <%= form.label :operating, t(:operating) %>
+    <% Reu09.c(:redes, :operating).each do |topic| %>
+      <%= form.radio_button "operating", topic %>
+      <label class="radio"><%= t(topic) %></label>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :operating_desc, t(:operating_desc) %>
+    <%= form.text_area :operating_desc %>
+  </p>
+
+  <p>
+    <%= form.label :internet, t(:internet) %>
+    <% Reu09.c(:redes, :internet).each do |topic| %>
+      <%= form.check_box  "internet_#{topic}" %>
+      <label class="checkbox"><%= t("internet_#{topic}") %></label>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :internet_desc, t(:internet_desc) %>
+    <%= form.text_area :internet_desc %>
+  </p>
+
+  <p>
+    <%= form.label :internet_time, t(:internet_time) %>
+    <% Reu09.c(:redes, :internet_time).each do |topic| %>
+      <%= form.radio_button "internet_time", topic %>
+      <label class="radio"><%= t(topic) %></label>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :web_links, t(:web_links) %>
+    <%= form.text_area :web_links %>
+  </p>
+
+  <p>
+    <%= form.label :p2p, t(:p2p) %>
+    <% Reu09.c(:redes, :p2p).each do |topic| %>
+      <%= form.radio_button "p2p", topic %>
+      <label class="radio"><%= t(topic) %></label>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :access, t(:access) %>
+    <% Reu09.c(:redes, :access).each do |topic| %>
+      <%= form.radio_button "access", topic %>
+      <label class="radio"><%= t(topic) %></label>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :web_find, t(:web_find) %>
+    <%= form.radio_button :web_find, :yes %><label class="radio"><%= t(:web_find_yes) %></label>
+    <%= form.radio_button :web_find, :no %><label class="radio"><%= t(:web_find_no) %></label>
+  </p>
+
+  <% if current_user %>
+    <p class="submit bottom">
+    <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
+  </p>
+  <% end %>
+
+
+<% end %>

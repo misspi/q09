@@ -14,7 +14,7 @@
   <% end %>
 
   <p>
-    <%= form.label :studies, t(:studies) %>
+    <%= form.label :studies, @survey.qt(:studies) %>
     <% [:studies_eso, :studies_bachiller, :studies_fp_medio, :studies_fp_medio, :studies_fp_superior,
       :studies_uni_completa, :studies_uni_incompleta, :studies_postgrado, :studies_doctorado].each do |name| %>
       <%= form.check_box name %><label class="radio"><%= t(name) %></label>
@@ -23,7 +23,7 @@
 
 
   <p>
-    <%= form.label :studies_eval, t(:studies_eval) %>
+    <%= form.label :studies_eval, @survey.qt(:studies_eval) %>
   <table>
     <thead>
       <tr>
@@ -44,23 +44,23 @@
   </p>
 
   <p>
-    <%= form.label :studies_eval_desc, t(:studies_eval_desc) %>
+    <%= form.label :studies_eval_desc, @survey.qt(:studies_eval_desc) %>
     <%= form.text_area :studies_eval_desc %>
   </p>
 
   <p>
-    <%= form.label :formation, t(:formation) %>
+    <%= form.label :formation, @survey.qt(:formation) %>
     <%= form.radio_button :formation, :yes %><label class="radio"><%= t(:formation_yes) %></label>
     <%= form.radio_button :formation, :no %><label class="radio"><%= t(:formation_no) %></label>
   </p>
 
   <p>
-    <%= form.label :formation_desc, t(:formation_desc) %>
+    <%= form.label :formation_desc, @survey.qt(:formation_desc) %>
     <%= form.text_area :formation_desc %>
   </p>
 
   <p>
-    <%= form.label :formation_kind, t(:formation_kind) %>
+    <%= form.label :formation_kind, @survey.qt(:formation_kind) %>
     <%= form.check_box :formation_kind_course %><label class="checkbox"><%= t(:formation_kind_course) %></label>
     <%= form.check_box :formation_kind_exchange %><label class="checkbox"><%= t(:formation_kind_exchange) %></label>
     <%= form.check_box :formation_kind_auto %><label class="checkbox"><%= t(:formation_kind_auto) %></label>
@@ -68,12 +68,12 @@
   </p>
 
   <p>
-    <%= form.label :formation_kind_desc, t(:formation_kind_desc) %>
+    <%= form.label :formation_kind_desc, @survey.qt(:formation_kind_desc) %>
     <%= form.text_area :formation_kind_desc %>
   </p>
 
   <p>
-    <%= form.label :formation_done, t(:formation_done) %>
+    <%= form.label :formation_done, @survey.qt(:formation_done) %>
   <table>
     <thead>
       <tr>
