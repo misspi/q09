@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100630174915) do
+ActiveRecord::Schema.define(:version => 20100701113831) do
 
   create_table "answers", :force => true do |t|
     t.string   "value"
@@ -56,13 +56,14 @@ ActiveRecord::Schema.define(:version => 20100630174915) do
     t.string   "username"
     t.string   "email"
     t.string   "password"
-    t.string   "crypted_password",  :null => false
-    t.string   "password_salt",     :null => false
-    t.string   "persistence_token", :null => false
+    t.string   "crypted_password",                     :null => false
+    t.string   "password_salt",                        :null => false
+    t.string   "persistence_token",                    :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "request_info"
     t.boolean  "allow_publish"
+    t.boolean  "survey_completed",  :default => false
   end
 
 end

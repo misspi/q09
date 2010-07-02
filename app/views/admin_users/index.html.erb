@@ -5,6 +5,7 @@
       <td>Nombre</td>
       <td>Email</td>
       <td>Fecha de alta</td>
+      <td>Cuestionario completo</td>
     </tr>
   </thead>
   <tbody>
@@ -13,7 +14,11 @@
         <td><%= user.username %></td>
         <td><%= user.email %></td>
         <td><%= user.created_at.fecha %></td>
-        <td><%= link_to t('app.view'), user_path(user) %></td>
+        <td><%= user.survey_completed? ? 'Si' : 'No' %></td>
+        <td>
+          <%= link_to t('app.view'), admin_user_path(user) %>
+          <%= link_to 'Ver su cuestionario', admin_survey_path(user)  %>
+        </td>
       </tr>
     <% end %>
   </tbody>

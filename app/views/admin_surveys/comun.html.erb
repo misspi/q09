@@ -1,0 +1,140 @@
+<%= render :partial => 'prevent.html' %>
+<%= title t(:title), :show => false %>
+
+<% form_for @survey do |form| %>
+  <%= next_step cuestionario_path(:id => 'comun') %>
+
+
+  <% if current_user %>
+    <p class="submit">
+      <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
+    </p>
+  <% else %>
+    <%= render 'preview' %>
+  <% end %>
+
+  <p>
+    <%= form.label :institution, t(:institution) %>
+    <%= form.text_area :institution %>
+  </p>
+
+  <p>
+    <%= form.label :policy, t(:policy) %>
+  <table>
+    <thead>
+    </thead>
+    <% Reu09.c(:comun, :policy).each do |topic| %>
+      <tr>
+        <td><%= t(topic) %></td>
+        <% Reu09::RELEVANCE.each do |relevance| %>
+          <td class="<%= relevance %> radio"><%= form.radio_button "policy_#{topic}", relevance %>
+            <span class="tooltip"><%= t(relevance) %> </span></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+  </p>
+
+  <p>
+    <%= form.label :culture_steps, t(:culture_steps) %>
+  <table>
+    <thead>
+      <tr>
+      </tr>
+    </thead>
+    <% Reu09.c(:comun, :culture_steps).each do |topic| %>
+      <tr>
+        <td><%= t("culture_steps_#{topic}") %></td>
+        <% Reu09::IMPORTANCE.each do |importance| %>
+          <td class="<%= importance %> radio"><%= form.radio_button "culture_steps_#{topic}", importance %>
+            <span class="tooltip"><%= t(importance) %> </span></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+  </p>
+
+  <p>
+    <%= form.label :situation, t(:situation) %>
+    <%= form.text_area :situation %>
+  </p>
+
+  <p>
+    <%= form.label :culture_action, t(:culture_action) %>
+    <% Reu09.c(:comun, :culture_action).each do |topic| %>
+      <%= form.check_box "culture_action_#{topic}" %>
+      <label class="radio"><%= t("culture_action_#{topic}") %></label>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :culture_action_desc, t(:culture_action_desc) %>
+    <%= form.text_area :culture_action_desc %>
+  </p>
+
+  <p>
+    <%= form.label :polis_action, t(:polis_action) %>
+    <% Reu09.c(:comun, :polis_action).each do |topic| %>
+      <%= form.check_box "polis_action_#{topic}" %>
+      <label class="checkbox"><%= t("polis_action_#{topic}") %></label>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :polis_action_desc, t(:polis_action_desc) %>
+    <%= form.text_area :polis_action_desc %>
+  </p>
+
+  <p>
+    <%= form.label :conditions, t(:conditions) %>
+    <% Reu09.c(:comun, :conditions).each do |topic| %>
+      <%= form.radio_button "conditions", topic %>
+      <label class="radio"><%= t(topic) %></label>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :administration, t(:administration) %>
+  <table>
+    <thead>
+    </thead>
+    <% Reu09.c(:comun, :administration).each do |topic| %>
+      <tr>
+        <td><%= t(topic) %></td>
+        <% Reu09::QUALITY.each do |quality| %>
+          <td class="<%= quality %> radio"><%= form.radio_button "administration_#{topic}", quality %>
+            <span class="tooltip"><%= t(quality) %> </span></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+  </p>
+
+  <p>
+    <%= form.label :future, t(:future) %>
+    <% Reu09.c(:comun, :future).each do |topic| %>
+      <%= form.check_box "future_#{topic}" %>
+      <label class="checkbox"><%= t("future_#{topic}") %></label>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :future_desc, t(:future_desc) %>
+    <%= form.text_area :future_desc %>
+  </p>
+
+  <p>
+    <%= form.label :proposal, t(:proposal) %>
+    <%= form.text_area :proposal %>
+  </p>
+
+
+  <% if current_user %>
+    <p class="submit bottom">
+    <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
+  </p>
+  <% end %>
+
+
+
+<% end %>

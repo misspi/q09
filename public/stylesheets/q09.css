@@ -454,6 +454,18 @@ p.submit span {
   font-family: Verdana, Helvetica, Arial, sans-serif;
 }
 p.submit.bottom { margin-top: 60px; }
+.survey p {
+  width: 100%;
+  overflow: hidden;
+}
+.survey p label {
+  display: block;
+  margin-top: 1.5em;
+  margin-bottom: 0.3em;
+  color: #9c9e9f;
+  font-weight: bold;
+  font-size: 90%;
+}
 form table {
   margin-left: 1em;
   width: 81.5%;

@@ -1,0 +1,53 @@
+
+<% survey_view(@user, :presentacion) do |survey| %>
+<h1>Presentación</h1>
+  <div class="presentacion">
+    <p>
+      <%= survey.label :name %>
+      <%= survey.text_field :name %>
+    </p>
+
+    <p>
+      <%= survey.label :page_url %>
+      <%= survey.text_field :page_url %>
+    </p>
+
+    <p>
+      <%= survey.label :icon %>
+      <%= survey.text_field :icon, :id => 'upload_field' %>
+    </p>
+
+    <p>
+      <%= survey.upload_file(:icon) %>
+    </p>
+
+    <p>
+      <%= survey.label :location %>
+      <%= survey.text_field :location %>
+    </p>
+
+
+    <p>
+      <%= survey.label :indi_colective %>
+      <%= survey.radio_button :indi_colective, {:individual => 'Individual', :colectivo => 'Colectivo', :ambos => 'Ambos'}  %>
+    </p>
+
+    <p>
+      <label>¿En qué ámbitos desempeñas alguna actividad? Usa las cajas de texto para dar más información...</label>
+    </p>
+    <table>
+      <% Reu09.c(:presentacion, :ambito).each do |actividad| %>
+        <tr>
+          <td><%= survey.check_box "#{actividad}_select" %>&nbsp;
+            <%= t "cuestionario.presentacion.#{actividad}" %></td>
+          <td><%= survey.text_field actividad %></td>
+        </tr>
+      <% end %>
+    </table>
+
+    <p>
+      <%= survey.label :interest %>
+      <%= survey.text_area :interest %>
+    </p>
+  </div>
+<% end %>

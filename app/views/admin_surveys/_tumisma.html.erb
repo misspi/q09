@@ -1,0 +1,124 @@
+<div class="tumismx">
+  <h1>Tu mismx</h1>
+
+  <% survey_view(@user, :tumisma) do |form| %>
+
+    <p>
+      <%= form.label :birth %>
+      <%= form.text_field :birth %>
+    </p>
+
+    <p>
+      <%= form.label :gender %>
+      <%= form.text_field :gender %>
+    </p>
+
+    <p>
+      <%= form.label :since %>
+      <%= form.text_field :since %>
+    </p>
+
+    <p>
+      <%= form.label :books %>
+      <%= form.text_area :books %>
+    </p>
+
+    <p>
+      <%= form.label :films %>
+      <%= form.text_area :films %>
+    </p>
+
+    <p>
+      <%= form.label :musics %>
+      <%= form.text_area :musics %>
+    </p>
+
+    <p>
+      <%= form.label :movements %>
+      <%= form.text_area :movements %>
+    </p>
+
+    <p>
+      <%= form.label :influences %>
+      <%= form.text_area :influences %>
+    </p>
+
+    <p>
+      <%= form.label :ilike %>
+      <%= form.text_area :ilike %>
+    </p>
+
+    <p>
+      <%= form.label :dislike %>
+      <%= form.text_area :dislike %>
+    </p>
+
+    <p>
+      <%= form.label :isdifferent %>
+      <%= form.radio_button :isdifferent, {:yes => 'Sí', :no => 'No'} %>
+    </p>
+
+    <p>
+      <%= form.label :isdifferent_desc %>
+      <%= form.text_area :isdifferent_desc %>
+    </p>
+
+    <p>
+      <%= form.label :proj_good %>
+      <%= form.text_area :proj_good %>
+    </p>
+    <p>
+      <%= form.label :proj_good_att %>
+      <%= form.text_field :proj_good_att, :id => 'upload_proj_good' %>
+      <%= form.upload_file(:proj_good_att, :id => 'upload_proj_good', :label => t('upload')) %>
+    </p>
+
+    <p>
+      <%= form.label :proj_bad %>
+      <%= form.text_area :proj_bad %>
+    </p>
+    <p>
+      <%= form.label :proj_bad_att %>
+      <%= form.text_field :proj_bad_att, :id => 'upload_proj_bad' %>
+      <%= form.upload_file(:proj_bad_att, :id => 'upload_proj_bad', :label => t('upload')) %>
+
+    </p>
+
+    <p>
+      <%= form.label :diffusion %>
+      <%= form.text_area :diffusion %>
+    </p>
+
+    <p>
+      <label> Valora la relevancia de los siguientes criterios en tu trayectoria profesional</label>
+    <table>
+      <thead>
+      </thead>
+      <% Reu09.c(:tumisma, :traject_eval).each do |topic| %>
+        <tr>
+          <td><%= t("cuestionario.tumisma.#{topic}") %></td>
+          <td><%= form.radio_button "traject_eval_#{topic}", {:none => 'No relevante', :some => 'Poco relevante',
+            :lot => 'Relevante', :full => 'Muy relevante'} %></td>
+        </tr>
+      <% end %>
+    </table>
+  </p>
+
+  <p>
+    <%= form.label :traject_eval_desc %>
+    <%= form.text_area :traject_eval_desc %>
+  </p>
+
+  <p>
+    <%= form.label :gender_influence %>
+    <%= form.radio_button :gender_influence, {:yes => 'Sí', :no => 'No'} %>
+  </p>
+
+  <p>
+    <%= form.label :gender_influence_desc %>
+    <%= form.text_area :gender_influence_desc %>
+  </p>
+
+<% end %>
+</div>
+

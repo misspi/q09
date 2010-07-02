@@ -15,6 +15,8 @@ Rails::Initializer.run do |config|
   config.gem 'cancan'
   config.gem 'searchlogic'
   config.gem 'formtastic'
+  config.gem "block_helpers", :source => "http://gemcutter.org"
+
 
   config.time_zone = 'UTC'
   config.i18n.default_locale = :es

@@ -1,0 +1,147 @@
+<%= render :partial => 'prevent.html' %>
+<%= title t(:title), :show => false %>
+
+
+<% form_for @survey do |form| %>
+  <%= next_step cuestionario_path(:id => 'habitat') %>
+
+
+  <% if current_user %>
+    <p class="submit">
+      <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
+    </p>
+  <% else %>
+    <%= render 'preview' %>
+  <% end %>
+
+  <p>
+    <%= form.label :place, t(:place) %>
+    <% Reu09.c(:habitat, :place).each do |topic| %>
+      <%= form.radio_button "place", topic %>
+      <label class="radio"><%= t(topic) %></label>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :place_desc, t(:place_desc) %>
+    <%= form.text_area :place_desc %>
+  </p>
+
+  <p>
+    <%= form.label :city_work, t(:city_work) %>
+    <%= form.text_area :city_work %>
+  </p>
+
+
+  <p>
+    <%= form.label :culture_infra, t(:culture_infra) %>
+    <% Reu09.c(:habitat, :culture_infra).each do |topic| %>
+      <%= form.check_box "culture_infra_#{topic}" %>
+      <label class="checkbox"><%= t("culture_infra_#{topic}") %></label>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :culture_infra_work, t(:culture_infra_work) %>
+    <%= form.text_area :culture_infra_work %>
+  </p>
+
+  <p>
+    <%= form.label :homes, t(:homes) %>
+    <% Reu09.c(:habitat, :homes).each do |topic| %>
+      <%= form.radio_button "homes", topic %>
+      <label class="radio"><%= t(topic) %></label>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :living, t(:living) %>
+    <% Reu09.c(:habitat, :living).each do |topic| %>
+      <%= form.radio_button "living", topic %>
+      <label class="radio"><%= t(topic) %></label>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :living_desc, t(:living_desc) %>
+    <%= form.text_field :living_desc %>
+  </p>
+
+  <p>
+    <%= form.label :living_share, t(:living_share) %>
+    <%= form.text_field :living_share %>
+  </p>
+
+  <p>
+    <%= form.label :home_cost, t(:home_cost) %>
+    <% Reu09.c(:habitat, :home_cost).each do |topic| %>
+      <%= form.radio_button "home_cost", topic %>
+      <label class="radio"><%= t(topic) %></label>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :studio, t(:studio) %>
+    <% Reu09.c(:habitat, :studio).each do |topic| %>
+      <%= form.radio_button "studio", topic %>
+      <label class="radio"><%= t(topic) %></label>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :studio_other, t(:studio_other) %>
+    <%= form.text_area :studio_other %>
+  </p>
+
+  <p>
+    <%= form.label :studio_share, t(:studio_share) %>
+    <%= form.radio_button :studio_share, :yes %><label class="radio"><%= t(:studio_share_yes) %></label>
+    <%= form.radio_button :studio_share, :no %><label class="radio"><%= t(:studio_share_no) %></label>
+  </p>
+
+  <p>
+    <%= form.label :studio_share_desc, t(:studio_share_desc) %>
+    <%= form.text_field :studio_share_desc %>
+  </p>
+
+  <p>
+    <%= form.label :studio_cost, t(:studio_cost) %>
+    <% Reu09.c(:habitat, :home_cost).each do |topic| %>
+      <%= form.radio_button "studio_cost", topic %>
+      <label class="radio"><%= t(topic) %></label>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :expenses, t(:expenses) %>
+    <table>
+      <% Reu09.c(:habitat, :expenses).each do |expenses| %>
+        <tr>
+          <td class="else"><%= t(expenses) %></td>
+          <td><%= form.text_field expenses %></td>
+        </tr>
+      <% end %>
+    </table>
+  </p>
+
+  <p>
+    <%= form.label :travel, t(:travel) %>
+    <% Reu09.c(:habitat, :travel).each do |topic| %>
+      <%= form.radio_button "travel", topic %>
+      <label class="radio"><%= t(topic) %></label>
+    <% end %>
+  </p>
+
+  <p>
+    <%= form.label :income, t(:income) %>
+    <%= form.radio_button :income, :yes %><label class="radio"><%= t(:income_yes) %></label>
+    <%= form.radio_button :income, :no %><label class="radio"><%= t(:income_no) %></label>
+  </p>
+
+  <% if current_user %>
+    <p class="submit bottom">
+    <%= form.submit "Guardar" %><span><%= t(:submit_info) %></span>
+  </p>
+  <% end %>
+
+<% end %>

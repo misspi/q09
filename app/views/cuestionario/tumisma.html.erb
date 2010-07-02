@@ -18,52 +18,52 @@
   <% end %>
 
   <p>
-    <%= form.label :birth, t(:birth) %>
+    <%= form.label :birth, @survey.qt(:birth) %>
     <%= form.text_field :birth %>
   </p>
 
   <p>
-    <%= form.label :gender, t(:gender) %>
+    <%= form.label :gender, @survey.qt(:gender) %>
     <%= form.text_field :gender %>
   </p>
 
   <p>
-    <%= form.label :since, t(:since) %>
+    <%= form.label :since, @survey.qt(:since) %>
     <%= form.text_field :since %>
   </p>
 
   <p>
-    <%= form.label :books, t(:books) %>
+    <%= form.label :books, @survey.qt(:books) %>
     <%= form.text_area :books %>
   </p>
 
   <p>
-    <%= form.label :films, t(:films) %>
+    <%= form.label :films, @survey.qt(:films) %>
     <%= form.text_area :films %>
   </p>
 
   <p>
-    <%= form.label :musics, t(:musics) %>
+    <%= form.label :musics, @survey.qt(:musics) %>
     <%= form.text_area :musics %>
   </p>
 
   <p>
-    <%= form.label :movements, t(:movements) %>
+    <%= form.label :movements, @survey.qt(:movements) %>
     <%= form.text_area :movements %>
   </p>
 
   <p>
-    <%= form.label :influences, t(:influences) %>
+    <%= form.label :influences, @survey.qt(:influences) %>
     <%= form.text_area :influences %>
   </p>
 
   <p>
-    <%= form.label :ilike, t(:ilike) %>
+    <%= form.label :ilike, @survey.qt(:ilike) %>
     <%= form.text_area :ilike %>
   </p>
 
   <p>
-    <%= form.label :dislike, t(:dislike) %>
+    <%= form.label :dislike, @survey.qt(:dislike) %>
     <%= form.text_area :dislike %>
   </p>
 
@@ -74,33 +74,33 @@
   </p>
 
   <p>
-    <%= form.label :isdifferent_desc, t(:isdifferent_desc) %>
+    <%= form.label :isdifferent_desc, @survey.qt(:isdifferent_desc) %>
     <%= form.text_area :isdifferent_desc %>
   </p>
 
   <p>
-    <%= form.label :proj_good, t(:proj_good) %>
+    <%= form.label :proj_good, @survey.qt(:proj_good) %>
     <%= form.text_area :proj_good %>
   </p>
   <p>
-    <%= form.label :proj_good_att, t(:proj_good_att) %>
+    <%= form.label :proj_good_att, @survey.qt(:proj_good_att) %>
     <%= form.text_field :proj_good_att, :id => 'upload_proj_good' %>
     <%= js_upload_file(@survey.proj_good_att, :id => 'upload_proj_good', :label => t('upload')) %>
   </p>
 
   <p>
-    <%= form.label :proj_bad, t(:proj_bad) %>
+    <%= form.label :proj_bad, @survey.qt(:proj_bad) %>
     <%= form.text_area :proj_bad %>
   </p>
   <p>
-    <%= form.label :proj_bad_att, t(:proj_bad_att) %>
+    <%= form.label :proj_bad_att, @survey.qt(:proj_bad_att) %>
     <%= form.text_field :proj_bad_att, :id => 'upload_proj_bad' %>
     <%= js_upload_file(@survey.proj_bad_att, :id => 'upload_proj_bad', :label => t('upload')) %>
 
   </p>
 
   <p>
-    <%= form.label :diffusion, t(:diffusion) %>
+    <%= form.label :diffusion, @survey.qt(:diffusion) %>
     <%= form.text_area :diffusion %>
   </p>
 
@@ -124,18 +124,18 @@
   </p>
 
   <p>
-    <%= form.label :traject_eval_desc, t(:traject_eval_desc) %>
+    <%= form.label :traject_eval_desc, @survey.qt(:traject_eval_desc) %>
     <%= form.text_area :traject_eval_desc %>
   </p>
 
   <p>
-    <%= form.label :gender_influence, t(:gender_influence) %>
+    <%= form.label :gender_influence, @survey.qt(:gender_influence) %>
     <%= form.radio_button :gender_influence, :yes %><label class="radio"><%= t(:gender_influence_yes) %></label>
     <%= form.radio_button :gender_influence, :no %><label class="radio"><%= t(:gender_influence_no) %></label>
   </p>
 
   <p>
-    <%= form.label :gender_influence_desc, t(:gender_influence_desc) %>
+    <%= form.label :gender_influence_desc, @survey.qt(:gender_influence_desc) %>
     <%= form.text_area :gender_influence_desc %>
   </p>
 
